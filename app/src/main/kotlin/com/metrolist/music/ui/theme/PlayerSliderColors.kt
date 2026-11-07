@@ -48,9 +48,9 @@ object PlayerSliderColors {
         }
         
         return SliderDefaults.colors(
-            activeTrackColor = activeColor,
+            activeTrackColor = Color(0xFF00CFFF),
             activeTickColor = activeColor,
-            thumbColor = activeColor,
+            thumbColor = Color(0xFF00CFFF),
             inactiveTrackColor = inactiveTrackColor,
             disabledActiveTrackColor = activeColor,
             disabledInactiveTrackColor = inactiveTrackColor,
