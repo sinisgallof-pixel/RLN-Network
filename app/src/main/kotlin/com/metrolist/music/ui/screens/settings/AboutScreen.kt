@@ -252,15 +252,12 @@ fun AboutScreen(
                     .fillMaxWidth()
                     .padding(24.dp)
             ) {
-                Image(
-                    painter = painterResource(R.drawable.small_icon),
-                    contentDescription = stringResource(R.string.metrolist),
-                    colorFilter = ColorFilter.tint(
-                        color = MaterialTheme.colorScheme.primary,
-                        blendMode = BlendMode.SrcIn,
-                    ),
-                    modifier = Modifier.size(64.dp)
-                )
+           Image(
+    painter = painterResource(R.drawable.rln_network_logo),
+    contentDescription = "RLN Network",
+    modifier = Modifier.size(64.dp)
+)
+
         
                 Spacer(Modifier.width(20.dp))
         
@@ -270,7 +267,7 @@ fun AboutScreen(
                         .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
 
                     Text(
-                        text = metrolistName,
+                        text = "RLN Network",
                         style = MaterialTheme.typography.headlineLarge,
                         fontWeight = FontWeight.Black,
                         color = MaterialTheme.colorScheme.onSurface,
