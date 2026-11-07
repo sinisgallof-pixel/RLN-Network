@@ -405,7 +405,7 @@ fun AboutScreen(
         Spacer(Modifier.height(32.dp))
         
         // Collaborators section - back to Material3SettingsGroup
-        Material3SettingsGroup(
+       if (false) {Material3SettingsGroup(
             title = stringResource(R.string.credits_collaborators_section),
             items = collaborators.map { contributor ->
                 Material3SettingsItem(
@@ -468,11 +468,14 @@ fun AboutScreen(
         )
 
         Spacer(Modifier.height(32.dp))
+        }
 
         // Community & Info using standard Group
         Material3SettingsGroup(
             title = stringResource(R.string.community_and_info),
-            items = communityLinks.map { link ->
+            items = communityLinks
+    .filter { it.labelRes == R.string.credits_license_name }
+    .map { link ->
                 Material3SettingsItem(
                     icon = painterResource(link.iconRes),
                     title = { Text(stringResource(link.labelRes), fontWeight = FontWeight.SemiBold) },
@@ -484,14 +487,13 @@ fun AboutScreen(
             }
         )
 
-        Spacer(Modifier.height(48.dp))
         
-        Text(
-            text = stringResource(R.string.stands_with_palestine),
-            style = MaterialTheme.typography.labelLarge,
-            fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
+        
+        
+            
+            
+    
+        
         
         Spacer(Modifier.height(48.dp))
     }
