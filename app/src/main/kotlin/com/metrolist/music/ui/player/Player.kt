@@ -31,6 +31,7 @@ import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -90,6 +91,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -1664,13 +1666,18 @@ fun BottomSheetPlayer(
                                 interactionSource = backInteractionSource,
                                 colors =
                                     IconButtonDefaults.filledIconButtonColors(
-                                        containerColor = sideButtonContainerColor,
-                                        contentColor = sideButtonContentColor,
+                                        containerColor = Color(0xFF071A2C),
+contentColor = Color(0xFF00CFFF),
+                                    
                                     ),
                                 modifier =
                                     Modifier
                                         .height(68.dp)
-                                        .weight(backButtonWeight),
+                                        .weight(backButtonWeight).border(
+    width = 1.5.dp,
+    color = Color(0xFF00CFFF),
+    shape = RoundedCornerShape(50)
+)
                             ) {
                                 Icon(
                                     painter = painterResource(R.drawable.skip_previous),
@@ -1704,15 +1711,24 @@ fun BottomSheetPlayer(
                                 interactionSource = playPauseInteractionSource,
                                 colors =
                                     IconButtonDefaults.filledIconButtonColors(
-                                        containerColor = textButtonColor,
-                                        contentColor = iconButtonColor,
+                                        containerColor = Color(0xFF071A2C),
+                                        contentColor = Color(0xFF00CFFF),
                                     ),
-                                modifier =
-                                    Modifier
-                                        .height(68.dp)
-                                        .weight(playPauseWeight)
-                                        .focusRequester(focusRequester),
-                            ) {
+                                modifier = Modifier
+    .size(68.dp).shadow(
+    elevation = 16.dp,
+    shape = RoundedCornerShape(50),
+    ambientColor = Color(0xFF00CFFF),
+    spotColor = Color(0xFF00CFFF)
+)
+    .border(
+        width = 2.dp,
+        color = Color(0xFF00CFFF),
+        shape = RoundedCornerShape(50)
+    )
+    .focusRequester(focusRequester),
+) {
+                            
                                 Row(
                                     verticalAlignment = Alignment.CenterVertically,
                                     horizontalArrangement = Arrangement.Center,
@@ -1734,16 +1750,16 @@ fun BottomSheetPlayer(
                                             },
                                         modifier = Modifier.size(32.dp),
                                     )
-                                    Spacer(modifier = Modifier.width(8.dp))
-                                    Text(
-                                        text =
-                                            if (isListenTogetherGuest) {
-                                                if (isMuted) stringResource(R.string.unmute) else stringResource(R.string.mute)
-                                            } else {
-                                                if (effectiveIsPlaying) stringResource(R.string.player_pause) else stringResource(R.string.play)
-                                            },
-                                        style = MaterialTheme.typography.titleMedium,
-                                    )
+                                    
+                                    
+                                        
+                                            
+                                                
+                                            
+                                            
+                                            }
+                                        
+                                    
                                 }
                             }
 
@@ -1756,13 +1772,19 @@ fun BottomSheetPlayer(
                                 interactionSource = nextInteractionSource,
                                 colors =
                                     IconButtonDefaults.filledIconButtonColors(
-                                        containerColor = sideButtonContainerColor,
-                                        contentColor = sideButtonContentColor,
+                                        containerColor = Color(0xFF071A2C),
+contentColor = Color(0xFF00CFFF),
+                                        
                                     ),
                                 modifier =
                                     Modifier
                                         .height(68.dp)
                                         .weight(nextButtonWeight),
+                                .border(
+    width = 1.5.dp,
+    color = Color(0xFF00CFFF),
+    shape = RoundedCornerShape(50)
+)
                             ) {
                                 Icon(
                                     painter = painterResource(R.drawable.skip_next),
