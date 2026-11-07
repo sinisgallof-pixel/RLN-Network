@@ -1061,10 +1061,32 @@ class MainActivity : FragmentActivity() {
                                 Row {
                                     TopAppBar(
                                         title = {
-                                            Text(
-                                                text = currentTitleRes?.let { stringResource(it) } ?: "",
-                                                style = MaterialTheme.typography.titleLarge,
-                                            )
+                                            if (currentRoute == Screens.Home.route) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.rln_network_logo),
+            contentDescription = "Logo RLN",
+            tint = Color.Unspecified,
+            modifier = Modifier.size(40.dp)
+        )
+        Text(
+            text = "RLN 2.0",
+            style = MaterialTheme.typography.titleLarge,
+            color = Color(0xFF39CFFF),
+            modifier = Modifier.padding(start = 8.dp)
+        )
+    }
+} else {
+    Text(
+        text = currentTitleRes?.let { stringResource(it) } ?: "",
+        style = MaterialTheme.typography.titleLarge
+    )
+}
+                                                
+                                            
+
                                         },
                                         actions = {
                                             if (showHistoryButton) {
