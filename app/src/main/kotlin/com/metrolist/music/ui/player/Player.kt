@@ -1761,7 +1761,7 @@ contentColor = Color(0xFF00CFFF),
                                         
                                     
                                 }
-                            }
+                            
 
                             Spacer(modifier = Modifier.width(8.dp))
 
@@ -1779,12 +1779,12 @@ contentColor = Color(0xFF00CFFF),
                                 modifier =
                                     Modifier
                                         .height(68.dp)
-                                        .weight(nextButtonWeight),
+                                        .weight(nextButtonWeight)
                                 .border(
     width = 1.5.dp,
     color = Color(0xFF00CFFF),
     shape = RoundedCornerShape(50)
-)
+), 
                             ) {
                                 Icon(
                                     painter = painterResource(R.drawable.skip_next),
