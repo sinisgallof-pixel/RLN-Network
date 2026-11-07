@@ -91,7 +91,14 @@ private fun DrawScope.drawTrack(
         sliderStart.x +
                 (sliderEnd.x - sliderStart.x) * activeRangeStart,
         center.y
-    )
+    ) 
+    drawLine(
+    color = activeTrackColor.copy(alpha = 0.20f),
+    start = sliderValueStart,
+    end = sliderValueEnd,
+    strokeWidth = trackStrokeWidth * 4f,
+    cap = StrokeCap.Round
+)
     drawLine(
         activeTrackColor,
         sliderValueStart,
