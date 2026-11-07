@@ -9,6 +9,7 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.border
 import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -49,6 +50,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.CompositingStrategy
 import androidx.compose.ui.graphics.graphicsLayer
@@ -557,10 +559,25 @@ private fun ThumbnailItem(
         contentAlignment = Alignment.Center
     ) {
         Box(
-            modifier = Modifier
-                .size(dimensions.thumbnailSize)
-                .clip(RoundedCornerShape(dimensions.cornerRadius))
-        ) {
+    modifier = Modifier
+        .size(dimensions.thumbnailSize)
+        .shadow(
+            elevation = 12.dp,
+            shape = RoundedCornerShape(dimensions.cornerRadius),
+            ambientColor = Color(0xFF00CFFF),
+            spotColor = Color(0xFF00CFFF)
+        )
+        .clip(RoundedCornerShape(dimensions.cornerRadius))
+        .border(
+            width = 2.dp,
+            color = Color(0xFF00CFFF),
+            shape = RoundedCornerShape(dimensions.cornerRadius)
+        )
+) {
+            
+            
+                
+        
             if (hidePlayerThumbnail) {
                 HiddenThumbnailPlaceholder(textBackgroundColor = textBackgroundColor)
             } else {
