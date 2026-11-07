@@ -23,7 +23,7 @@ jobs:
           java-version: '21'
 
       - name: Configura Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
 
       - name: Configura Gradle
         uses: gradle/actions/setup-gradle@v4
