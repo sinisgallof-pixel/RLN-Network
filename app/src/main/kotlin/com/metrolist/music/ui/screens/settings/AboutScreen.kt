@@ -7,8 +7,10 @@ package com.metrolist.music.ui.screens.settings
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -487,14 +489,21 @@ fun AboutScreen(
             }
         )
 
-        
-        
-        
-            
-            
-    
-        
-        
+        Spacer(Modifier.height(24.dp))
+
+        Image(
+            painter = painterResource(R.drawable.rln_telegram_banner),
+            contentDescription = stringResource(R.string.rln_open_telegram),
+            contentScale = ContentScale.Fit,
+            modifier = Modifier
+                .fillMaxWidth()
+                .aspectRatio(1f)
+                .clip(RoundedCornerShape(16.dp))
+                .clickable(onClickLabel = stringResource(R.string.rln_open_telegram)) {
+                    uriHandler.openUri("https://t.me/RadioMessenger_bot")
+                },
+        )
+
         Spacer(Modifier.height(48.dp))
     }
 
