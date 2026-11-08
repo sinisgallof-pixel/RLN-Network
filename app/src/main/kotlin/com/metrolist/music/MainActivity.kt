@@ -1073,7 +1073,7 @@ class MainActivity : FragmentActivity() {
         )
         Text(
             text = "RLN 2.0",
-            style = MaterialTheme.typography.titleLarge,
+            style = MaterialTheme.typography.headlineMedium,
             color = Color(0xFF39CFFF),
             modifier = Modifier.padding(start = 8.dp)
         )
