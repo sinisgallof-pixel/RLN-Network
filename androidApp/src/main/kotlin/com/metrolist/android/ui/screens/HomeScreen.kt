@@ -15,15 +15,19 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.focusGroup
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -61,14 +65,17 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource as androidPainterResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.metrolist.android.LocalMiniPlayerBottomInset
 import com.metrolist.android.LocalStartupPresentation
+import com.metrolist.android.R
 import com.metrolist.android.playback.LocalPlayerConnection
 import com.metrolist.android.ui.component.AdaptiveModalBottomSheet
 import com.metrolist.android.ui.component.tabContentTopPadding
@@ -88,6 +95,7 @@ import com.metrolist.shared.generated.resources.player_not_ready
 import com.metrolist.shared.generated.resources.recognize_music
 import com.metrolist.shared.generated.resources.refresh
 import com.metrolist.shared.generated.resources.refreshing
+import com.metrolist.shared.generated.resources.rln_brand_subtitle
 import com.metrolist.shared.generated.resources.shuffle
 import com.metrolist.shared.generated.resources.try_again
 import com.metrolist.shared.generated.resources.unpin_from_speed_dial
@@ -283,6 +291,23 @@ fun HomeScreen(
                     }.focusGroup()
                     .focusRestorer(),
             header = {
+                item(key = "rln_brand") {
+                    Row(
+                        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp),
+                        horizontalArrangement = Arrangement.spacedBy(12.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Image(
+                            painter = androidPainterResource(R.drawable.rln_network_logo),
+                            contentDescription = null,
+                            modifier = Modifier.size(56.dp),
+                        )
+                        Text(
+                            text = stringResource(Res.string.rln_brand_subtitle),
+                            style = MaterialTheme.typography.titleLarge,
+                        )
+                    }
+                }
                 if (isTv) {
                     item(key = "tv_refresh") {
                         Button(
@@ -348,6 +373,14 @@ fun HomeScreen(
     Box(
         modifier = Modifier.fillMaxSize().nestedScroll(fabNestedScrollConnection),
     ) {
+        Image(
+            painter = androidPainterResource(R.drawable.rln_network_logo),
+            contentDescription = null,
+            modifier = Modifier.matchParentSize(),
+            alpha = 0.12f,
+            contentScale = ContentScale.Crop,
+        )
+        Box(Modifier.matchParentSize().background(MaterialTheme.colorScheme.surface.copy(alpha = 0.28f)))
         if (enablePullToRefresh) {
             val pullToRefreshState = rememberPullToRefreshState()
             PullToRefreshBox(

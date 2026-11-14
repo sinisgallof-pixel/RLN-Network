@@ -34,6 +34,7 @@ import androidx.compose.animation.slideOutVertically
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.focusGroup
 import androidx.compose.foundation.focusable
@@ -466,6 +467,7 @@ fun PlayerScreen(
     onPlayPauseFocusRequested: () -> Unit = {},
     onLyricsVisibleChange: (Boolean) -> Unit = {},
     isScreenVisible: Boolean = true,
+    accentColor: Color? = null,
 ) {
     val isPlayerContentVisible by remember(bottomSheetState) {
         derivedStateOf { bottomSheetState.value > bottomSheetState.collapsedBound && !bottomSheetState.isCollapsed }
@@ -1748,7 +1750,11 @@ fun PlayerScreen(
                                                                             boundsTransform = albumArtBoundsTransform,
                                                                             clipInOverlayDuringTransition = OverlayClip(albumArtShape),
                                                                         ).aspectRatio(1f)
-                                                                        .clip(albumArtShape),
+                                                                        .then(
+                                                                            accentColor?.let {
+                                                                                Modifier.border(2.dp, it, albumArtShape)
+                                                                            } ?: Modifier,
+                                                                        ).clip(albumArtShape),
                                                             ) {
                                                                 CrossfadeArtwork(
                                                                     animate = LocalPlayerContentActive.current,
@@ -2047,7 +2053,7 @@ fun PlayerScreen(
                                     canSeek = !isListenTogetherGuest,
                                     isCasting = castState.isConnected,
                                     songId = currentSong?.id,
-                                    progressColor = textBackgroundColor.takeIf { playerType == PlayerType.CLASSIC },
+                                    progressColor = accentColor ?: textBackgroundColor.takeIf { playerType == PlayerType.CLASSIC },
                                     isLive = uiState.isLive || playbackResource?.isLive == true,
                                 )
 
@@ -2172,8 +2178,8 @@ fun PlayerScreen(
                                                             viewModel.next()
                                                         },
                                                         showLabels = true,
-                                                        sideButtonContainerColor = sideButtonContainerColor,
-                                                        sideButtonContentColor = sideButtonContentColor,
+                                                        sideButtonContainerColor = accentColor?.copy(alpha = 0.18f) ?: sideButtonContainerColor,
+                                                        sideButtonContentColor = accentColor ?: sideButtonContentColor,
                                                         useRoundedRect = Settings.shared.useRoundedRectPlayButton,
                                                         modifier = Modifier.fillMaxWidth(),
                                                         buttonHeight = primaryControlSize,

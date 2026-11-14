@@ -1841,6 +1841,7 @@ fun MetrolistApp(
                         ) {
                             val playerLifecycleState by lifecycleOwner.lifecycle.currentStateAsState()
                             PlayerScreen(
+                                accentColor = Color(0xFF00CFFF),
                                 isScreenVisible = playerLifecycleState.isAtLeast(Lifecycle.State.STARTED),
                                 viewModel = playerViewModel,
                                 bottomSheetState = playerBottomSheetState,
