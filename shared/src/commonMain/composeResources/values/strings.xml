@@ -5454,4 +5454,5 @@
     <string name="ai_setup_privacy_settings">Open privacy settings</string>
     <string name="ai_setup_sign_in_again">Sign in again</string>
     <string name="ai_setup_key_limits">Review key limits</string>
+    <string name="rln_open_telegram">Open our Telegram group</string>
 </resources>

@@ -2581,4 +2581,5 @@
     <string name="ai_translation_failed_empty">Traduzione con IA fallita: risposta vuota</string>
     <string name="ai_translation_failed_invalid">Traduzione con IA fallita: risposta non valida</string>
     <string name="ai_translation_failed_incomplete">Traduzione con IA fallita: risposta incompleta</string>
+    <string name="rln_open_telegram">Apri il nostro gruppo Telegram</string>
 </resources>

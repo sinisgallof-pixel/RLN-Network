@@ -109,6 +109,7 @@ fun AboutScreen(
     onOpenCommunityLink: ((AboutCommunityLink) -> Unit)? = null,
     onDevtoolsUnlocked: () -> Unit = {},
     onPlayFavoriteSong: ((videoId: String) -> Unit)? = null,
+    afterLicense: @Composable () -> Unit = {},
 ) {
     val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
     var logoClickCount by rememberSaveable { mutableIntStateOf(0) }
@@ -255,6 +256,8 @@ fun AboutScreen(
                         .clickable(role = Role.Button, onClickLabel = text.license) { openCommunityLink(aboutLicenseLink) }
                         .padding(16.dp),
             )
+
+            afterLicense()
 
             Text(
                 text = stringResource(Res.string.stands_with_palestine),
