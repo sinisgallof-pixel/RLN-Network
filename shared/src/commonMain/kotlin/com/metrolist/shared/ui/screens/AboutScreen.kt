@@ -111,6 +111,7 @@ fun AboutScreen(
     onPlayFavoriteSong: ((videoId: String) -> Unit)? = null,
     afterLicense: @Composable () -> Unit = {},
     tintLogo: Boolean = true,
+    showAdditionalContributors: Boolean = true,
 ) {
     val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
     var logoClickCount by rememberSaveable { mutableIntStateOf(0) }
@@ -228,23 +229,25 @@ fun AboutScreen(
                 onContributorLongClick = onContributorLongClick,
             )
 
-            CollaboratorsList(
-                contributors = AboutContributors.leads,
-                text = text,
-                title = text.leadsSection,
-                avatarSize = 64.dp,
-                colorScheme = colorScheme,
-                onContributorClick = { selectedContributor = it },
-                onContributorLongClick = onContributorLongClick,
-            )
+            if (showAdditionalContributors) {
+                CollaboratorsList(
+                    contributors = AboutContributors.leads,
+                    text = text,
+                    title = text.leadsSection,
+                    avatarSize = 64.dp,
+                    colorScheme = colorScheme,
+                    onContributorClick = { selectedContributor = it },
+                    onContributorLongClick = onContributorLongClick,
+                )
 
-            CollaboratorsList(
-                contributors = AboutContributors.collaborators,
-                text = text,
-                colorScheme = colorScheme,
-                onContributorClick = { selectedContributor = it },
-                onContributorLongClick = onContributorLongClick,
-            )
+                CollaboratorsList(
+                    contributors = AboutContributors.collaborators,
+                    text = text,
+                    colorScheme = colorScheme,
+                    onContributorClick = { selectedContributor = it },
+                    onContributorLongClick = onContributorLongClick,
+                )
+            }
 
             Text(
                 text = text.licenseDescription,

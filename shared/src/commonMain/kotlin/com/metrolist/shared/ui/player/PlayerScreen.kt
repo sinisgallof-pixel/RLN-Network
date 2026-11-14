@@ -834,7 +834,7 @@ fun PlayerScreen(
             }
         }
 
-    val albumArtShape = RoundedCornerShape(PlayerArtworkCornerRadius)
+    val albumArtShape = RoundedCornerShape(if (accentColor != null) 28.dp else PlayerArtworkCornerRadius)
     val smallAlbumArtShape = if (isTv) albumArtShape else ComponentShapes.SmallThumbnailShape
     val albumArtBoundsTransform =
         remember(allowArtworkExpansion) {
