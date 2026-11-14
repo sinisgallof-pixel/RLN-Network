@@ -10,6 +10,7 @@ package com.metrolist.shared.ui.design.expressive.components
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
@@ -209,6 +210,7 @@ fun ExpressiveMiniPlayer(
         expressive = true,
         color = containerColor,
         elevation = 3.dp,
+        border = BorderStroke(1.5.dp, Color(0xFF00CFFF)),
     ) {
         BoxWithConstraints(Modifier.fillMaxWidth().padding(start = 10.dp, end = 12.dp)) {
             val controlsMaxWidth = maxWidth * 0.5f
