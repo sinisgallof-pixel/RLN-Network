@@ -2178,8 +2178,9 @@ fun PlayerScreen(
                                                             viewModel.next()
                                                         },
                                                         showLabels = true,
-                                                        sideButtonContainerColor = accentColor?.copy(alpha = 0.18f) ?: sideButtonContainerColor,
+                                                        sideButtonContainerColor = if (accentColor != null) Color(0xFF071A2C) else sideButtonContainerColor,
                                                         sideButtonContentColor = accentColor ?: sideButtonContentColor,
+                                                        pillButtons = accentColor != null,
                                                         useRoundedRect = Settings.shared.useRoundedRectPlayButton,
                                                         modifier = Modifier.fillMaxWidth(),
                                                         buttonHeight = primaryControlSize,

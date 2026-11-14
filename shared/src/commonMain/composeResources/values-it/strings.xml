@@ -574,7 +574,7 @@
     <string name="updates_title">Aggiornamento app</string>
     <string name="updates_check">Cerca aggiornamenti</string>
     <string name="updates_checking">Controllo gli aggiornamenti…</string>
-    <string name="updates_no_updates">Metrolist è aggiornato</string>
+    <string name="updates_no_updates">Nessun aggiornamento disponibile</string>
     <string name="updates_error">Impossibile controllare gli aggiornamenti</string>
     <string name="updates_status_current">Aggiornato a Metrolist %1$s</string>
     <string name="updates_auto_check">Controlla in automatico gli aggiornamenti</string>

@@ -148,6 +148,7 @@ fun PlayerPrimaryControls(
     previousText: String = stringResource(Res.string.previous),
     nextText: String = stringResource(Res.string.next),
     showLoadingIndicator: Boolean = true,
+    pillButtons: Boolean = false,
 ) {
     val haptics = rememberMetrolistHaptics()
     val prevInteractionSource = remember { MutableInteractionSource() }
@@ -216,7 +217,9 @@ fun PlayerPrimaryControls(
         }
     val sideShape = RoundedCornerShape(effectiveSideButtonHeight / 2)
     val playShape =
-        if (useRoundedRect) {
+        if (pillButtons) {
+            RoundedCornerShape(50)
+        } else if (useRoundedRect) {
             RoundedCornerShape(16.dp)
         } else if (isCompact) {
             if (isPlaying) RoundedCornerShape(14.dp) else RoundedCornerShape(28.dp)

@@ -1654,7 +1654,7 @@
     <!-- Translators: Progress or status message for checking in the update settings. -->
     <string name="updates_checking">Checking for updates…</string>
     <!-- Translators: Option or section label for no updates in the update settings. -->
-    <string name="updates_no_updates">Metrolist is up to date</string>
+    <string name="updates_no_updates">No updates available</string>
     <!-- Translators: Error message about updates in the update settings. -->
     <string name="updates_error">Couldn\u0027t check for updates</string>
     <!-- Translators: Option or section label for current in the update settings. %1$s is the installed app version. -->

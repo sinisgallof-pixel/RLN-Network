@@ -21,6 +21,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.focusGroup
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -28,6 +29,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -376,9 +378,9 @@ fun HomeScreen(
         Image(
             painter = androidPainterResource(R.drawable.rln_network_logo),
             contentDescription = null,
-            modifier = Modifier.matchParentSize(),
+            modifier = Modifier.align(Alignment.Center).widthIn(max = 360.dp).fillMaxWidth(0.65f).aspectRatio(1f),
             alpha = 0.12f,
-            contentScale = ContentScale.Crop,
+            contentScale = ContentScale.Fit,
         )
         Box(Modifier.matchParentSize().background(MaterialTheme.colorScheme.surface.copy(alpha = 0.28f)))
         if (enablePullToRefresh) {

@@ -406,8 +406,10 @@ fun SettingsScreen(
                             (appUpdateState as? AppUpdateState.Error)?.release != null
                         ) {
                             stringResource(Res.string.settings_updates_available_description)
-                        } else {
+                        } else if (appUpdateState is AppUpdateState.UpToDate) {
                             stringResource(Res.string.updates_no_updates)
+                        } else {
+                            null
                         },
                     availablePages = availablePages,
                     externalPages = setOf(SettingsPageId.SUPPORTED_LINKS),
