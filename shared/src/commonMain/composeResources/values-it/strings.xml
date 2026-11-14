@@ -481,7 +481,7 @@
         <item quantity="other">Importate %1$d tracce</item>
     </plurals>
     <string name="backup_restore_export_desc">Esporta le impostazioni, il database della libreria, la playlist, i Mi piace e la cronologia in un file zip</string>
-    <string name="backup_restore_import_desc">Ripristina un backup di Metrolist. In seguito ad un ripristino andato a buon fine, l\u0027app si riavvierà.</string>
+    <string name="backup_restore_import_desc">Ripristina un backup di RLN Network. In seguito ad un ripristino andato a buon fine, l\u0027app si riavvierà.</string>
     <string name="backup_restore_busy">Elaborazione in corso…</string>
     <string name="backup_sensitive_title">Backup con dati sensibili</string>
     <string name="backup_sensitive_message">I backup contengono le tue chiavi API, credenziali dell\u0027account, cookie di autenticazione, token di sessione e altre informazioni sensibili. Chiunque entri in possesso di questo file potrà accedere ai tuoi account. Conservalo in un luogo sicuro e non condividerlo con nessuno.</string>
