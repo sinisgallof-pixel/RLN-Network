@@ -87,7 +87,6 @@ internal fun OnboardingScreen(
                 add(OnboardingPage.WELCOME)
                 if (hasLegacyInstallation && !libraryStartedFresh) add(OnboardingPage.MIGRATION)
                 if (hasLegacyInstallation && !libraryStartedFresh) add(OnboardingPage.MIGRATION_COMPLETE)
-                add(OnboardingPage.CRASH_REPORTS)
                 add(OnboardingPage.NOTIFICATIONS)
                 add(OnboardingPage.LANGUAGE_LYRICS)
                 add(OnboardingPage.PLAYBACK)
@@ -95,7 +94,6 @@ internal fun OnboardingScreen(
             }
         }
     var currentPageName by rememberSaveable { mutableStateOf(OnboardingPage.WELCOME.name) }
-    var sendCrashReports by rememberSaveable { mutableStateOf(false) }
     var startingFresh by rememberSaveable { mutableStateOf(false) }
     var error by rememberSaveable { mutableStateOf<String?>(null) }
     val scope = rememberCoroutineScope()
@@ -109,7 +107,7 @@ internal fun OnboardingScreen(
         if (currentIndex < pages.lastIndex) {
             currentPageName = pages[currentIndex + 1].name
         } else {
-            onComplete(sendCrashReports, OnboardingDestination.HOME)
+            onComplete(false, OnboardingDestination.HOME)
         }
     }
 
@@ -139,7 +137,7 @@ internal fun OnboardingScreen(
                 if (startingFresh) {
                     libraryStartedFresh = true
                     error = null
-                    currentPageName = OnboardingPage.CRASH_REPORTS.name
+                    currentPageName = OnboardingPage.NOTIFICATIONS.name
                 } else {
                     nextPage()
                 }
@@ -259,7 +257,6 @@ internal fun OnboardingScreen(
                     }
 
                     OnboardingPage.CRASH_REPORTS -> {
-                        sendCrashReports = true
                         nextPage()
                     }
 
@@ -277,7 +274,7 @@ internal fun OnboardingScreen(
                     }
 
                     OnboardingPage.FINISH -> {
-                        onComplete(sendCrashReports, OnboardingDestination.HOME)
+                        onComplete(false, OnboardingDestination.HOME)
                     }
                 }
             },
@@ -304,14 +301,7 @@ internal fun OnboardingScreen(
                         null
                     }
 
-                    OnboardingPage.CRASH_REPORTS -> {
-                        (
-                            {
-                                sendCrashReports = false
-                                nextPage()
-                            }
-                        )
-                    }
+                    OnboardingPage.CRASH_REPORTS -> null
 
                     OnboardingPage.NOTIFICATIONS -> {
                         (
@@ -373,8 +363,8 @@ internal fun OnboardingScreen(
                 } else {
                     emptyList()
                 },
-            onLogin = { onComplete(sendCrashReports, OnboardingDestination.LOGIN) },
-            onRestore = { onComplete(sendCrashReports, OnboardingDestination.BACKUP_RESTORE) },
+            onLogin = { onComplete(false, OnboardingDestination.LOGIN) },
+            onRestore = { onComplete(false, OnboardingDestination.BACKUP_RESTORE) },
         )
     }
 }
