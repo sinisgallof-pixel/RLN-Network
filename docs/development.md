@@ -357,7 +357,7 @@ Android backup snapshots use Room's writer connection: `VACUUM INTO` on API 30+,
 
 ### Casting
 
-Android and desktop share the JVM cast sessions. Connecting and replacing media preserve receiver volume for Google Cast, DLNA/Sonos and FCast; only explicit adjustments send volume commands. Receiver reports supply remote volume state.
+Android and desktop share the JVM cast sessions. Connecting and replacing media preserve receiver volume for Google Cast, DLNA/Sonos and FCast; only explicit adjustments send volume commands. Receiver reports supply remote volume state. The Cast proxy forwards each receiver byte range as a single upstream request.
 
 ### Discord
 

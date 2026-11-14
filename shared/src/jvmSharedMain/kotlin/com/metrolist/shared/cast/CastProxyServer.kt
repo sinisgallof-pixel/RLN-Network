@@ -212,68 +212,58 @@ internal class CastProxyServer(
         range: ByteRange,
         partialResponse: Boolean,
     ) {
-        val output = downstreamSink(socket)
-        val buffer = ByteArray(DEFAULT_BUFFER_SIZE)
-        val chunkSize = media.resource.rangeChunkSizeBytes.coerceAtLeast(1L)
-        var start = range.start
-        while (start <= range.endInclusive && !closed) {
-            val length = minOf(chunkSize, range.endInclusive - start + 1L)
-            val chunk = ByteRange(start, start + length - 1L)
-            val request =
-                Request
-                    .Builder()
-                    .url(upstreamUrl)
-                    .get()
-                    .apply { media.resource.headers.forEach { (name, value) -> header(name, value) } }
-                    .header("Range", "bytes=${chunk.start}-${chunk.endInclusive}")
-                    .header("Accept-Encoding", "identity")
-                    .build()
-            val call = client.newCall(request)
-            calls.add(call)
-            try {
-                if (closed) {
-                    call.cancel()
+        val request =
+            Request
+                .Builder()
+                .url(upstreamUrl)
+                .get()
+                .apply { media.resource.headers.forEach { (name, value) -> header(name, value) } }
+                .header("Range", "bytes=${range.start}-${range.endInclusive}")
+                .build()
+        val call = client.newCall(request)
+        calls.add(call)
+        try {
+            if (closed) {
+                call.cancel()
+                return
+            }
+            call.execute().use { response ->
+                val fullResponse = response.code == 200 && range.start == 0L
+                val expectedContentRange = "bytes ${range.start}-${range.endInclusive}/$contentLength"
+                val validPartial = response.code == 206 && response.header("Content-Range") == expectedContentRange
+                if (!fullResponse && !validPartial) {
+                    val message =
+                        if (response.code == 206) "Upstream returned an unexpected Content-Range"
+                        else "Upstream rejected range request"
+                    PlaybackEventLog.error(
+                        PlaybackEventKind.NETWORK,
+                        message = "[CastProxy] $message",
+                        details = mapOf("httpStatus" to response.code.toString()),
+                    )
+                    Logger.w("CastProxy", "$message (HTTP ${response.code})")
+                    writeError(socket, 502, "Bad Gateway")
                     return
                 }
-                call.execute().use { response ->
-                    val fullResponse = response.code == 200 && chunk.start == 0L
-                    val expectedContentRange = "bytes ${chunk.start}-${chunk.endInclusive}/$contentLength"
-                    val validPartial = response.code == 206 && response.header("Content-Range") == expectedContentRange
-                    if (!fullResponse && !validPartial) {
-                        val message =
-                            if (response.code == 206) "Upstream returned an unexpected Content-Range"
-                            else "Upstream rejected range request"
-                        PlaybackEventLog.error(
-                            PlaybackEventKind.NETWORK,
-                            message = "[CastProxy] $message",
-                            details = mapOf("httpStatus" to response.code.toString()),
-                        )
-                        Logger.w("CastProxy", "$message (HTTP ${response.code})")
-                        if (start == range.start) writeError(socket, 502, "Bad Gateway")
+
+                socket.soTimeout = 0
+                val output = downstreamSink(socket)
+                writeHeaders(output, if (partialResponse) 206 else 200, range, partialResponse)
+                val source = response.body.byteStream()
+                val buffer = ByteArray(DEFAULT_BUFFER_SIZE)
+                var remaining = range.length
+                while (remaining > 0L) {
+                    val count = source.read(buffer, 0, minOf(buffer.size.toLong(), remaining).toInt())
+                    if (count < 0) {
+                        PlaybackEventLog.error(PlaybackEventKind.NETWORK, "[CastProxy] Upstream audio ended before the requested range")
                         return
                     }
-                    if (start == range.start) {
-                        socket.soTimeout = 0
-                        writeHeaders(output, if (partialResponse) 206 else 200, range, partialResponse)
-                    }
-                    val source = response.body.byteStream()
-                    var remaining = if (fullResponse) range.length else length
-                    while (remaining > 0L) {
-                        val count = source.read(buffer, 0, minOf(buffer.size.toLong(), remaining).toInt())
-                        if (count < 0) {
-                            PlaybackEventLog.error(PlaybackEventKind.NETWORK, "[CastProxy] Upstream audio ended before the requested range")
-                            return
-                        }
-                        output.write(buffer, 0, count)
-                        remaining -= count
-                    }
-                    output.flush()
-                    if (fullResponse) return
+                    output.write(buffer, 0, count)
+                    remaining -= count
                 }
-            } finally {
-                calls.remove(call)
+                output.flush()
             }
-            start += length
+        } finally {
+            calls.remove(call)
         }
     }
 

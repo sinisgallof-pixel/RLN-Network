@@ -198,7 +198,7 @@ class CastProtocolTest {
     }
 
     @Test
-    fun proxyStreamsReceiverRangeAcrossMultipleUpstreamChunks() {
+    fun proxyForwardsReceiverRangeAsOneUpstreamRequest() {
         val address = InetAddress.getLoopbackAddress()
         val media =
             CastMedia(
@@ -248,7 +248,7 @@ class CastProtocolTest {
                 assertTrue("Content-Range: bytes 2-8/10" in response)
                 assertEquals("2345678", response.substringAfter("\r\n\r\n"))
             }
-            assertEquals(listOf("bytes=2-5", "bytes=6-8"), requested.toList())
+            assertEquals(listOf("bytes=2-8"), requested.toList())
         }
     }
 
