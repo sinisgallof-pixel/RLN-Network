@@ -3385,7 +3385,7 @@
     <!-- Translators: Label for user icon in the account menu. -->
     <string name="account_user_icon">User</string>
     <!-- Translators: Heading for menu in the account menu. %1$s is the app version. -->
-    <string name="account_menu_title" translatable="false">Metrolist-KMP (%1$s)</string>
+    <string name="account_menu_title" translatable="false">RLN Network (%1$s)</string>
     <!-- Translators: Label for not signed in in the account menu. -->
     <!-- Translators: Progress or status message for logging out; retained for translation compatibility but not currently referenced by app code. -->
     <!-- Translators: Confirmation prompt for logout in the account menu. -->
