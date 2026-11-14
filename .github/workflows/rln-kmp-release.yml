@@ -1,0 +1,60 @@
+name: RLN Network Android Release 2.0
+
+on:
+  push:
+    branches: [release/rln-network-2.0]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  apk:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          submodules: recursive
+          persist-credentials: false
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad
+        with:
+          distribution: temurin
+          java-version: '25'
+      - uses: android-actions/setup-android@be39fa834029ff78f1a44aa3bb0819b8fc2bd8fd
+        with:
+          packages: platform-tools
+      - name: Prepara la firma RLN
+        id: signing
+        uses: ./.github/actions/prepare-android-signing
+        env:
+          KEYSTORE_PATH: ${{ secrets.KEYSTORE }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+      - name: Compila la release firmata
+        env:
+          SIGNING_AVAILABLE: ${{ steps.signing.outputs.signing_available }}
+          KEYSTORE_PATH: ${{ steps.signing.outputs.keystore_path }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          test "$SIGNING_AVAILABLE" = true
+          ./gradlew :androidApp:assembleRelease --no-configuration-cache
+      - name: Verifica e prepara l’APK
+        run: |
+          apks=(androidApp/build/outputs/apk/release/*.apk)
+          test "${#apks[@]}" -eq 1 && test -f "${apks[0]}"
+          mapfile -t signers < <(find "$ANDROID_HOME/build-tools" -name apksigner | sort -V)
+          signer="${signers[-1]}"
+          "$signer" verify "${apks[0]}"
+          "${signer%/*}/aapt" dump badging "${apks[0]}" > "$RUNNER_TEMP/rln-badging.txt"
+          rg -q "^package: name='com[.]rlnnetwork[.]music[.]kmp'.*versionName='2[.]0[.]0'" "$RUNNER_TEMP/rln-badging.txt"
+          mkdir -p dist
+          cp "${apks[0]}" dist/RLN-Network-2.0.apk
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: RLN-Network-2.0
+          path: dist/RLN-Network-2.0.apk
+          if-no-files-found: error

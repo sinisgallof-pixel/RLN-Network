@@ -204,7 +204,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.rlnnetwork.music"
+        applicationId = "com.rlnnetwork.music.kmp"
         minSdk = 24
         targetSdk = 37
         versionCode = 154
