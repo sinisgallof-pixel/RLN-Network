@@ -134,6 +134,7 @@ class CastProtocolTest {
                     null,
                     null,
                     contentLengthBytes = bytes.size.toLong(),
+                    rangeChunkSizeBytes = bytes.size.toLong(),
                     mimeType = "audio/mp4",
                 ),
                 0L,
@@ -150,6 +151,7 @@ class CastProtocolTest {
                         .protocol(Protocol.HTTP_1_1)
                         .code(206)
                         .message("Partial Content")
+                        .header("Content-Range", "bytes 0-${bytes.lastIndex}/${bytes.size}")
                         .body(bytes.toResponseBody())
                         .build()
                 }.build()
@@ -192,6 +194,61 @@ class CastProtocolTest {
         } finally {
             clients.forEach(Socket::close)
             proxy.close()
+        }
+    }
+
+    @Test
+    fun proxyStreamsReceiverRangeAcrossMultipleUpstreamChunks() {
+        val address = InetAddress.getLoopbackAddress()
+        val media =
+            CastMedia(
+                SongItem("id", "Title", null, emptyList(), null),
+                null,
+                PlaybackResource(
+                    "id",
+                    "https://r1.googlevideo.com/videoplayback",
+                    emptyMap(),
+                    null,
+                    null,
+                    contentLengthBytes = 10L,
+                    rangeChunkSizeBytes = 4L,
+                    mimeType = "audio/mp4",
+                ),
+                0L,
+            )
+        val requested = Collections.synchronizedList(mutableListOf<String>())
+        val upstream =
+            OkHttpClient
+                .Builder()
+                .addInterceptor { chain ->
+                    val range = requireNotNull(chain.request().header("Range"))
+                    requested += range
+                    val bytes = requireNotNull(parseByteRange(range, 10L))
+                    Response
+                        .Builder()
+                        .request(chain.request())
+                        .protocol(Protocol.HTTP_1_1)
+                        .code(206)
+                        .message("Partial Content")
+                        .header("Content-Range", "bytes ${bytes.start}-${bytes.endInclusive}/10")
+                        .body("0123456789".substring(bytes.start.toInt(), bytes.endInclusive.toInt() + 1).toResponseBody())
+                        .build()
+                }.build()
+        CastProxyServer(address, address, media).use { proxy ->
+            CastProxyServer::class.java
+                .getDeclaredField("client")
+                .apply { isAccessible = true }
+                .set(proxy, upstream)
+            val path = URI(proxy.mediaUrl()).rawPath
+            Socket(address, proxy.port).use { socket ->
+                socket.soTimeout = 5_000
+                socket.getOutputStream().write("GET $path HTTP/1.1\r\nHost: localhost\r\nRange: bytes=2-8\r\n\r\n".toByteArray())
+                val response = socket.getInputStream().bufferedReader().readText()
+                assertTrue(response.startsWith("HTTP/1.1 206"))
+                assertTrue("Content-Range: bytes 2-8/10" in response)
+                assertEquals("2345678", response.substringAfter("\r\n\r\n"))
+            }
+            assertEquals(listOf("bytes=2-5", "bytes=6-8"), requested.toList())
         }
     }
 
