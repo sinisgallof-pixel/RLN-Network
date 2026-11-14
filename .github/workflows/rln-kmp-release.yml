@@ -2,7 +2,7 @@ name: RLN Network Android Release 2.0
 
 on:
   push:
-    branches: [release/rln-network-2.0]
+    branches: [release/rln-network-2.0, feature/kmp-in-app-updates-final]
   workflow_dispatch:
 
 permissions:
