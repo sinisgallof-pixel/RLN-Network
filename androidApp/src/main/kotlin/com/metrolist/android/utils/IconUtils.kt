@@ -36,8 +36,7 @@ enum class AppIcon(
     ORIGINAL(
         aliasName = "MainActivityOriginal",
         labelRes = Res.string.app_icon_original,
-        previewRes = R.drawable.ic_launcher_foreground,
-        previewBackgroundRes = R.drawable.app_icon_original_background,
+        previewRes = R.drawable.rln_network_logo,
         enabledByDefault = true,
     ),
     ARCTIC_HAZE(
