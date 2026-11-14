@@ -24,6 +24,7 @@ import androidx.compose.material3.CircularWavyProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.LocalMinimumInteractiveComponentSize
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.ui.graphics.Color
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.CompositionLocalProvider
@@ -324,22 +325,29 @@ class MainActivity : ComponentActivity() {
                     } else {
                         val tvDevice = remember { isAndroidTv() }
                         CompositionLocalProvider(LocalIsTv provides tvDevice) {
-                            MetrolistTheme {
-                                OnboardingScreen(
-                                    migration = app.legacyInstallMigration,
-                                    hasLegacyInstallationOverride = app.hadLegacyInstallationAtStartup,
-                                    onComplete = { sendCrashReports, destination ->
-                                        app.completeOnboarding(sendCrashReports)
-                                        incomingIntentState.value =
-                                            when (destination) {
-                                                OnboardingDestination.HOME -> incomingIntentState.value
-                                                OnboardingDestination.LOGIN -> Intent(ACTION_LOGIN)
-                                                OnboardingDestination.BACKUP_RESTORE -> Intent(ACTION_BACKUP_RESTORE)
-                                            }
-                                        prepareIncomingPlayback()
-                                        onboardingComplete = true
-                                    },
+                            MetrolistTheme(darkTheme = true, themeColor = Color(0xFF40C4F4)) {
+                                val setupColors = MaterialTheme.colorScheme.copy(
+                                    surface = Color(0xFF020914),
+                                    primary = Color(0xFF40C4F4),
+                                    onPrimary = Color(0xFF001F2B),
                                 )
+                                MaterialTheme(colorScheme = setupColors) {
+                                    OnboardingScreen(
+                                        migration = app.legacyInstallMigration,
+                                        hasLegacyInstallationOverride = app.hadLegacyInstallationAtStartup,
+                                        onComplete = { sendCrashReports, destination ->
+                                            app.completeOnboarding(sendCrashReports)
+                                            incomingIntentState.value =
+                                                when (destination) {
+                                                    OnboardingDestination.HOME -> incomingIntentState.value
+                                                    OnboardingDestination.LOGIN -> Intent(ACTION_LOGIN)
+                                                    OnboardingDestination.BACKUP_RESTORE -> Intent(ACTION_BACKUP_RESTORE)
+                                                }
+                                            prepareIncomingPlayback()
+                                            onboardingComplete = true
+                                        },
+                                    )
+                                }
                             }
                         }
                     }

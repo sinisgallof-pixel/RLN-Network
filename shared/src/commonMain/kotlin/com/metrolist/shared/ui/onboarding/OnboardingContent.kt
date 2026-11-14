@@ -159,10 +159,11 @@ fun OnboardingContent(
     preferredActionModifier: Modifier = Modifier,
     previousContent: OnboardingPageContent? = null,
     brandName: String = stringResource(Res.string.app_name),
+    welcomeArtwork: (@Composable (Modifier) -> Unit)? = null,
 ) {
     var paused by rememberSaveable { mutableStateOf(false) }
     OnboardingTransition(content, previousContent) { page ->
-        OnboardingPageLayout(page, welcomeContent, featureContent, modifier, preferredActionModifier, brandName, paused) { paused = it }
+        OnboardingPageLayout(page, welcomeContent, featureContent, modifier, preferredActionModifier, brandName, welcomeArtwork, paused) { paused = it }
     }
 }
 
@@ -174,6 +175,7 @@ private fun OnboardingPageLayout(
     modifier: Modifier = Modifier,
     preferredActionModifier: Modifier,
     brandName: String,
+    welcomeArtwork: (@Composable (Modifier) -> Unit)?,
     paused: Boolean,
     onPausedChange: (Boolean) -> Unit,
 ) {
@@ -186,7 +188,7 @@ private fun OnboardingPageLayout(
             stateDescription = stepDescription
         },
     ) {
-        AnimatedVisibility(visible = welcome, enter = fadeIn(tween(320)), exit = fadeOut(tween(320))) {
+        AnimatedVisibility(visible = welcome && welcomeArtwork == null, enter = fadeIn(tween(320)), exit = fadeOut(tween(320))) {
             WelcomeBackdrop(paused, onFinished = { onPausedChange(true) })
         }
         BoxWithConstraints(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding()) {
@@ -211,11 +213,13 @@ private fun OnboardingPageLayout(
                                 welcomeContent(Modifier.size(24.dp))
                                 Text(brandName, style = MaterialTheme.typography.titleMedium)
                                 Spacer(Modifier.weight(1f))
-                                IconButton(onClick = { onPausedChange(!paused) }, shapes = IconButtonDefaults.shapes()) {
-                                    Icon(
-                                        if (paused) MetrolistIcons.Filled.PlayArrow else MetrolistIcons.Filled.Pause,
-                                        contentDescription = stringResource(if (paused) Res.string.play else Res.string.pause),
-                                    )
+                                if (welcomeArtwork == null) {
+                                    IconButton(onClick = { onPausedChange(!paused) }, shapes = IconButtonDefaults.shapes()) {
+                                        Icon(
+                                            if (paused) MetrolistIcons.Filled.PlayArrow else MetrolistIcons.Filled.Pause,
+                                            contentDescription = stringResource(if (paused) Res.string.play else Res.string.pause),
+                                        )
+                                    }
                                 }
                             }
                         }
@@ -229,6 +233,11 @@ private fun OnboardingPageLayout(
                                     .padding(horizontal = gutter, vertical = if (availableHeight < 500.dp) 16.dp else 32.dp),
                                 verticalArrangement = if (pageWelcome) Arrangement.Bottom else Arrangement.Top,
                             ) {
+                                if (pageWelcome && welcomeArtwork != null) {
+                                    val artworkHeight = minOf(viewportHeight * 0.52f, stageWidth * 0.76f, 400.dp)
+                                    welcomeArtwork(Modifier.fillMaxWidth().height(artworkHeight))
+                                    Spacer(Modifier.height(20.dp))
+                                }
                                 if (!pageWelcome) {
                                     Icon(
                                         pageContent.icon,

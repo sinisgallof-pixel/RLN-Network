@@ -95,6 +95,14 @@ internal fun OnboardingContent(
                 modifier = modifier,
             )
         },
+        welcomeArtwork = { modifier ->
+            Image(
+                painter = painterResource(R.drawable.rln_welcome_art),
+                contentDescription = null,
+                modifier = modifier,
+                contentScale = ContentScale.Fit,
+            )
+        },
         featureContent = { page ->
             if (page == OnboardingPage.LANGUAGE_LYRICS || page == OnboardingPage.PLAYBACK) preferences(page)
             EditorialFeature(page, accounts, onLogin, onRestore)
