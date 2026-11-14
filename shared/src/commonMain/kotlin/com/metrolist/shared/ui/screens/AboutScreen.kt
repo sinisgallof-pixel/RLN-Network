@@ -112,6 +112,7 @@ fun AboutScreen(
     afterLicense: @Composable () -> Unit = {},
     tintLogo: Boolean = true,
     showAdditionalContributors: Boolean = true,
+    showCommunityLinks: Boolean = true,
 ) {
     val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
     var logoClickCount by rememberSaveable { mutableIntStateOf(0) }
@@ -214,10 +215,12 @@ fun AboutScreen(
                 tintLogo = tintLogo,
             )
 
-            CommunitySection(
-                text = text,
-                onOpenLink = openCommunityLink,
-            )
+            if (showCommunityLinks) {
+                CommunitySection(
+                    text = text,
+                    onOpenLink = openCommunityLink,
+                )
+            }
 
             CollaboratorsList(
                 contributors = listOf(AboutContributors.lead),
