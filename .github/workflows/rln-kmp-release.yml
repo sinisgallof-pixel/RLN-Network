@@ -50,7 +50,7 @@ jobs:
           signer="${signers[-1]}"
           "$signer" verify "${apks[0]}"
           "${signer%/*}/aapt" dump badging "${apks[0]}" > "$RUNNER_TEMP/rln-badging.txt"
-          rg -q "^package: name='com[.]rlnnetwork[.]music[.]kmp'.*versionName='2[.]0[.]0'" "$RUNNER_TEMP/rln-badging.txt"
+          grep -Eq "^package: name='com[.]rlnnetwork[.]music[.]kmp'.*versionName='2[.]0[.]0'" "$RUNNER_TEMP/rln-badging.txt"
           mkdir -p dist
           cp "${apks[0]}" dist/RLN-Network-2.0.apk
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
