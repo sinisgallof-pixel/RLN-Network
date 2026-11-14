@@ -304,7 +304,7 @@
     <string name="settings_open_supported_links_title">Apri link supportati</string>
     <string name="settings_updates_title">Aggiornamenti</string>
     <string name="settings_updates_available_description">È disponibile un nuovo aggiornamento di Metrolist</string>
-    <string name="settings_about_title">Info su Metrolist</string>
+    <string name="settings_about_title">Info su RLN Network</string>
     <string name="settings_search_placeholder">Cerca nelle impostazioni</string>
     <string name="settings_search_no_results">Nessuna impostazione trovata</string>
     <string name="settings_search_no_results_desc">Nessuna corrispondenza per %1$s</string>
@@ -613,7 +613,7 @@
     <string name="device_connect_rescan">Cerca di nuovo</string>
     <string name="device_connect_account_mismatch">Account diverso</string>
     <string name="device_connect_grant_permission">Concedi permesso</string>
-    <string name="side_menu_welcome">Benvenuto in Metrolist</string>
+    <string name="side_menu_welcome">Benvenuto in RLN Network</string>
     <string name="action_cannot_be_undone">Quest\u0027azione non potrà essere annullata.</string>
     <string name="add">Aggiungi</string>
     <string name="add_a_song">Aggiungi un brano</string>
@@ -2447,7 +2447,7 @@
     <string name="settings_appearance_overview">Tema, font e aspetto del lettore</string>
     <string name="settings_android_auto_overview">Playlist in auto e destinazione per le aggiunte rapide</string>
     <string name="settings_about_overview">Collaboratori, collegamenti della comunità e licenze</string>
-    <string name="settings_supported_links_overview">Scegli quali link di YouTube aprire in Metrolist</string>
+    <string name="settings_supported_links_overview">Scegli quali link di YouTube aprire in RLN Network</string>
     <string name="settings_equalizer_overview">Preimpostazioni audio, bande di frequenza e profili</string>
     <string name="settings_fonts_overview">Scelta e importazione dei font</string>
     <string name="settings_artwork_overview">Copertine animate, fonti delle immagini e qualità video</string>

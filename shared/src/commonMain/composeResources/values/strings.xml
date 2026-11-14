@@ -880,7 +880,7 @@
     <!-- Translators: Supporting text beneath the available option in the settings. -->
     <string name="settings_updates_available_description">A new Metrolist update is available</string>
     <!-- Translators: Heading for about in the settings. -->
-    <string name="settings_about_title">About Metrolist</string>
+    <string name="settings_about_title">About RLN Network</string>
     <!-- Translators: Heading for devtools in the settings and app-wide dialogs. -->
     <string name="devtools_title" translatable="false">Devtools</string>
     <!-- Translators: Label for devtools enabled in the About screen. -->
@@ -1797,7 +1797,7 @@
 
     <!-- Side Menu -->
     <!-- Translators: Label for welcome; retained for translation compatibility but not currently referenced by app code. -->
-    <string name="side_menu_welcome">Welcome to Metrolist</string>
+    <string name="side_menu_welcome">Welcome to RLN Network</string>
     <!-- Translators: Imperative action label for sign in prompt; retained for translation compatibility but not currently referenced by app code. -->
     <!-- Translators: Imperative action label for view token; retained for translation compatibility but not currently referenced by app code. -->
     <!-- Translators: Confirmation prompt for view token; retained for translation compatibility but not currently referenced by app code. -->
@@ -3678,7 +3678,7 @@
     <!-- Translators: Progress or status message for report issue in the desktop application menu. -->
     <string name="menu_report_issue">Report an issue…</string>
     <!-- Translators: Label for about metrolist in the desktop application menu. -->
-    <string name="menu_about_metrolist">About Metrolist</string>
+    <string name="menu_about_metrolist">About RLN Network</string>
     <!-- Translators: Label for song in the desktop application menu. -->
     <string name="menu_song">Song</string>
     <!-- Translators: Imperative action label for stop in the desktop application menu. -->
@@ -5345,7 +5345,7 @@
     <string name="settings_appearance_overview">Theme, fonts and player appearance</string>
     <string name="settings_android_auto_overview">Driving playlists and quick-add destination</string>
     <string name="settings_about_overview">Contributors, community links and licenses</string>
-    <string name="settings_supported_links_overview">Choose which YouTube links open in Metrolist</string>
+    <string name="settings_supported_links_overview">Choose which YouTube links open in RLN Network</string>
     <string name="settings_equalizer_overview">Sound presets, frequency bands and profiles</string>
     <string name="settings_fonts_overview">Font selection and font imports</string>
     <string name="settings_artwork_overview">Animated covers, artwork sources and video quality</string>

@@ -158,10 +158,11 @@ fun OnboardingContent(
     modifier: Modifier = Modifier,
     preferredActionModifier: Modifier = Modifier,
     previousContent: OnboardingPageContent? = null,
+    brandName: String = stringResource(Res.string.app_name),
 ) {
     var paused by rememberSaveable { mutableStateOf(false) }
     OnboardingTransition(content, previousContent) { page ->
-        OnboardingPageLayout(page, welcomeContent, featureContent, modifier, preferredActionModifier, paused) { paused = it }
+        OnboardingPageLayout(page, welcomeContent, featureContent, modifier, preferredActionModifier, brandName, paused) { paused = it }
     }
 }
 
@@ -172,6 +173,7 @@ private fun OnboardingPageLayout(
     featureContent: @Composable (OnboardingPage) -> Unit,
     modifier: Modifier = Modifier,
     preferredActionModifier: Modifier,
+    brandName: String,
     paused: Boolean,
     onPausedChange: (Boolean) -> Unit,
 ) {
@@ -207,7 +209,7 @@ private fun OnboardingPageLayout(
                                 horizontalArrangement = Arrangement.spacedBy(10.dp),
                             ) {
                                 welcomeContent(Modifier.size(24.dp))
-                                Text(stringResource(Res.string.app_name), style = MaterialTheme.typography.titleMedium)
+                                Text(brandName, style = MaterialTheme.typography.titleMedium)
                                 Spacer(Modifier.weight(1f))
                                 IconButton(onClick = { onPausedChange(!paused) }, shapes = IconButtonDefaults.shapes()) {
                                     Icon(

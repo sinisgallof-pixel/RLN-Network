@@ -40,7 +40,6 @@ import com.metrolist.shared.settings.ThemePaletteStyle
 import com.metrolist.shared.ui.LocalIsTv
 import com.metrolist.shared.ui.components.FocusOutlineProvider
 import com.metrolist.shared.ui.haptics.MetrolistHapticsProvider
-import com.metrolist.shared.ui.theme.DefaultThemeColor
 import com.metrolist.shared.ui.theme.MetrolistShapes
 import com.metrolist.shared.ui.theme.ThemeColorExtractor
 import com.metrolist.shared.ui.theme.animateColorScheme
@@ -52,12 +51,14 @@ import kotlinx.coroutines.withContext
 import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
+internal val RlnThemeColor = Color(0xFF007DC4)
+
 @Composable
 fun MetrolistTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     pureBlack: Boolean = false,
-    themeColor: Color = DefaultThemeColor,
-    dynamicColor: Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S,
+    themeColor: Color = RlnThemeColor,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit,
 ) {
     val context = LocalContext.current

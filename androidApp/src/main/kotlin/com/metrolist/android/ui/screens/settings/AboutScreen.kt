@@ -56,6 +56,7 @@ fun AndroidAboutScreen(
         appName = stringResource(Res.string.rln_brand_name),
         version = BuildConfig.VERSION_NAME,
         isDebug = BuildConfig.DEBUG,
+        tintLogo = false,
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 24.dp),
         bottomInset = miniPlayerInset,
         onNavigateBack = onNavigateBack.takeUnless { LocalSettingsPageHasTopBar.current },

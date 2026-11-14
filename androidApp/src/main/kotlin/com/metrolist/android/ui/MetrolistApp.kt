@@ -230,6 +230,7 @@ import com.metrolist.android.ui.screens.settings.StorageSettingsScreen
 import com.metrolist.android.ui.screens.settings.UpdateDetailsScreen
 import com.metrolist.android.ui.screens.settings.UpdatesScreen
 import com.metrolist.android.ui.theme.MetrolistTheme
+import com.metrolist.android.ui.theme.RlnThemeColor
 import com.metrolist.android.ui.utils.appBarScrollBehavior
 import com.metrolist.android.ui.utils.resetHeightOffset
 import com.metrolist.android.update.AppUpdateManager
@@ -453,14 +454,14 @@ fun MetrolistApp(
             .takeIf { songArtworkColorsEnabled }
     MetrolistTheme(
         darkTheme = darkTheme,
-        dynamicColor = materialYouEnabled && hasDynamicColorSdk && artworkSeedColor == null,
+        dynamicColor = materialYouEnabled && hasDynamicColorSdk && artworkSeedColor == null && Settings.shared.selectedThemeColor != 0L,
         themeColor =
             resolveThemeSeedColor(
                 materialYouEnabled = materialYouEnabled,
                 songArtworkColorsEnabled = songArtworkColorsEnabled,
                 selectedThemeColor = Settings.shared.selectedThemeColor,
                 artworkSeedColor = artworkSeedColor,
-            ),
+            ).let { if (Settings.shared.selectedThemeColor == 0L && artworkSeedColor == null) RlnThemeColor else it },
         pureBlack = pureBlack,
     ) {
         val appBackground = if (pureBlack) Color.Black else MaterialTheme.colorScheme.surface

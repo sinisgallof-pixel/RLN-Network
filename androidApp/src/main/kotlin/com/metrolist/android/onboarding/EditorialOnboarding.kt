@@ -31,7 +31,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
@@ -42,6 +41,7 @@ import com.metrolist.android.ui.component.Material3SettingsGroup
 import com.metrolist.android.ui.component.Material3SettingsItem
 import com.metrolist.shared.api.lastfm.LastFM
 import com.metrolist.shared.generated.resources.Res
+import com.metrolist.shared.generated.resources.rln_brand_name
 import com.metrolist.shared.generated.resources.action_login
 import com.metrolist.shared.generated.resources.migrated
 import com.metrolist.shared.generated.resources.onboarding_account_picture
@@ -79,6 +79,7 @@ internal fun OnboardingContent(
         }
     }
     SharedOnboardingContent(
+        brandName = stringResource(Res.string.rln_brand_name),
         content = content,
         previousContent = previousContent,
         preferredActionModifier =
@@ -88,14 +89,8 @@ internal fun OnboardingContent(
                 Modifier
             },
         welcomeContent = { modifier ->
-            val iconRes =
-                if (MaterialTheme.colorScheme.background.luminance() < 0.5f) {
-                    R.drawable.app_icon_zenith_white_foreground
-                } else {
-                    R.drawable.app_icon_zenith_black_foreground
-                }
             Image(
-                painter = painterResource(iconRes),
+                painter = painterResource(R.drawable.rln_network_logo),
                 contentDescription = null,
                 modifier = modifier,
             )

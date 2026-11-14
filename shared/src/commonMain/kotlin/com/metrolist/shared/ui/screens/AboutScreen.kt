@@ -110,6 +110,7 @@ fun AboutScreen(
     onDevtoolsUnlocked: () -> Unit = {},
     onPlayFavoriteSong: ((videoId: String) -> Unit)? = null,
     afterLicense: @Composable () -> Unit = {},
+    tintLogo: Boolean = true,
 ) {
     val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
     var logoClickCount by rememberSaveable { mutableIntStateOf(0) }
@@ -209,6 +210,7 @@ fun AboutScreen(
                 isDebug = isDebug,
                 colorScheme = colorScheme,
                 onLogoClick = ::handleLogoClick,
+                tintLogo = tintLogo,
             )
 
             CommunitySection(
@@ -301,6 +303,7 @@ private fun AppHeaderCard(
     isDebug: Boolean,
     colorScheme: ColorScheme,
     onLogoClick: () -> Unit,
+    tintLogo: Boolean,
 ) {
     Card(
         shape = RoundedCornerShape(28.dp),
@@ -312,7 +315,7 @@ private fun AppHeaderCard(
             modifier =
                 Modifier
                     .fillMaxWidth()
-                    .logoStripes(logo, colorScheme.primary.copy(alpha = 0.08f))
+                    .then(if (tintLogo) Modifier.logoStripes(logo, colorScheme.primary.copy(alpha = 0.08f)) else Modifier)
                     .padding(horizontal = 24.dp, vertical = 28.dp),
         ) {
             Surface(
@@ -323,8 +326,8 @@ private fun AppHeaderCard(
             ) {
                 Image(
                     painter = logo,
-                    contentDescription = stringResource(Res.string.app_name),
-                    colorFilter = ColorFilter.tint(colorScheme.onPrimaryContainer, BlendMode.SrcIn),
+                    contentDescription = appName.ifBlank { stringResource(Res.string.app_name) },
+                    colorFilter = if (tintLogo) ColorFilter.tint(colorScheme.onPrimaryContainer, BlendMode.SrcIn) else null,
                     modifier = Modifier.padding(12.dp),
                 )
             }
