@@ -32,6 +32,7 @@ import java.io.ByteArrayOutputStream
 import java.io.DataInputStream
 import java.io.DataOutputStream
 import java.io.EOFException
+import java.io.IOException
 import java.io.InputStream
 import java.net.InetAddress
 import java.net.InetSocketAddress
@@ -204,6 +205,7 @@ internal class GoogleCastSession(
     private lateinit var input: DataInputStream
     private lateinit var output: DataOutputStream
     private var readerJob: Job? = null
+    private var heartbeatJob: Job? = null
     private var pollingJob: Job? = null
     private var transportId: String? = null
     private var receiverSessionId: String? = null
@@ -233,6 +235,22 @@ internal class GoogleCastSession(
             connectSocket()
             readerJob = scope.launch(Dispatchers.IO) { readLoop() }
             sendConnection(RECEIVER_ID)
+            sendHeartbeatPing()
+            heartbeatJob =
+                scope.launch(Dispatchers.IO) {
+                    while (isActive && !closed) {
+                        delay(HEARTBEAT_INTERVAL_MS.milliseconds)
+                        try {
+                            sendHeartbeatPing()
+                        } catch (error: IOException) {
+                            if (!closed) {
+                                PlaybackEventLog.error(PlaybackEventKind.NETWORK, "GoogleCast", "Receiver heartbeat failed", error)
+                                close()
+                            }
+                            break
+                        }
+                    }
+                }
 
             val statusResponse = request(RECEIVER_NAMESPACE, RECEIVER_ID, "GET_STATUS")
             var application = findDefaultReceiver(statusResponse)
@@ -396,6 +414,10 @@ internal class GoogleCastSession(
         )
     }
 
+    private fun sendHeartbeatPing() {
+        send(HEARTBEAT_NAMESPACE, RECEIVER_ID, buildJsonObject { put("type", "PING") }.toString())
+    }
+
     private fun send(
         namespace: String,
         destinationId: String,
@@ -518,6 +540,7 @@ internal class GoogleCastSession(
     override fun close() {
         if (closed) return
         closed = true
+        heartbeatJob?.cancel()
         pollingJob?.cancel()
         readerJob?.cancel()
         runCatching { socket.close() }
@@ -533,6 +556,7 @@ internal class GoogleCastSession(
         const val MEDIA_NAMESPACE = "urn:x-cast:com.google.cast.media"
         const val CONNECT_TIMEOUT_MS = 8_000
         const val READ_TIMEOUT_MS = 30_000
+        const val HEARTBEAT_INTERVAL_MS = 5_000L
         const val COMMAND_TIMEOUT_MS = 8_000L
         const val LAUNCH_TIMEOUT_MS = 12_000L
         const val POLL_INTERVAL_MS = 1_000L
