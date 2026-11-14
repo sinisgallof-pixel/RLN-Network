@@ -12,6 +12,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.pm.PackageInfoCompat
 import com.metrolist.android.BuildConfig
 import com.metrolist.android.MainActivity
 import com.metrolist.android.R
@@ -119,6 +120,7 @@ object AppUpdateManager {
     private val client =
         sharedOkHttpClient
             .newBuilder()
+            .followSslRedirects(false)
             .build()
     private val json = Json { ignoreUnknownKeys = true }
     private val mutableState = MutableStateFlow<AppUpdateState>(AppUpdateState.Idle)
@@ -202,7 +204,10 @@ object AppUpdateManager {
                             check(response.isSuccessful) { "GitHub returned ${response.code}" }
                             json
                                 .decodeFromString<List<GitHubRelease>>(checkNotNull(response.body).string())
-                                .filter { release -> !release.draft && ReleaseVersion.parse(release.tagName) != null }
+                                .filter { release ->
+                                    !release.draft && !release.prerelease &&
+                                        ReleaseVersion.parse(release.tagName) != null && release.apk != null
+                                }
                                 .sortedWith { left, right -> compareVersions(right.version, left.version) }
                         }
                     mutableReleases.value = publicReleases
@@ -284,7 +289,7 @@ object AppUpdateManager {
                     return@runCatching
                 }
                 check(partial.renameTo(output)) { "Could not finalize update" }
-                if (!verifyApkIdentity(context, output)) {
+                if (!verifyApkIdentity(context, output, release.version)) {
                     output.delete()
                     mutableState.value = AppUpdateState.Error(UpdateFailure.DIGEST, release)
                     return@runCatching
@@ -318,7 +323,7 @@ object AppUpdateManager {
     ): Boolean =
         withContext(Dispatchers.IO) {
             mutableState.value = downloaded.copy(installing = true)
-            if (!downloaded.file.isFile || !verifyApkIdentity(context, downloaded.file)) {
+            if (!downloaded.file.isFile || !verifyApkIdentity(context, downloaded.file, downloaded.release.version)) {
                 downloaded.file.delete()
                 mutableState.value = AppUpdateState.Available(downloaded.release)
                 return@withContext false
@@ -452,6 +457,7 @@ object AppUpdateManager {
     internal fun verifyApkIdentity(
         context: Context,
         file: File,
+        expectedVersion: String,
     ): Boolean =
         runCatching {
             val packageManager = context.packageManager
@@ -463,8 +469,11 @@ object AppUpdateManager {
                     PackageManager.GET_SIGNATURES
                 }
             val archive = packageManager.getPackageArchiveInfo(file.absolutePath, flags) ?: return false
-            if (archive.packageName != context.packageName) return false
+            if (archive.packageName != context.packageName || archive.versionName != expectedVersion) return false
             val installed = packageManager.getPackageInfo(context.packageName, flags)
+            if (PackageInfoCompat.getLongVersionCode(archive) <=
+                PackageInfoCompat.getLongVersionCode(installed)
+            ) return false
             signerDigestsMatch(
                 installedCurrentSigners = installed.currentSignerBytes(),
                 archiveCurrentSigners = archive.currentSignerBytes(),
