@@ -207,7 +207,7 @@ android {
         applicationId = "com.rlnnetwork.music.kmp"
         minSdk = 24
         targetSdk = 37
-        versionCode = 154
+        versionCode = 155
         versionName = appVersion
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
