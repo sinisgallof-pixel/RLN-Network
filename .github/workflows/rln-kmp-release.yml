@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   apk:
@@ -50,11 +50,31 @@ jobs:
           signer="${signers[-1]}"
           "$signer" verify "${apks[0]}"
           "${signer%/*}/aapt" dump badging "${apks[0]}" > "$RUNNER_TEMP/rln-badging.txt"
-          grep -Eq "^package: name='com[.]rlnnetwork[.]music[.]kmp'.*versionName='2[.]0[.]0'" "$RUNNER_TEMP/rln-badging.txt"
+          VERSION="$(sed -n 's/^appVersion=//p' gradle.properties | head -1)"
+          test -n "$VERSION"
+          grep -F "package: name='com.rlnnetwork.music.kmp'" "$RUNNER_TEMP/rln-badging.txt" | grep -F "versionName='$VERSION'"
           mkdir -p dist
-          cp "${apks[0]}" dist/RLN-Network-2.0.apk
+          cp "${apks[0]}" "dist/RLN-Network-$VERSION.apk"
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: RLN-Network-2.0
-          path: dist/RLN-Network-2.0.apk
+          name: RLN-Network-signed
+          path: dist/RLN-Network-*.apk
           if-no-files-found: error
+      - name: Pubblica release ufficiale per aggiornamenti in-app
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          VERSION="$(sed -n 's/^appVersion=//p' gradle.properties | head -1)"
+          test -n "$VERSION"
+          if gh release view "v$VERSION" >/dev/null 2>&1; then
+            echo "La release v$VERSION esiste già; aumentare appVersion e versionCode prima di pubblicare."
+            exit 1
+          fi
+          printf 'RLN Network %s. Release ufficiale Android.\n' "$VERSION" > rln-release-notes.txt
+          gh release create "v$VERSION" "dist/RLN-Network-$VERSION.apk" \
+            --target "$GITHUB_SHA" \
+            --title "RLN Network $VERSION" \
+            --notes-file rln-release-notes.txt \
+            --latest
