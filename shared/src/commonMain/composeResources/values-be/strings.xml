@@ -274,7 +274,7 @@
     <string name="onboarding_continue_without_migration">Працягнуць з пустой бібліятэкай</string>
     <string name="onboarding_migration_recovery_description">Вы можаце паўтарыць спробу або працягнуць з пустой бібліятэкай. Копія зыходнай базы даных для аднаўлення застанецца на гэтай прыладзе. Пасля наладжвання вы зможаце аднавіць рэзервовую копію.</string>
     <string name="onboarding_migration_failed">Не ўдалося падрыхтаваць бібліятэку. Вашы зыходныя даныя захаваны.</string>
-    <string name="onboarding_library_migrated_description">Вашы плэй-лісты, гісторыя, упадабаныя кампазіцыі і даныя бібліятэкі гатовыя ў гэтай версіі Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Вашы плэй-лісты, гісторыя, упадабаныя кампазіцыі і даныя бібліятэкі гатовыя ў гэтай версіі RLN Network.</string>
     <string name="onboarding_notifications_denied">Апавяшчэнні адключаны. Вы можаце ўключыць іх пазней у наладах праграмы ў Android або выбраць «Не», каб працягнуць.</string>
     <string name="mini_player_video_prerequisite">Спачатку ўключыце «Прайграваць музычныя відэа» ў наладах прайгравання</string>
     <string name="download_folder_access_failed">Не ўдалося захаваць дазвол на доступ да гэтай папкі. Выберыце папку з доступам для чытання і запісу.</string>
@@ -314,7 +314,7 @@
     <string name="video_stats_latency_value">%1$s мс</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s МБ (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Гучнасць: %2$s</string>
-    <string name="download_folder_unavailable">Не ўдалося выкарыстаць гэтую папку. Выберыце папку з правам запісу, да якой сістэма або пясочніца дазваляе доступ Metrolist.</string>
+    <string name="download_folder_unavailable">Не ўдалося выкарыстаць гэтую папку. Выберыце папку з правам запісу, да якой сістэма або пясочніца дазваляе доступ RLN Network.</string>
     <string name="window_maximize">Разгарнуць</string>
     <string name="window_restore">Аднавіць памер акна</string>
     <string name="equalizer_stream_unavailable">Эквалайзер і папярэдні ўзмацняльнік недаступныя для гэтага патоку. Змены ўжывуцца пры прайграванні трэка, які падтрымліваецца.</string>
@@ -379,7 +379,7 @@
     <string name="onboarding_migration_title">Ваша бібліятэка з v13 тут</string>
     <string name="onboarding_migration_description">Мы знайшлі асобную базу даных Metrolist. Перанясіце плэй-лісты, гісторыю, упадабаныя кампазіцыі і даныя бібліятэкі на месцы. Калі перанос не ўдасца, вы зможаце аднавіць зыходную базу даных.</string>
     <string name="onboarding_migration_complete_title">Ваш уліковы запіс перанесены</string>
-    <string name="onboarding_migration_complete_description">Ваш уліковы запіс, плэй-лісты, гісторыя, упадабаныя кампазіцыі і даныя бібліятэкі гатовыя ў гэтай версіі Metrolist.</string>
+    <string name="onboarding_migration_complete_description">Ваш уліковы запіс, плэй-лісты, гісторыя, упадабаныя кампазіцыі і даныя бібліятэкі гатовыя ў гэтай версіі RLN Network.</string>
     <string name="onboarding_crash_reports_title">Дапамажыце палепшыць RLN Network</string>
     <string name="onboarding_crash_reports_description">Дасылайце неабавязковыя дыягнастычныя даныя праз Sentry, каб дапамагчы нам знаходзіць і выпраўляць праблемы. Вы можаце змяніць гэта ў любы час у наладах.</string>
     <string name="onboarding_notifications_title">Дазволіць апавяшчэнні</string>

@@ -462,7 +462,7 @@
     <string name="backup_restore_title">Бэкап и импорт</string>
     <string name="spotify_sign_in">Войти в Spotify</string>
     <string name="spotify_sign_in_again">Войти снова</string>
-    <string name="spotify_choose_playlists_supporting">Выберите плейлисты, которые вы хотите перенести в Metrolist.</string>
+    <string name="spotify_choose_playlists_supporting">Выберите плейлисты, которые вы хотите перенести в RLN Network.</string>
     <plurals name="spotify_selected_playlist_count">
         <item quantity="one">%1$d плейлист выбран</item>
         <item quantity="few">%1$d плейлиста выбрано</item>
@@ -501,7 +501,7 @@
     <string name="backup_restore_busy">Выполнение…</string>
     <string name="backup_sensitive_title">Конфиденциальный бэкап</string>
     <string name="backup_sensitive_message">Бэкап содержит ваши ключи API, данные входа в аккаунты, файлы cookie авторизации, токены сессий и другую конфиденциальную информацию. Любой, у кого есть этот файл, получит доступ к вашим аккаунтам. Храните его в безопасном месте и никогда не делитесь им.</string>
-    <string name="restore_in_progress">Восстановление вашего бэкапа…\nMetrolist перезапустится автоматически.</string>
+    <string name="restore_in_progress">Восстановление вашего бэкапа…\nRLN Network перезапустится автоматически.</string>
     <string name="scrobble_tap_to_disconnect">Нажмите, чтобы отключиться</string>
     <string name="scrobble_enable">Скробблинг</string>
     <string name="scrobble_now_playing">Обновления Сейчас Играет</string>
@@ -1257,7 +1257,7 @@
     <string name="onboarding_migration_title">Ваша библиотека v13 здесь</string>
     <string name="onboarding_migration_description">Мы обнаружили отдельную базу данных Metrolist. Перенесите плейлисты, историю, лайки и данные библиотеки на месте. Ваш оригинал останется доступным для восстановления в случае провала переноса данных.</string>
     <string name="onboarding_migration_complete_title">Ваш аккаунт был перенесен</string>
-    <string name="onboarding_migration_complete_description">Ваш аккаунт, плейлисты, история, лайки и данные библиотеки готовы в этой версии Metrolist.</string>
+    <string name="onboarding_migration_complete_description">Ваш аккаунт, плейлисты, история, лайки и данные библиотеки готовы в этой версии RLN Network.</string>
     <string name="onboarding_crash_reports_title">Помогите улучшить RLN Network</string>
     <string name="onboarding_crash_reports_description">Поделитесь необязательной диагностикой через Sentry чтобы помочь нам находить и исправлять проблемы. Вы можете изменить это в любое время в Настройках.</string>
     <string name="onboarding_notifications_title">Разрешить уведомления</string>
@@ -1491,7 +1491,7 @@
     <string name="sensitive_backup">Конфиденциальный бэкап</string>
     <string name="restore_backup_confirm">Восстановить бэкап?</string>
     <string name="restore">Восстановить</string>
-    <string name="restoring_backup">Восстановление вашего бэкапа…\nMetrolist перезапустится автоматически.</string>
+    <string name="restoring_backup">Восстановление вашего бэкапа…\nRLN Network перезапустится автоматически.</string>
     <string name="hidden_items_count">Спрятанные элементы (%1$d)</string>
     <string name="hidden_library_items">Спрятанные элементы библиотеки</string>
     <string name="delete_playlist_confirm">Удалить плейлист?</string>
@@ -1951,7 +1951,7 @@
     <string name="onboarding_continue_without_migration">Продолжить с пустой библиотекой</string>
     <string name="onboarding_migration_recovery_description">Вы можете повторить попытку или продолжить с пустой библиотекой. Копия исходной базы данных для восстановления останется на этом устройстве. После настройки вы сможете восстановить резервную копию.</string>
     <string name="onboarding_migration_failed">Не удалось подготовить библиотеку. Ваши исходные данные сохранены.</string>
-    <string name="onboarding_library_migrated_description">Ваши плейлисты, история, отметки «Нравится» и данные библиотеки готовы к использованию в этой версии Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Ваши плейлисты, история, отметки «Нравится» и данные библиотеки готовы к использованию в этой версии RLN Network.</string>
     <string name="onboarding_notifications_denied">Уведомления отключены. Вы можете включить их позже в настройках приложения в Android или выбрать «Нет», чтобы продолжить.</string>
     <string name="mini_player_video_prerequisite">Сначала включите «Воспроизводить музыкальные видео» в настройках воспроизведения</string>
     <string name="download_folder_access_failed">Не удалось сохранить разрешение на доступ к этой папке. Выберите папку с доступом для чтения и записи.</string>
@@ -1991,7 +1991,7 @@
     <string name="video_stats_latency_value">%1$s мс</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s МБ (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Громкость: %2$s</string>
-    <string name="download_folder_unavailable">Не удалось использовать эту папку. Выберите папку с правом записи, к которой система или песочница разрешает доступ Metrolist.</string>
+    <string name="download_folder_unavailable">Не удалось использовать эту папку. Выберите папку с правом записи, к которой система или песочница разрешает доступ RLN Network.</string>
     <string name="window_maximize">Развернуть</string>
     <string name="window_restore">Восстановить размер окна</string>
     <string name="equalizer_stream_unavailable">Эквалайзер и предусилитель недоступны для этого потока. Изменения применятся при воспроизведении поддерживаемого трека.</string>
@@ -2640,7 +2640,7 @@
     <string name="appearance_floating_top_bar_description">Отображать верхнюю панель в виде отдельных круглых плавающих кнопок вместо панели, прикрепленной к верхней части экрана.</string>
     <string name="listen_together_server_maintainer">Ответственный за поддержку</string>
     <string name="prefer_word_synced_lyrics_description">Искать текст песен с пословной синхронизацией перед использованием текстов песен с синхронизацией по строкам или несинхронизированных текстов песен</string>
-    <string name="discord_continue_in_browser">Продолжите вход в Discord в браузере. По завершении вернитесь в Metrolist.</string>
+    <string name="discord_continue_in_browser">Продолжите вход в Discord в браузере. По завершении вернитесь в RLN Network.</string>
     <string name="discord_open_browser_again">Открыть снова</string>
     <string name="discord_browser_open_failed">Не удалось открыть браузер. Попробуйте открыть его ещё раз.</string>
     <string name="channel_switch_recovery_hint">Не удалось загрузить ваши каналы YouTube. Войдите заново, чтобы обновить сессию, а затем выберите канал.</string>

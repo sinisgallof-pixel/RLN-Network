@@ -478,7 +478,7 @@
     </plurals>
     <string name="my_top_100">Mon top 100</string>
     <string name="spotify_sign_in_again">Se connecter de nouveau</string>
-    <string name="spotify_choose_playlists_supporting">Sélectionnez les playlists que vous souhaitez importer vers Metrolist.</string>
+    <string name="spotify_choose_playlists_supporting">Sélectionnez les playlists que vous souhaitez importer vers RLN Network.</string>
     <string name="lyrics_provider_unknown_description">Source de paroles additionnelle</string>
     <string name="startup_error_title">Erreur de démarrage de RLN Network</string>
     <string name="lyrics_show_translations">Traductions</string>
@@ -513,7 +513,7 @@
     <string name="backup_restore_busy">Restauration en cours…</string>
     <string name="backup_sensitive_title">Données sensibles</string>
     <string name="backup_sensitive_message">Cette sauvegarde contient vos clés API, vos identifiants de connexion, vos cookies d\u0027authentification, vos jetons de session et d\u0027autres informations sensibles. Toute personne qui possède ce fichier peut accéder à vos comptes. Conservez-le en lieu sûr et ne le partagez jamais.</string>
-    <string name="restore_in_progress">Restauration de votre sauvegarde…\nMetrolist va redémarrer automatiquement.</string>
+    <string name="restore_in_progress">Restauration de votre sauvegarde…\nRLN Network va redémarrer automatiquement.</string>
     <string name="scrobble_tap_to_disconnect">Appuyez pour vous déconnecter</string>
     <string name="scrobble_enable">Scrobbling</string>
     <string name="scrobble_connecting">Connexion en cours…</string>
@@ -1405,7 +1405,7 @@
     <string name="onboarding_migration_title">Voici votre bibliothèque RLN Network v13</string>
     <string name="onboarding_migration_description">Nous avons trouvé des données issues de la version standard de Metrolist. Importez vos playlists, vos titres favoris, votre historique et votre bibliothèque. Les données d\u0027origine restent intactes si l\u0027importation échoue.</string>
     <string name="onboarding_migration_complete_title">Vos données ont été importées</string>
-    <string name="onboarding_migration_complete_description">Votre compte, vos playlists, vos titres favoris, votre historique et votre bibliothèque sont maintenant disponibles dans cette version de Metrolist.</string>
+    <string name="onboarding_migration_complete_description">Votre compte, vos playlists, vos titres favoris, votre historique et votre bibliothèque sont maintenant disponibles dans cette version de RLN Network.</string>
     <string name="onboarding_crash_reports_description">Partagez des données de diagnostic optionnelles via Sentry pour nous aider à identifier et corriger les problèmes. Vous pouvez changer d'avis à tout moment depuis les paramètres.</string>
     <string name="onboarding_notifications_title">Autoriser les notifications</string>
     <string name="onboarding_notifications_description">Activez les notifications de lecture et de téléchargement.</string>
@@ -1643,7 +1643,7 @@
     <string name="sensitive_backup">Données sensibles</string>
     <string name="restore_backup_confirm">Restaurer la sauvegarde ?</string>
     <string name="restore">Restaurer</string>
-    <string name="restoring_backup">Restauration de votre sauvegarde…\n\nMetrolist va redémarrer automatiquement.</string>
+    <string name="restoring_backup">Restauration de votre sauvegarde…\n\nRLN Network va redémarrer automatiquement.</string>
     <string name="hidden_items_count">Éléments masqués (%1$d)</string>
     <string name="hidden_library_items">Éléments masqués de la bibliothèque</string>
     <string name="delete_playlist_confirm">Supprimer la playlist ?</string>
@@ -2025,7 +2025,7 @@
     <string name="onboarding_continue_without_migration">Continuer avec une bibliothèque vide</string>
     <string name="onboarding_migration_recovery_description">Vous pouvez réessayer ou continuer avec une bibliothèque vide. Une copie de récupération de votre base de données d'origine restera sur cet appareil. Vous pourrez restaurer une sauvegarde après la configuration.</string>
     <string name="onboarding_migration_failed">Impossible de préparer votre bibliothèque. Vos données d'origine ont été conservées.</string>
-    <string name="onboarding_library_migrated_description">Vos playlists, votre historique, vos favoris et les données de votre bibliothèque sont prêts dans cette version de Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Vos playlists, votre historique, vos favoris et les données de votre bibliothèque sont prêts dans cette version de RLN Network.</string>
     <string name="onboarding_notifications_denied">Les notifications sont désactivées. Vous pouvez les activer plus tard dans les paramètres Android de l'application ou choisir Non pour continuer.</string>
     <string name="mini_player_video_prerequisite">Activez d'abord Lire les clips musicaux dans les paramètres de lecture</string>
     <string name="download_folder_access_failed">Impossible de conserver l'accès à ce dossier. Choisissez un dossier accessible en lecture et en écriture.</string>
@@ -2050,7 +2050,7 @@
     <string name="updates_notification_settings">Paramètres de notification Android</string>
     <string name="widget_recognizer_open_result">Ouvrir le titre identifié</string>
     <string name="statistics_load_failed">Impossible d'actualiser les statistiques. Réessayez.</string>
-    <string name="desktop_platform_unsupported">Ce système d'exploitation n'est pas pris en charge par Metrolist. Utilisez Windows 10 ou une version ultérieure, macOS ou une distribution Linux autre qu'Omarchy.</string>
+    <string name="desktop_platform_unsupported">Ce système d'exploitation n'est pas pris en charge par RLN Network. Utilisez Windows 10 ou une version ultérieure, macOS ou une distribution Linux autre qu'Omarchy.</string>
     <string name="shortcut_toggle_expanded">Agrandir ou réduire le lecteur</string>
     <string name="desktop_display_unavailable">RLN Network n'a pas pu se connecter à l'affichage X de cette session. Lancez l'application depuis votre session de bureau avec DISPLAY défini.</string>
     <string name="webkit_install_hint">La connexion intégrée nécessite WebKitGTK 4.1 (%1$s). Installez-le avec le gestionnaire de paquets de votre système.</string>
@@ -2115,8 +2115,8 @@
     <string name="theme_color_rose">Rose</string>
     <string name="theme_color_red">Rouge</string>
     <string name="theme_color_gold">Doré</string>
-    <string name="backup_unsupported_format">Ce format de sauvegarde n'est pas pris en charge par cette version de Metrolist.</string>
-    <string name="backup_unsupported_database">La version de la base de données de cette sauvegarde n'est pas prise en charge par cette version de Metrolist.</string>
+    <string name="backup_unsupported_format">Ce format de sauvegarde n'est pas pris en charge par cette version de RLN Network.</string>
+    <string name="backup_unsupported_database">La version de la base de données de cette sauvegarde n'est pas prise en charge par cette version de RLN Network.</string>
     <string name="backup_too_large">La sauvegarde dépasse la taille ou le nombre d'entrées pris en charge.</string>
     <string name="backup_invalid_data">Impossible de lire ou de valider la sauvegarde. Elle est peut-être endommagée ou contient des données non prises en charge.</string>
     <string name="search_history_removal_failed">Impossible d'effacer l'historique de recherche. Veuillez réessayer une fois connecté.</string>
@@ -2374,7 +2374,7 @@
         <item quantity="many">%1$d min</item>
         <item quantity="other">%1$d min</item>
     </plurals>
-    <string name="discord_continue_in_browser">Poursuivez la connexion à Discord depuis votre navigateur puis retournez sur Metrolist.</string>
+    <string name="discord_continue_in_browser">Poursuivez la connexion à Discord depuis votre navigateur puis retournez sur RLN Network.</string>
     <string name="discord_open_browser_again">Ouvrir à nouveau</string>
     <string name="discord_browser_open_failed">Impossible d'ouvrir le navigateur. Veuillez réessayer.</string>
     <string name="menu_create_station">Créer une radio</string>

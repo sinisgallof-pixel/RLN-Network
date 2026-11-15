@@ -453,7 +453,7 @@
     <string name="backup_restore_title">Restauração e importação</string>
     <string name="spotify_sign_in">Entrar no Spotify</string>
     <string name="spotify_sign_in_again">Entrar novamente</string>
-    <string name="spotify_choose_playlists_supporting">Selecione as playlists que você deseja importar para o Metrolist.</string>
+    <string name="spotify_choose_playlists_supporting">Selecione as playlists que você deseja importar para o RLN Network.</string>
     <plurals name="spotify_selected_playlist_count">
         <item quantity="one">%1$d playlist selecionada</item>
         <item quantity="many">%1$d playlists selecionadas</item>
@@ -1214,7 +1214,7 @@
     <string name="onboarding_migration_title">Sua biblioteca v13 está aqui</string>
     <string name="onboarding_migration_description">Encontramos um banco de dados independente do Metrolist. Migre playlists, histórico, curtidas e dados da biblioteca no local. Você pode recuprar o banco de dados original se a migração falhar.</string>
     <string name="onboarding_migration_complete_title">Sua conta foi migrada</string>
-    <string name="onboarding_migration_complete_description">Sua conta, playlists, histórico, curtidas, e dados de biblioteca estão prontos nesta versão do Metrolist.</string>
+    <string name="onboarding_migration_complete_description">Sua conta, playlists, histórico, curtidas, e dados de biblioteca estão prontos nesta versão do RLN Network.</string>
     <string name="onboarding_crash_reports_title">Ajude a melhorar o RLN Network</string>
     <string name="onboarding_crash_reports_description">Compartilhe diagnósticos opcionais via Sentry para nos ajudar a encontrar e corrigir problemas mais rápido. Você pode alterar isso a qualquer momento nas Configurações.</string>
     <string name="onboarding_notifications_title">Permitir notificações</string>
@@ -2074,7 +2074,7 @@
     <string name="onboarding_continue_without_migration">Continuar com uma biblioteca vazia</string>
     <string name="onboarding_migration_recovery_description">Você pode tentar novamente ou continuar com uma biblioteca vazia. Uma cópia de recuperação do banco de dados original ficará neste dispositivo. Você pode restaurar um backup após a configuração.</string>
     <string name="onboarding_migration_failed">Não foi possível preparar sua biblioteca. Seus dados originais foram preservados.</string>
-    <string name="onboarding_library_migrated_description">Suas playlists, histórico, curtidas e dados da biblioteca estão prontos nesta versão do Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Suas playlists, histórico, curtidas e dados da biblioteca estão prontos nesta versão do RLN Network.</string>
     <string name="onboarding_notifications_denied">As notificações estão desativadas. Você pode ativá-las depois nas configurações do aplicativo no Android ou escolher Não para continuar.</string>
     <string name="mini_player_video_prerequisite">Primeiro, ative Reproduzir videoclipes nas configurações de Reprodução</string>
     <string name="download_folder_access_failed">Não foi possível salvar a permissão de acesso a esta pasta. Escolha uma pasta com acesso de leitura e gravação.</string>
@@ -2099,7 +2099,7 @@
     <string name="updates_notification_settings">Configurações de notificações do Android</string>
     <string name="widget_recognizer_open_result">Abrir música identificada</string>
     <string name="statistics_load_failed">Não foi possível atualizar as estatísticas. Tente novamente.</string>
-    <string name="desktop_platform_unsupported">Este sistema operacional não é compatível com o Metrolist. Use Windows 10 ou posterior, macOS ou uma distribuição Linux que não seja Omarchy.</string>
+    <string name="desktop_platform_unsupported">Este sistema operacional não é compatível com o RLN Network. Use Windows 10 ou posterior, macOS ou uma distribuição Linux que não seja Omarchy.</string>
     <string name="shortcut_toggle_expanded">Expandir ou recolher o player</string>
     <string name="desktop_display_unavailable">O RLN Network não conseguiu se conectar à tela X desta sessão. Inicie-o pela sua sessão de desktop com a variável DISPLAY definida.</string>
     <string name="webkit_install_hint">O login integrado requer WebKitGTK 4.1 (%1$s). Instale-o usando o gerenciador de pacotes do sistema.</string>
@@ -2114,7 +2114,7 @@
     <string name="video_stats_latency_value">%1$s ms</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s MB (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Volume: %2$s</string>
-    <string name="download_folder_unavailable">Não foi possível usar esta pasta. Escolha uma pasta com permissão de gravação à qual o sistema ou o ambiente isolado permita o acesso do Metrolist.</string>
+    <string name="download_folder_unavailable">Não foi possível usar esta pasta. Escolha uma pasta com permissão de gravação à qual o sistema ou o ambiente isolado permita o acesso do RLN Network.</string>
     <string name="window_maximize">Maximizar</string>
     <string name="window_restore">Restaurar janela</string>
     <string name="equalizer_stream_unavailable">O equalizador e o pré-amplificador não estão disponíveis para esta transmissão. As alterações serão aplicadas quando uma faixa compatível for reproduzida.</string>
@@ -2164,8 +2164,8 @@
     <string name="theme_color_rose">Rosa</string>
     <string name="theme_color_red">Vermelho</string>
     <string name="theme_color_gold">Dourado</string>
-    <string name="backup_unsupported_format">O formato deste backup não é compatível com esta versão do Metrolist.</string>
-    <string name="backup_unsupported_database">A versão do banco de dados deste backup não é compatível com esta versão do Metrolist.</string>
+    <string name="backup_unsupported_format">O formato deste backup não é compatível com esta versão do RLN Network.</string>
+    <string name="backup_unsupported_database">A versão do banco de dados deste backup não é compatível com esta versão do RLN Network.</string>
     <string name="backup_too_large">O backup excede o limite de tamanho ou de entradas permitido.</string>
     <string name="backup_invalid_data">Não foi possível ler ou validar o backup. Ele pode estar corrompido ou conter dados incompatíveis.</string>
     <string name="search_history_removal_failed">Não foi possível limpar o histórico de pesquisa da conta. Tente novamente quando estiver conectado.</string>

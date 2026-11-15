@@ -162,7 +162,7 @@
     <string name="video_stats_latency_value">%1$s ms</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s MB (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Skaļums: %2$s</string>
-    <string name="download_folder_unavailable">Neizdevās izmantot šo mapi. Izvēlieties mapi ar rakstīšanas piekļuvi, kurai sistēma vai izolētā vide ļauj piekļūt lietotnei Metrolist.</string>
+    <string name="download_folder_unavailable">Neizdevās izmantot šo mapi. Izvēlieties mapi ar rakstīšanas piekļuvi, kurai sistēma vai izolētā vide ļauj piekļūt lietotnei RLN Network.</string>
     <string name="window_maximize">Maksimizēt</string>
     <string name="window_restore">Atjaunot logu</string>
     <string name="equalizer_stream_unavailable">Ekvalaizers un priekšpastiprinātājs šai straumei nav pieejami. Izmaiņas tiks piemērotas, kad tiks atskaņota atbalstīta dziesma.</string>
@@ -177,7 +177,7 @@
     <string name="queue_youtube_history_paused_desc">Atsāciet klausīšanās vēstures saglabāšanu, lai bezsaistes atskaņošanas reizes ievietotu sinhronizācijas rindā</string>
     <string name="search_online_failed">Neizdevās meklēt tiešsaistē. Pārbaudiet savienojumu un mēģiniet vēlreiz.</string>
     <string name="search_load_more_failed">Neizdevās ielādēt vairāk rezultātu.</string>
-    <string name="discord_error_gateway_configuration">Discord noraidīja savienojuma konfigurāciju. Pirms mēģināt vēlreiz, atjauniniet Metrolist.</string>
+    <string name="discord_error_gateway_configuration">Discord noraidīja savienojuma konfigurāciju. Pirms mēģināt vēlreiz, atjauniniet RLN Network.</string>
     <string name="discord_preview_buttons_adjusted">Discord saīsina garus pogu nosaukumus un izlaiž pogas ar pārāk garām saitēm. Šajā priekšskatījumā ir redzamas pogas, kas tiks nosūtītas.</string>
     <string name="discord_presence_status_warning">Paplašinātais statuss nosūta Discord statusu Tiešsaistē. Tas var aizstāt Neredzams vai Netraucēt, arī pēc atskaņošanas apturēšanas.</string>
     <string name="discord_refresh_queued">Statusa atsvaidzināšana ievietota rindā.</string>

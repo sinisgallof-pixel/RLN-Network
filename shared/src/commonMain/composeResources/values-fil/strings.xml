@@ -256,7 +256,7 @@
     <string name="discord_status_not_initialized">Hindi pa nasisimulan</string>
     <string name="discord_status_authorized">Awtorisado</string>
     <string name="discord_error_denied">Tinanggihan ng Discord ang awtorisasyon.</string>
-    <string name="discord_error_connection_failed">Hindi makakonekta sa Discord. Awtomatikong susubukan muli ng Metrolist.</string>
+    <string name="discord_error_connection_failed">Hindi makakonekta sa Discord. Awtomatikong susubukan muli ng RLN Network.</string>
     <string name="discord_error_no_browser">Walang app na maaaring magbukas ng Discord authorization.</string>
     <string name="discord_error_token_exchange_failed">Nabigo ang pagpapalitan ng token. Pakisubukang muli.</string>
     <string name="discord_error_token_refresh_failed">Nabigo ang pag-refresh ng token. Pakilog in muli.</string>
@@ -421,7 +421,7 @@
     <string name="backup_restore_title">I-backup at ibalik</string>
     <string name="spotify_sign_in">Mag-sign in sa Spotify</string>
     <string name="spotify_sign_in_again">Mag-sign in ulit</string>
-    <string name="spotify_choose_playlists_supporting">Piliin ang mga playlist na gusto mong i-import sa Metrolist.</string>
+    <string name="spotify_choose_playlists_supporting">Piliin ang mga playlist na gusto mong i-import sa RLN Network.</string>
     <plurals name="spotify_selected_playlist_count">
         <item quantity="one">%1$d na playlist ang napili</item>
         <item quantity="other">%1$d na playlist ang napili</item>
@@ -451,7 +451,7 @@
     <string name="backup_restore_busy">Pinoproseso…</string>
     <string name="backup_sensitive_title">Sensitive na backup</string>
     <string name="backup_sensitive_message">Ang backup ay naglalaman ng iyong API keys, account credentials, authentication cookies, session tokens, at iba pang sensitibong impormasyon. Maaaring ma-access ng sinumang may file na ito ang iyong mga account. Itago ito nang ligtas at huwag na huwag itong ibahagi.</string>
-    <string name="restore_in_progress">Nire-restore ang iyong backup…\nAwtomatikong magre-restart ang Metrolist.</string>
+    <string name="restore_in_progress">Nire-restore ang iyong backup…\nAwtomatikong magre-restart ang RLN Network.</string>
     <string name="scrobble_tap_to_disconnect">I-tap para idiskonekta</string>
     <string name="scrobble_enable">I-enable ang scrobbling</string>
     <string name="scrobble_now_playing">Update sa kasalukuyang pinapatugtog</string>
@@ -1183,7 +1183,7 @@
     <string name="onboarding_migration_title">Narito na ang iyong v13 library</string>
     <string name="onboarding_migration_description">Nakahanap kami ng standalone na database ng Metrolist. Ilipat ang mga playlist, history, likes, at data ng library sa lugar. Mananatiling mababawi ang iyong orihinal kung sakaling mabigo ang paglipat.</string>
     <string name="onboarding_migration_complete_title">Nailipat na ang iyong account</string>
-    <string name="onboarding_migration_complete_description">Handa na ang iyong account, mga playlist, history, mga like, at data ng library sa bersyong ito ng Metrolist.</string>
+    <string name="onboarding_migration_complete_description">Handa na ang iyong account, mga playlist, history, mga like, at data ng library sa bersyong ito ng RLN Network.</string>
     <string name="onboarding_crash_reports_title">Tumulong na mapabuti ang RLN Network</string>
     <string name="onboarding_crash_reports_description">Magbahagi ng mga opsyonal na diagnostic sa pamamagitan ng Sentry para matulungan kaming mas mabilis na mahanap at maayos ang mga problema. Maaari mo itong baguhin anumang oras sa Mga Setting.</string>
     <string name="lyrics_animation_style">Animation ng bawat salita</string>
@@ -1409,7 +1409,7 @@
     <string name="sensitive_backup">Sensitive na backup</string>
     <string name="restore_backup_confirm">Ibalik ang backup?</string>
     <string name="restore">Ibalik</string>
-    <string name="restoring_backup">Nire-restore ang iyong backup…\nAwtomatikong magre-restart ang Metrolist.</string>
+    <string name="restoring_backup">Nire-restore ang iyong backup…\nAwtomatikong magre-restart ang RLN Network.</string>
     <string name="hidden_items_count">Mga nakatago (%1$d)</string>
     <string name="hidden_library_items">Mga nakatagong library item</string>
     <string name="delete_playlist_confirm">Burahin ang playlist?</string>
@@ -1517,7 +1517,7 @@
     <string name="backup_created">Nagawa na ang backup</string>
     <string name="backup_failed">Nabigo ang pag-backup: %1$s</string>
     <string name="could_not_open_file_picker">Hindi mabuksan ang tagapili ng file: %1$s</string>
-    <string name="restore_replaces_data">Papalitan nito ang kasalukuyan mong mga setting, kredensyal, account, at data ng library. Awtomatikong magre-restart ang Metrolist.</string>
+    <string name="restore_replaces_data">Papalitan nito ang kasalukuyan mong mga setting, kredensyal, account, at data ng library. Awtomatikong magre-restart ang RLN Network.</string>
     <string name="create_backup_countdown">Gawa ng backup (%1$d)</string>
     <string name="listen_together_how_it_works">Paano ito gumagana</string>
     <string name="listen_together_how_it_works_body">Hinahayaan ka ng Makinig nang Sama-sama na makinig ng musika nang sabay-sabay kasama ang mga kaibigan. Kinokontrol ng host ang playback at awtomatikong sumusunod ang mga guest.</string>
@@ -1806,7 +1806,7 @@
     <string name="onboarding_continue_without_migration">Magpatuloy gamit ang walang lamang library</string>
     <string name="onboarding_migration_recovery_description">Puwede mong subukan muli o magpatuloy gamit ang walang lamang library. Mananatili sa device na ito ang kopya ng orihinal mong database para sa pagbawi. Puwede kang mag-restore ng backup pagkatapos ng pag-set up.</string>
     <string name="onboarding_migration_failed">Hindi maihanda ang library mo. Napanatili ang orihinal mong data.</string>
-    <string name="onboarding_library_migrated_description">Handa na ang mga playlist, kasaysayan, mga ni-like, at data ng library mo sa bersyong ito ng Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Handa na ang mga playlist, kasaysayan, mga ni-like, at data ng library mo sa bersyong ito ng RLN Network.</string>
     <string name="onboarding_notifications_denied">Naka-off ang mga abiso. Puwede mong i-on ang mga ito sa ibang pagkakataon sa mga setting ng app sa Android, o piliin ang Hindi para magpatuloy.</string>
     <string name="mini_player_video_prerequisite">I-on muna ang Magpatugtog ng mga bidyong pangmusika sa mga setting ng pag-playback</string>
     <string name="download_folder_access_failed">Hindi ma-save ang pahintulot sa folder na ito. Pumili ng folder na puwedeng basahin at sulatan.</string>
@@ -1846,7 +1846,7 @@
     <string name="video_stats_latency_value">%1$s ms</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s MB (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Lakas ng tunog: %2$s</string>
-    <string name="download_folder_unavailable">Hindi magamit ang folder na ito. Pumili ng folder na puwedeng sulatan at pinapayagan ng system o sandbox na ma-access ng Metrolist.</string>
+    <string name="download_folder_unavailable">Hindi magamit ang folder na ito. Pumili ng folder na puwedeng sulatan at pinapayagan ng system o sandbox na ma-access ng RLN Network.</string>
     <string name="window_maximize">Lakihan</string>
     <string name="window_restore">Ibalik ang laki ng window</string>
     <string name="equalizer_stream_unavailable">Hindi magagamit ang equalizer at preamp para sa stream na ito. Ilalapat ang mga pagbabago kapag may tumugtog na suportadong kanta.</string>

@@ -426,7 +426,7 @@
     <string name="backup_restore_title">Sandaran &amp; import</string>
     <string name="spotify_sign_in">Log masuk ke Spotify</string>
     <string name="spotify_sign_in_again">Log masuk semula</string>
-    <string name="spotify_choose_playlists_supporting">Pilih senarai main yang ingin anda masukkan ke dalam Metrolist.</string>
+    <string name="spotify_choose_playlists_supporting">Pilih senarai main yang ingin anda masukkan ke dalam RLN Network.</string>
     <string name="spotify_preview_summary" translatable="false">%1$s / %2$s</string>
     <string name="spotify_track_limit_warning">Import Spotify dihadkan kepada 5,000 trek pertama dalam setiap senarai main.</string>
     <string name="spotify_login_page_failed">Tidak dapat memuatkan daftar masuk Spotify: %1$s</string>
@@ -441,7 +441,7 @@
     <string name="backup_restore_busy">Sedang diproses…</string>
     <string name="backup_sensitive_title">Sandaran sensitif</string>
     <string name="backup_sensitive_message">Fail sandaran mengandungi kunci API, kelayakan akaun, kuki pengesahan, token sesi dan maklumat sensitif anda yang lain. Sesiapa sahaja yang memiliki fail ini PASTI boleh mengakses akaun anda. Simpan fail tersebut dengan selamat dan JANGAN SEKALI-KALI MENGKONGSIKANNYA.</string>
-    <string name="restore_in_progress">Memulihkan sandaran anda…\nMetrolist akan dimulakan semula secara automatik.</string>
+    <string name="restore_in_progress">Memulihkan sandaran anda…\nRLN Network akan dimulakan semula secara automatik.</string>
     <string name="scrobble_tap_to_disconnect">Ketik untuk memutuskan sambungan</string>
     <string name="scrobble_enable">Aktifkan scrobbling</string>
     <string name="scrobble_now_playing">Kemas kini sedang dimainkan</string>
@@ -1001,7 +1001,7 @@
     <string name="updates_notification_settings">Tetapan pemberitahuan Android</string>
     <string name="widget_recognizer_open_result">Buka lagu yang dikenal pasti</string>
     <string name="statistics_load_failed">Tidak dapat mengemas kini statistik. Cuba lagi.</string>
-    <string name="desktop_platform_unsupported">Sistem pengendalian ini tidak disokong oleh Metrolist. Gunakan Windows 10 atau lebih baharu, macOS, atau pengedaran Linux selain Omarchy.</string>
+    <string name="desktop_platform_unsupported">Sistem pengendalian ini tidak disokong oleh RLN Network. Gunakan Windows 10 atau lebih baharu, macOS, atau pengedaran Linux selain Omarchy.</string>
     <string name="shortcut_toggle_expanded">Kembangkan atau kecilkan pemain</string>
     <string name="desktop_display_unavailable">RLN Network tidak dapat menyambung ke paparan X sesi ini. Lancarkannya daripada sesi desktop anda dengan pemboleh ubah DISPLAY ditetapkan.</string>
     <string name="webkit_install_hint">Log masuk terbina dalam memerlukan WebKitGTK 4.1 (%1$s). Pasangnya menggunakan pengurus pakej sistem anda.</string>
@@ -1016,7 +1016,7 @@
     <string name="video_stats_latency_value">%1$s ms</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s MB (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Kelantangan: %2$s</string>
-    <string name="download_folder_unavailable">Tidak dapat menggunakan folder ini. Pilih folder boleh tulis yang dibenarkan oleh sistem atau persekitaran terasing untuk diakses oleh Metrolist.</string>
+    <string name="download_folder_unavailable">Tidak dapat menggunakan folder ini. Pilih folder boleh tulis yang dibenarkan oleh sistem atau persekitaran terasing untuk diakses oleh RLN Network.</string>
     <string name="window_maximize">Maksimumkan</string>
     <string name="window_restore">Pulihkan tetingkap</string>
     <string name="equalizer_stream_unavailable">Penyama dan prapenguat tidak tersedia untuk strim ini. Perubahan digunakan apabila lagu yang disokong dimainkan.</string>
@@ -1095,7 +1095,7 @@
     <string name="onboarding_finish_title">Semuanya sudah sedia</string>
     <string name="onboarding_finish_description">Persediaan selesai. Mula mendengar atau pindahkan akaun dan data anda dahulu.</string>
     <string name="onboarding_restore_backup">Pulihkan daripada sandaran</string>
-    <string name="onboarding_settings_hint">Buka Tetapan daripada menu di bahagian atas sebelah kanan untuk menyesuaikan Metrolist.</string>
+    <string name="onboarding_settings_hint">Buka Tetapan daripada menu di bahagian atas sebelah kanan untuk menyesuaikan RLN Network.</string>
     <string name="onboarding_no_saved_accounts">Tiada akaun terpaut ditemui.</string>
     <string name="onboarding_account_picture">Gambar profil %1$s</string>
     <string name="onboarding_backup_picker_title">Pulihkan sandaran RLN Network</string>

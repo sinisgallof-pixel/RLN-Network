@@ -128,7 +128,7 @@
     <string name="onboarding_continue_without_migration">Continue with an empty library</string>
     <string name="onboarding_migration_recovery_description">You can try again or continue with an empty library. A recovery copy of your original database will stay on this device. You can restore a backup after setup.</string>
     <string name="onboarding_migration_failed">Could not prepare your library. Your original data has been preserved.</string>
-    <string name="onboarding_library_migrated_description">Your playlists, history, likes, and library data are ready in this version of Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Your playlists, history, likes, and library data are ready in this version of RLN Network.</string>
     <string name="onboarding_notifications_denied">Notifications are disabled. You can enable them later in Android app settings, or choose No to continue.</string>
     <string name="mini_player_video_prerequisite">Enable Play music videos in Playback settings first</string>
     <string name="download_folder_access_failed">Access to this folder could not be saved. Choose a folder with read and write access.</string>
@@ -153,7 +153,7 @@
     <string name="updates_notification_settings">Android notification settings</string>
     <string name="widget_recognizer_open_result">Open identified song</string>
     <string name="statistics_load_failed">Could not refresh statistics. Try again.</string>
-    <string name="desktop_platform_unsupported">This operating system is not supported by Metrolist. Use Windows 10 or later, macOS, or a Linux distribution other than Omarchy.</string>
+    <string name="desktop_platform_unsupported">This operating system is not supported by RLN Network. Use Windows 10 or later, macOS, or a Linux distribution other than Omarchy.</string>
     <string name="shortcut_toggle_expanded">Toggle expanded player</string>
     <string name="desktop_display_unavailable">RLN Network could not connect to this session’s X display. Launch it from your desktop session with DISPLAY set.</string>
     <string name="webkit_install_hint">Embedded sign-in requires WebKitGTK 4.1 (%1$s). Install it using your system package manager.</string>
@@ -217,8 +217,8 @@
     <string name="theme_color_rose">Rose</string>
     <string name="theme_color_red">Red</string>
     <string name="theme_color_gold">Gold</string>
-    <string name="backup_unsupported_format">This backup format is not supported by this version of Metrolist.</string>
-    <string name="backup_unsupported_database">The database version in this backup is not supported by this version of Metrolist.</string>
+    <string name="backup_unsupported_format">This backup format is not supported by this version of RLN Network.</string>
+    <string name="backup_unsupported_database">The database version in this backup is not supported by this version of RLN Network.</string>
     <string name="backup_too_large">The backup exceeds a supported size or entry limit.</string>
     <string name="backup_invalid_data">The backup could not be read or validated. It may be damaged or contain unsupported data.</string>
     <string name="search_history_removal_failed">Could not clear account search history. Please try again when connected.</string>
@@ -231,7 +231,7 @@
     <string name="onboarding_migration_title">Your v13 library is here</string>
     <string name="onboarding_migration_description">We found a standalone Metrolist database. Migrate playlists, history, likes, and library data in place. You can recover the original database if migration fails.</string>
     <string name="onboarding_migration_complete_title">Your account was migrated</string>
-    <string name="onboarding_migration_complete_description">Your account, playlists, history, likes, and library data are ready in this version of Metrolist.</string>
+    <string name="onboarding_migration_complete_description">Your account, playlists, history, likes, and library data are ready in this version of RLN Network.</string>
     <string name="onboarding_crash_reports_title">Help improve RLN Network</string>
     <string name="onboarding_crash_reports_description">Share optional diagnostics through Sentry to help us find and fix problems. You can change this anytime in Settings.</string>
     <string name="onboarding_notifications_title">Allow notifications</string>
@@ -248,7 +248,7 @@
     <string name="onboarding_finish_title">You're all set</string>
     <string name="onboarding_finish_description">Setup is complete. Start listening, or bring your account and data with you first.</string>
     <string name="onboarding_restore_backup">Restore from backup</string>
-    <string name="onboarding_settings_hint">Open Settings from the menu in the top right to customize Metrolist.</string>
+    <string name="onboarding_settings_hint">Open Settings from the menu in the top right to customize RLN Network.</string>
     <string name="onboarding_no_saved_accounts">No linked accounts were found.</string>
     <string name="onboarding_account_picture">%1$s profile picture</string>
     <string name="onboarding_backup_picker_title">Restore RLN Network backup</string>

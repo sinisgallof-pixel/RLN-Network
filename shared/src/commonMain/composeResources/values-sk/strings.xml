@@ -474,14 +474,14 @@
     <string name="scrobble_max_delay">Maximálne oneskorenie</string>
     <string name="appearance_show_top_playlist">Zobraziť najlepšie playlisty</string>
     <string name="android_auto_no_playlists">Nie sú k dispozícii žiadne playlisty.</string>
-    <string name="spotify_choose_playlists_supporting">Vyberte si playlisty, ktoré chcete preniesť do Metrolist.</string>
+    <string name="spotify_choose_playlists_supporting">Vyberte si playlisty, ktoré chcete preniesť do RLN Network.</string>
     <string name="backup_sensitive_message">Zálohy obsahujú vaše kľúče API, prihlasovacie údaje k účtu, overovacie súbory cookie, tokeny relácie a ďalšie citlivé informácie. Ktokoľvek s týmto súborom bude mať prístup k vašim účtom. Uschovajte si ho bezpečne a nikdy ho nezdieľajte.</string>
     <string name="scrobble_delay_description">Percentuálny podiel dĺžky skladby, ktorý treba počkať pred scrobblingom</string>
     <string name="scrobble_delay">Oneskorenie scrobblovania</string>
     <string name="app_font_applied">Používanie %1$s</string>
     <string name="app_font_picker_desc">Vyberte súbor TTF alebo OTF. Aplikácia RLN Network ho skopíruje do svojho súkromného úložiska.</string>
     <string name="android_auto_pinned_playlist_mode">Prehrávanie playlistov</string>
-    <string name="restore_in_progress">Obnovovanie zálohy…\nMetrolist sa automaticky reštartuje.</string>
+    <string name="restore_in_progress">Obnovovanie zálohy…\nRLN Network sa automaticky reštartuje.</string>
     <string name="privacy_blocklists">Blocklisty</string>
     <string name="appearance_show_home_tab">Zobraziť kartu Domov</string>
     <string name="appearance_show_uploaded_playlist">Zobraziť nahraný playlist</string>
@@ -643,10 +643,10 @@
     <string name="updates_notification_title">RLN Network %1$s je pripravený</string>
     <string name="updates_notification_text">Kliknutím stiahnete a nainštalujete aktualizáciu</string>
     <string name="updates_channel_name">Aktualizácie aplikácie</string>
-    <string name="updates_channel_description">Oznámenia o nových verziách Metrolistu</string>
+    <string name="updates_channel_description">Oznámenia o nových verziách RLN Networku</string>
     <string name="updates_download_failed">Aktualizáciu sa nepodarilo stiahnuť.</string>
     <string name="updates_release_unavailable">Toto vydanie neobsahuje kompatibilný súbor APK.</string>
-    <string name="updates_release_notes_title">Čo je nové v Metroliste %1$s</string>
+    <string name="updates_release_notes_title">Čo je nové v RLN Networke %1$s</string>
     <string name="device_connect_title">Pripojenie zariadenia</string>
     <string name="device_connect_summary">Spárujte dôveryhodné zariadenia vo svojej lokálnej sieti. Pripojenia sú šifrované.</string>
     <string name="device_connect_beta">Beta</string>
@@ -785,7 +785,7 @@
     <string name="onboarding_continue_without_migration">Pokračovať s prázdnou knižnicou</string>
     <string name="onboarding_migration_recovery_description">Môžete to skúsiť znova alebo pokračovať s prázdnou knižnicou. Kópia pôvodnej databázy na obnovu zostane v tomto zariadení. Po dokončení nastavenia môžete obnoviť zálohu.</string>
     <string name="onboarding_migration_failed">Vašu knižnicu sa nepodarilo pripraviť. Pôvodné údaje boli zachované.</string>
-    <string name="onboarding_library_migrated_description">Vaše playlisty, história, obľúbené skladby a údaje knižnice sú pripravené v tejto verzii Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Vaše playlisty, história, obľúbené skladby a údaje knižnice sú pripravené v tejto verzii RLN Network.</string>
     <string name="onboarding_notifications_denied">Upozornenia sú vypnuté. Môžete ich neskôr zapnúť v nastaveniach aplikácie v Androide alebo pokračovať výberom možnosti Nie.</string>
     <string name="mini_player_video_prerequisite">Najprv zapnite možnosť Prehrávať hudobné videá v nastaveniach prehrávania</string>
     <string name="download_folder_access_failed">Prístup k tomuto priečinku sa nepodarilo uložiť. Vyberte priečinok s prístupom na čítanie aj zápis.</string>
@@ -841,7 +841,7 @@
     <string name="queue_youtube_history_paused_desc">Obnovte zaznamenávanie histórie počúvania, aby sa prehratia v režime offline ukladali na neskoršie odoslanie</string>
     <string name="search_online_failed">Vyhľadávanie online zlyhalo. Skontrolujte pripojenie a skúste to znova.</string>
     <string name="search_load_more_failed">Ďalšie výsledky sa nepodarilo načítať.</string>
-    <string name="discord_error_gateway_configuration">Discord odmietol konfiguráciu pripojenia. Pred ďalším pokusom aktualizujte Metrolist.</string>
+    <string name="discord_error_gateway_configuration">Discord odmietol konfiguráciu pripojenia. Pred ďalším pokusom aktualizujte RLN Network.</string>
     <string name="discord_preview_buttons_adjusted">Discord skracuje dlhé názvy tlačidiel a vynecháva tlačidlá s príliš dlhými odkazmi. Tento náhľad zobrazuje tlačidlá, ktoré sa odošlú.</string>
     <string name="discord_presence_status_warning">Rozšírený stav odosiela do služby Discord stav Online. Môže prepísať Neviditeľný alebo Nerušiť, aj keď sa prehrávanie zastaví.</string>
     <string name="discord_refresh_queued">Obnovenie stavu bolo zaradené do radu.</string>
@@ -890,7 +890,7 @@
     <string name="onboarding_migration_title">Vaša knižnica z verzie v13 je tu</string>
     <string name="onboarding_migration_description">Našli sme samostatnú databázu Metrolist. Preneste playlisty, históriu, obľúbené skladby a údaje knižnice na mieste. Ak prenos zlyhá, môžete obnoviť pôvodnú databázu.</string>
     <string name="onboarding_migration_complete_title">Váš účet bol prenesený</string>
-    <string name="onboarding_migration_complete_description">Váš účet, playlisty, história, obľúbené skladby a údaje knižnice sú pripravené v tejto verzii Metrolist.</string>
+    <string name="onboarding_migration_complete_description">Váš účet, playlisty, história, obľúbené skladby a údaje knižnice sú pripravené v tejto verzii RLN Network.</string>
     <string name="onboarding_crash_reports_title">Pomôžte zlepšiť RLN Network</string>
     <string name="onboarding_crash_reports_description">Dobrovoľne zdieľajte diagnostické údaje cez Sentry a pomôžte nám nájsť a opraviť problémy. Túto voľbu môžete kedykoľvek zmeniť v Nastaveniach.</string>
     <string name="onboarding_notifications_title">Povoliť upozornenia</string>
@@ -930,7 +930,7 @@
     <string name="recognition_history_earlier">Skôr</string>
     <string name="no_recognized_songs_hint">Skladby, ktoré rozpoznáte, sa zobrazia tu.</string>
     <string name="recognition_listening_hint">Podržte telefón blízko hudby</string>
-    <string name="play_on_app">Hrať na Metroliste</string>
+    <string name="play_on_app">Hrať na RLN Networke</string>
     <string name="try_again">Skúste to znova</string>
     <string name="playlist_order_original">Poradie playlistu</string>
     <string name="lyrics_share_content_scale">Mierka obsahu: %1$d\u0025</string>

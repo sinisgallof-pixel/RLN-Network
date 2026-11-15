@@ -457,7 +457,7 @@
     <string name="settings_listen_together_overview">Kiszolgáló, csatlakozási kérelmek és daljavaslatok</string>
     <string name="settings_device_connect_overview">Közeli eszközök, párosítás és távoli lejátszás</string>
     <string name="settings_release_overview">Kiadási megjegyzések és telepítési lehetőségek</string>
-    <string name="settings_notification_access_summary">Válaszd ki, mely értesítéseket engedélyezze az Android a Metrolistnek</string>
+    <string name="settings_notification_access_summary">Válaszd ki, mely értesítéseket engedélyezze az Android a RLN Networknek</string>
     <string name="settings_crash_reports_summary">Olvasd el és oszd meg a mentett összeomlási jelentéseket</string>
     <string name="settings_content_language_summary">A YouTube Music keresésének és ajánlásainak nyelve</string>
     <string name="settings_content_country_summary">A YouTube Music slágerlistáinak és ajánlásainak régiója</string>
@@ -477,7 +477,7 @@
     <string name="settings_canvas_playback_summary">Rövid klipek vagy a teljes videóklip lejátszása a lejátszó mögött</string>
     <string name="settings_normalization_summary">Egyenlítsd ki a dalok hangerejét a nagy eltérések elkerüléséhez</string>
     <string name="settings_loudness_target_summary">Állítsd be a célhangerőt bekapcsolt hangnormalizálás mellett</string>
-    <string name="settings_stop_on_close_summary">Álljon le a lejátszás, ha a Metrolistet eltávolítod a legutóbbi alkalmazások közül</string>
+    <string name="settings_stop_on_close_summary">Álljon le a lejátszás, ha a RLN Networket eltávolítod a legutóbbi alkalmazások közül</string>
     <string name="settings_screen_awake_summary">Válaszd ki, hogy a lejátszó vagy a dalszöveg tartsa-e ébren a kijelzőt</string>
     <string name="settings_translation_mode_summary">A szavak fordítása vagy a kiejtés átírása a célnyelv írásrendszerébe</string>
     <string name="settings_translation_provider_summary">Válaszd ki a dalszövegeket fordító szolgáltatást</string>
@@ -497,7 +497,7 @@
     <string name="settings_reset_download_folder_summary">Az alapértelmezett mappa használata a letöltött dalokhoz</string>
     <string name="settings_diagnostic_logs_summary">Olvasd el és másold ki az alkalmazás diagnosztikai naplóját</string>
     <string name="settings_log_directory_summary">Böngészd a mentett naplófájlokat a fájlkezelőben</string>
-    <string name="settings_check_releases_summary">Keress újabb Metrolist-verziót a GitHubon</string>
+    <string name="settings_check_releases_summary">Keress újabb RLN Network-verziót a GitHubon</string>
     <string name="settings_share_apk_summary">A telepített alkalmazáscsomag megosztása fájlként</string>
     <string name="settings_system_font_summary">Az operációs rendszer betűtípusának használata</string>
     <string name="settings_thumbnail_shape_summary">Válaszd ki a borítók alakját a kibontott lejátszóban</string>

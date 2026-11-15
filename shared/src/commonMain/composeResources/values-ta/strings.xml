@@ -391,7 +391,7 @@
     <string name="onboarding_migration_description">தனித்த Metrolist தரவுத்தளத்தைக் கண்டறிந்தோம். பிளேலிச்ட்கள், வரலாறு, விருப்பங்கள் மற்றும் நூலகத் தரவை அதே இடத்தில் மாற்றவும். மாற்றம் தோல்வியுற்றால் அசல் தரவுத்தளத்தை மீட்டெடுக்கலாம்.</string>
     <string name="onboarding_migration_complete_title">உங்கள் கணக்கு மாற்றப்பட்டது</string>
     <string name="onboarding_migration_complete_description">உங்கள் கணக்கு, பிளேலிச்ட்கள், வரலாறு, விருப்பங்கள் மற்றும் நூலகத் தரவு இந்த RLN Network பதிப்பில் தயாராக உள்ளன.</string>
-    <string name="onboarding_crash_reports_title">Metrolist-ஐ மேம்படுத்த உதவுங்கள்</string>
+    <string name="onboarding_crash_reports_title">RLN Network-ஐ மேம்படுத்த உதவுங்கள்</string>
     <string name="onboarding_crash_reports_description">சிக்கல்களைக் கண்டறிந்து சரிசெய்ய உதவ, விருப்பப்பட்டால் Sentry வழியாகக் கண்டறிதல் தரவைப் பகிரவும். இதை எந்த நேரத்திலும் அமைப்புகளில் மாற்றலாம்.</string>
     <string name="onboarding_notifications_title">அறிவிப்புகளை அனுமதி</string>
     <string name="onboarding_notifications_description">இயக்கம் மற்றும் பதிவிறக்கங்களுக்கான அறிவிப்புகளை இயக்கவும்.</string>
@@ -407,7 +407,7 @@
     <string name="onboarding_finish_title">எல்லாம் தயார்</string>
     <string name="onboarding_finish_description">அமைப்பு முடிந்தது. கேட்கத் தொடங்குங்கள் அல்லது முதலில் உங்கள் கணக்கையும் தரவையும் கொண்டு வாருங்கள்.</string>
     <string name="onboarding_restore_backup">காப்புப்பிரதியிலிருந்து மீட்டமை</string>
-    <string name="onboarding_settings_hint">Metrolist-ஐத் தனிப்பயனாக்க, மேல் வலதுபுற மெனுவிலிருந்து அமைப்புகளைத் திறக்கவும்.</string>
+    <string name="onboarding_settings_hint">RLN Network-ஐத் தனிப்பயனாக்க, மேல் வலதுபுற மெனுவிலிருந்து அமைப்புகளைத் திறக்கவும்.</string>
     <string name="onboarding_no_saved_accounts">இணைக்கப்பட்ட கணக்குகள் எதுவும் கிடைக்கவில்லை.</string>
     <string name="onboarding_account_picture">%1$s இன் சுயவிவரப் படம்</string>
     <string name="onboarding_backup_picker_title">RLN Network காப்புப்பிரதியை மீட்டமை</string>

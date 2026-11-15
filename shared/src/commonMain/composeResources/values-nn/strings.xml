@@ -290,7 +290,7 @@
     <string name="onboarding_continue_without_migration">Hald fram med eit tomt bibliotek</string>
     <string name="onboarding_migration_recovery_description">Du kan prøve på nytt eller halde fram med eit tomt bibliotek. Ein gjenopprettingskopi av den opphavlege databasen vert verande på denne eininga. Du kan gjenopprette ein tryggleikskopi etter oppsettet.</string>
     <string name="onboarding_migration_failed">Klarte ikkje å klargjere biblioteket ditt. Dei opphavlege dataa er tekne vare på.</string>
-    <string name="onboarding_library_migrated_description">Spelelistene, historikken, dei lika songane og bibliotekdataa dine er klare i denne versjonen av Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Spelelistene, historikken, dei lika songane og bibliotekdataa dine er klare i denne versjonen av RLN Network.</string>
     <string name="onboarding_notifications_denied">Varsel er slått av. Du kan slå dei på seinare i appinnstillingane i Android, eller velje Nei for å halde fram.</string>
     <string name="mini_player_video_prerequisite">Slå fyrst på Spel av musikkvideoar i avspelingsinnstillingane</string>
     <string name="download_folder_access_failed">Klarte ikkje å lagre tilgangen til denne mappa. Vel ei mappe med lese- og skrivetilgang.</string>
@@ -393,7 +393,7 @@
     <string name="onboarding_migration_title">Biblioteket ditt frå v13 er her</string>
     <string name="onboarding_migration_description">Vi fann ein frittståande Metrolist-database. Overfør spelelister, soge, lika songar og bibliotekdata på staden. Du kan gjenopprette den opphavlege databasen viss overføringa mislukkast.</string>
     <string name="onboarding_migration_complete_title">Kontoen din er overført</string>
-    <string name="onboarding_migration_complete_description">Kontoen, spelelistene, soga, dei lika songane og bibliotekdataa dine er klare i denne versjonen av Metrolist.</string>
+    <string name="onboarding_migration_complete_description">Kontoen, spelelistene, soga, dei lika songane og bibliotekdataa dine er klare i denne versjonen av RLN Network.</string>
     <string name="onboarding_crash_reports_title">Hjelp oss å forbetre RLN Network</string>
     <string name="onboarding_crash_reports_description">Del valfrie diagnosedata via Sentry for å hjelpe oss med å finne og rette problem. Du kan endre dette når som helst i Innstillingar.</string>
     <string name="onboarding_notifications_title">Tillat varsel</string>
@@ -410,10 +410,10 @@
     <string name="onboarding_finish_title">Alt er klart</string>
     <string name="onboarding_finish_description">Oppsettet er fullført. Byrj å lytte, eller overfør kontoen og dataa dine først.</string>
     <string name="onboarding_restore_backup">Gjenopprett frå tryggleikskopi</string>
-    <string name="onboarding_settings_hint">Opne Innstillingar frå menyen øvst til høgre for å tilpasse Metrolist.</string>
+    <string name="onboarding_settings_hint">Opne Innstillingar frå menyen øvst til høgre for å tilpasse RLN Network.</string>
     <string name="onboarding_no_saved_accounts">Fann ingen tilknytte kontoar.</string>
     <string name="onboarding_account_picture">Profilbiletet til %1$s</string>
-    <string name="onboarding_backup_picker_title">Gjenopprett Metrolist-tryggleikskopi</string>
+    <string name="onboarding_backup_picker_title">Gjenopprett RLN Network-tryggleikskopi</string>
     <string name="onboarding_backup_picker_error">Klarte ikkje å opne veljaren for tryggleikskopiar: %1$s</string>
     <string name="onboarding_backup_restore_failed">Gjenoppretting mislukkast: %1$s</string>
     <string name="new_badge">Ny</string>

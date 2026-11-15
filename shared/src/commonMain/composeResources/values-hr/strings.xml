@@ -245,7 +245,7 @@
     <string name="preview">Pregled</string>
     <string name="about">Informacije</string>
     <string name="settings_content_title">Sadržaj</string>
-    <string name="settings_about_title">O Metrolistu</string>
+    <string name="settings_about_title">O RLN Networku</string>
     <string name="settings_search_placeholder">Pretraži postavke</string>
     <string name="settings_search_no_results">Nema rezultata</string>
     <string name="settings_search_no_results_desc">Nema rezultata za %1$s</string>
@@ -447,7 +447,7 @@
     <string name="onboarding_continue_without_migration">Nastavi s praznom zbirkom</string>
     <string name="onboarding_migration_recovery_description">Možete pokušati ponovno ili nastaviti s praznom zbirkom. Kopija izvorne baze podataka za oporavak ostat će na ovom uređaju. Sigurnosnu kopiju možete vratiti nakon postavljanja.</string>
     <string name="onboarding_migration_failed">Nije moguće pripremiti zbirku. Izvorni su podaci sačuvani.</string>
-    <string name="onboarding_library_migrated_description">Vaše playliste, povijest, oznake sviđanja i podaci zbirke spremni su u ovoj verziji aplikacije Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Vaše playliste, povijest, oznake sviđanja i podaci zbirke spremni su u ovoj verziji aplikacije RLN Network.</string>
     <string name="onboarding_notifications_denied">Obavijesti su isključene. Možete ih naknadno uključiti u postavkama aplikacije na Androidu ili odabrati Ne za nastavak.</string>
     <string name="mini_player_video_prerequisite">Prvo uključite Reproduciraj glazbene spotove u postavkama reprodukcije</string>
     <string name="download_folder_access_failed">Nije moguće spremiti dozvolu za pristup ovoj mapi. Odaberite mapu s pristupom za čitanje i pisanje.</string>
@@ -487,7 +487,7 @@
     <string name="video_stats_latency_value">%1$s ms</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s MB (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Glasnoća: %2$s</string>
-    <string name="download_folder_unavailable">Nije moguće koristiti ovu mapu. Odaberite mapu u koju je moguće pisati i kojoj sustav ili izolirano okruženje dopušta pristup aplikaciji Metrolist.</string>
+    <string name="download_folder_unavailable">Nije moguće koristiti ovu mapu. Odaberite mapu u koju je moguće pisati i kojoj sustav ili izolirano okruženje dopušta pristup aplikaciji RLN Network.</string>
     <string name="window_maximize">Maksimiziraj</string>
     <string name="window_restore">Vrati prozor</string>
     <string name="equalizer_stream_unavailable">Ekvilajzer i pretpojačalo nisu dostupni za ovaj tok. Promjene će se primijeniti pri reprodukciji podržane pjesme.</string>
@@ -551,7 +551,7 @@
     <string name="onboarding_migration_title">Vaša zbirka iz verzije v13 je ovdje</string>
     <string name="onboarding_migration_description">Pronašli smo samostalnu Metrolist bazu podataka. Prenesite playliste, povijest, oznake sviđanja i podatke zbirke na istom mjestu. Izvornu bazu podataka možete oporaviti ako prijenos ne uspije.</string>
     <string name="onboarding_migration_complete_title">Vaš je račun prenesen</string>
-    <string name="onboarding_migration_complete_description">Vaš račun, playliste, povijest, oznake sviđanja i podaci zbirke spremni su u ovoj verziji aplikacije Metrolist.</string>
+    <string name="onboarding_migration_complete_description">Vaš račun, playliste, povijest, oznake sviđanja i podaci zbirke spremni su u ovoj verziji aplikacije RLN Network.</string>
     <string name="onboarding_crash_reports_title">Pomozite poboljšati RLN Network</string>
     <string name="onboarding_crash_reports_description">Po želji podijelite dijagnostičke podatke putem Sentryja kako biste nam pomogli pronaći i riješiti probleme. To možete promijeniti bilo kada u Postavkama.</string>
     <string name="onboarding_notifications_title">Dopusti obavijesti</string>
@@ -568,10 +568,10 @@
     <string name="onboarding_finish_title">Sve je spremno</string>
     <string name="onboarding_finish_description">Postavljanje je dovršeno. Počnite slušati ili prvo prenesite svoj račun i podatke.</string>
     <string name="onboarding_restore_backup">Vrati iz sigurnosne kopije</string>
-    <string name="onboarding_settings_hint">Otvorite Postavke iz izbornika u gornjem desnom kutu kako biste prilagodili Metrolist.</string>
+    <string name="onboarding_settings_hint">Otvorite Postavke iz izbornika u gornjem desnom kutu kako biste prilagodili RLN Network.</string>
     <string name="onboarding_no_saved_accounts">Nisu pronađeni povezani računi.</string>
     <string name="onboarding_account_picture">Profilna slika korisnika %1$s</string>
-    <string name="onboarding_backup_picker_title">Vrati sigurnosnu kopiju Metrolista</string>
+    <string name="onboarding_backup_picker_title">Vrati sigurnosnu kopiju RLN Networka</string>
     <string name="onboarding_backup_picker_error">Nije moguće otvoriti birač sigurnosne kopije: %1$s</string>
     <string name="onboarding_backup_restore_failed">Vraćanje nije uspjelo: %1$s</string>
     <string name="new_badge">Novo</string>

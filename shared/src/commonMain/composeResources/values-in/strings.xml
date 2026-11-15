@@ -388,7 +388,7 @@
     <string name="backup_restore_title">Cadangkan dan impor</string>
     <string name="spotify_sign_in">Masuk ke Spotify</string>
     <string name="spotify_sign_in_again">Masuk kembali</string>
-    <string name="spotify_choose_playlists_supporting">Pilih playlist yang ingin Anda impor ke Metrolist.</string>
+    <string name="spotify_choose_playlists_supporting">Pilih playlist yang ingin Anda impor ke RLN Network.</string>
     <plurals name="spotify_selected_playlist_count">
         <item quantity="other">%1$d playlist dipilih</item>
     </plurals>
@@ -413,7 +413,7 @@
     <string name="backup_restore_export_desc">Ekspor pengaturan, database koleksi, playlist, lagu yang disukai, dan riwayat ke file zip</string>
     <string name="backup_restore_import_desc">Pulihkan cadangan Metrolist. Aplikasi akan dimulai ulang setelah pemulihan berhasil.</string>
     <string name="backup_sensitive_title">Cadangan sensitif</string>
-    <string name="restore_in_progress">Memulihkan cadangan Anda…\nMetrolist akan dimuat ulang secara otomatis.</string>
+    <string name="restore_in_progress">Memulihkan cadangan Anda…\nRLN Network akan dimuat ulang secara otomatis.</string>
     <string name="scrobble_tap_to_disconnect">Tekan untuk memutuskan sambungan</string>
     <string name="scrobble_enable">Scrobbling</string>
     <string name="scrobble_now_playing">Pembaruan sedang diputar</string>
@@ -1169,7 +1169,7 @@
     <string name="sensitive_backup">Cadangan sensitif</string>
     <string name="restore_backup_confirm">Pulihkan cadangan?</string>
     <string name="restore">Pulihkan</string>
-    <string name="restoring_backup">Memulihkan cadangan Anda…\nMetrolist akan memuat ulang sendirinya.</string>
+    <string name="restoring_backup">Memulihkan cadangan Anda…\nRLN Network akan memuat ulang sendirinya.</string>
     <string name="settings_layout_canvas">Kanvas</string>
     <string name="spotify_import_error_sign_in_failed">Gagal masuk ke Spotify.</string>
     <plurals name="spotify_import_skipped_playlists">
@@ -1493,7 +1493,7 @@
     <string name="onboarding_step_of">Langkah %1$d dari %2$d</string>
     <string name="onboarding_finish_title">Anda sudah siap</string>
     <string name="onboarding_finish_description">Penyiapan selesai. Mulai mendengarkan, atau bawa akun dan data Anda terlebih dahulu.</string>
-    <string name="onboarding_settings_hint">Buka Pengaturan di menu sudut kanan atas untuk menyesuaikan Metrolist.</string>
+    <string name="onboarding_settings_hint">Buka Pengaturan di menu sudut kanan atas untuk menyesuaikan RLN Network.</string>
     <string name="onboarding_no_saved_accounts">Tidak ada akun terhubung yang ditemukan.</string>
     <string name="cached_audio">Audio ter-cache</string>
     <string name="shortcut_toggle_fullscreen_video">Video layar penuh</string>
@@ -1597,7 +1597,7 @@
     <string name="updates_notification_settings">Setelan notifikasi Android</string>
     <string name="widget_recognizer_open_result">Buka lagu yang dikenali</string>
     <string name="statistics_load_failed">Tidak dapat memperbarui statistik. Coba lagi.</string>
-    <string name="desktop_platform_unsupported">Sistem operasi ini tidak didukung oleh Metrolist. Gunakan Windows 10 atau yang lebih baru, macOS, atau distribusi Linux selain Omarchy.</string>
+    <string name="desktop_platform_unsupported">Sistem operasi ini tidak didukung oleh RLN Network. Gunakan Windows 10 atau yang lebih baru, macOS, atau distribusi Linux selain Omarchy.</string>
     <string name="shortcut_toggle_expanded">Perluas atau ciutkan pemutar</string>
     <string name="desktop_display_unavailable">RLN Network tidak dapat terhubung ke tampilan X sesi ini. Jalankan dari sesi desktop Anda dengan variabel DISPLAY yang sudah diatur.</string>
     <string name="webkit_install_hint">Login bawaan memerlukan WebKitGTK 4.1 (%1$s). Instal menggunakan pengelola paket sistem Anda.</string>
@@ -1612,7 +1612,7 @@
     <string name="video_stats_latency_value">%1$s ms</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s MB (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Volume: %2$s</string>
-    <string name="download_folder_unavailable">Folder ini tidak dapat digunakan. Pilih folder yang dapat ditulisi dan diizinkan oleh sistem atau lingkungan terisolasi untuk diakses Metrolist.</string>
+    <string name="download_folder_unavailable">Folder ini tidak dapat digunakan. Pilih folder yang dapat ditulisi dan diizinkan oleh sistem atau lingkungan terisolasi untuk diakses RLN Network.</string>
     <string name="window_maximize">Maksimalkan</string>
     <string name="window_restore">Pulihkan ukuran jendela</string>
     <string name="equalizer_stream_unavailable">Equalizer dan preamp tidak tersedia untuk aliran ini. Perubahan diterapkan saat lagu yang didukung diputar.</string>

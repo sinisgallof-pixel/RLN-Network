@@ -313,7 +313,7 @@
     <string name="onboarding_continue_without_migration">Продовжити з порожньою бібліотекою</string>
     <string name="onboarding_migration_recovery_description">Можна повторити спробу або продовжити з порожньою бібліотекою. Копія початкової бази даних для відновлення залишиться на цьому пристрої. Після налаштування можна відновити резервну копію.</string>
     <string name="onboarding_migration_failed">Не вдалося підготувати бібліотеку. Початкові дані збережено.</string>
-    <string name="onboarding_library_migrated_description">Ваші плейлисти, історія, уподобання та дані бібліотеки готові в цій версії Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Ваші плейлисти, історія, уподобання та дані бібліотеки готові в цій версії RLN Network.</string>
     <string name="onboarding_notifications_denied">Сповіщення вимкнено. Їх можна ввімкнути пізніше в параметрах застосунку в Android або вибрати Ні, щоб продовжити.</string>
     <string name="mini_player_video_prerequisite">Спочатку ввімкніть Відтворювати музичні відео в параметрах відтворення</string>
     <string name="download_folder_access_failed">Не вдалося зберегти доступ до цієї папки. Виберіть папку з доступом для читання й запису.</string>
@@ -418,7 +418,7 @@
     <string name="onboarding_migration_title">Ваша бібліотека з v13 тут</string>
     <string name="onboarding_migration_description">Ми знайшли окрему базу даних Metrolist. Перенесіть плейлисти, історію, уподобання та дані бібліотеки на місці. Якщо перенесення не вдасться, ви зможете відновити початкову базу даних.</string>
     <string name="onboarding_migration_complete_title">Ваш обліковий запис перенесено</string>
-    <string name="onboarding_migration_complete_description">Ваш обліковий запис, плейлисти, історія, уподобання та дані бібліотеки готові в цій версії Metrolist.</string>
+    <string name="onboarding_migration_complete_description">Ваш обліковий запис, плейлисти, історія, уподобання та дані бібліотеки готові в цій версії RLN Network.</string>
     <string name="onboarding_crash_reports_title">Допоможіть покращити RLN Network</string>
     <string name="onboarding_crash_reports_description">За бажанням надсилайте діагностичні дані через Sentry, щоб допомогти нам знаходити й виправляти проблеми. Ви можете будь-коли змінити це в Параметрах.</string>
     <string name="onboarding_notifications_title">Дозволити сповіщення</string>
@@ -435,7 +435,7 @@
     <string name="onboarding_finish_title">Усе готово</string>
     <string name="onboarding_finish_description">Налаштування завершено. Почніть слухати або спершу перенесіть свій обліковий запис і дані.</string>
     <string name="onboarding_restore_backup">Відновити з резервної копії</string>
-    <string name="onboarding_settings_hint">Відкрийте Параметри в меню праворуч угорі, щоб налаштувати Metrolist.</string>
+    <string name="onboarding_settings_hint">Відкрийте Параметри в меню праворуч угорі, щоб налаштувати RLN Network.</string>
     <string name="onboarding_no_saved_accounts">Пов'язаних облікових записів не знайдено.</string>
     <string name="onboarding_account_picture">Зображення профілю користувача %1$s</string>
     <string name="onboarding_backup_picker_title">Відновити резервну копію RLN Network</string>

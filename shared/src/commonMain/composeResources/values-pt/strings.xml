@@ -426,7 +426,7 @@
     <string name="backup_restore_title">Cópia de segurança e restauro</string>
     <string name="spotify_sign_in">Iniciar sessão no Spotify</string>
     <string name="spotify_sign_in_again">Iniciar sessão novamente</string>
-    <string name="spotify_choose_playlists_supporting">Selecione as listas de reprodução que quer importar para o Metrolist.</string>
+    <string name="spotify_choose_playlists_supporting">Selecione as listas de reprodução que quer importar para o RLN Network.</string>
     <plurals name="spotify_selected_playlist_count">
         <item quantity="one">%1$d lista de reprodução selecionada</item>
         <item quantity="many">%1$d listas de reprodução selecionadas</item>
@@ -705,7 +705,7 @@
     <string name="onboarding_continue_without_migration">Continuar com uma biblioteca vazia</string>
     <string name="onboarding_migration_recovery_description">Podes tentar novamente ou continuar com uma biblioteca vazia. Será mantida neste dispositivo uma cópia de recuperação da tua base de dados original. Podes restaurar uma cópia de segurança após a configuração.</string>
     <string name="onboarding_migration_failed">Não foi possível preparar a tua biblioteca. Os teus dados originais foram preservados.</string>
-    <string name="onboarding_library_migrated_description">As tuas listas de reprodução, histórico, gostos e dados da biblioteca estão prontos nesta versão do Metrolist.</string>
+    <string name="onboarding_library_migrated_description">As tuas listas de reprodução, histórico, gostos e dados da biblioteca estão prontos nesta versão do RLN Network.</string>
     <string name="onboarding_notifications_denied">As notificações estão desativadas. Podes ativá-las mais tarde nas definições da aplicação no Android ou escolher Não para continuar.</string>
     <string name="mini_player_video_prerequisite">Primeiro, ativa Reproduzir vídeos musicais nas definições de reprodução</string>
     <string name="download_folder_access_failed">Não foi possível guardar a permissão de acesso a esta pasta. Escolhe uma pasta com acesso de leitura e escrita.</string>
@@ -730,7 +730,7 @@
     <string name="updates_notification_settings">Definições de notificações do Android</string>
     <string name="widget_recognizer_open_result">Abrir música identificada</string>
     <string name="statistics_load_failed">Não foi possível atualizar as estatísticas. Tenta novamente.</string>
-    <string name="desktop_platform_unsupported">Este sistema operativo não é suportado pelo Metrolist. Usa o Windows 10 ou posterior, o macOS ou uma distribuição de Linux que não seja o Omarchy.</string>
+    <string name="desktop_platform_unsupported">Este sistema operativo não é suportado pelo RLN Network. Usa o Windows 10 ou posterior, o macOS ou uma distribuição de Linux que não seja o Omarchy.</string>
     <string name="shortcut_toggle_expanded">Alternar leitor expandido</string>
     <string name="desktop_display_unavailable">O RLN Network não conseguiu ligar-se ao ecrã X desta sessão. Inicia-o a partir da tua sessão de ambiente de trabalho com DISPLAY definido.</string>
     <string name="webkit_install_hint">O início de sessão integrado requer o WebKitGTK 4.1 (%1$s). Instala-o com o gestor de pacotes do sistema.</string>
@@ -745,7 +745,7 @@
     <string name="video_stats_latency_value">%1$s ms</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s MB (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Vol: %2$s</string>
-    <string name="download_folder_unavailable">Não foi possível usar esta pasta. Escolhe uma pasta com permissão de escrita à qual o sistema ou o ambiente isolado permita o acesso do Metrolist.</string>
+    <string name="download_folder_unavailable">Não foi possível usar esta pasta. Escolhe uma pasta com permissão de escrita à qual o sistema ou o ambiente isolado permita o acesso do RLN Network.</string>
     <string name="window_maximize">Maximizar</string>
     <string name="window_restore">Restaurar janela</string>
     <string name="equalizer_stream_unavailable">O equalizador e o pré-amplificador não estão disponíveis para este fluxo. As alterações serão aplicadas ao reproduzir uma música compatível.</string>
@@ -795,8 +795,8 @@
     <string name="theme_color_rose">Rosa</string>
     <string name="theme_color_red">Vermelho</string>
     <string name="theme_color_gold">Dourado</string>
-    <string name="backup_unsupported_format">O formato desta cópia de segurança não é suportado por esta versão do Metrolist.</string>
-    <string name="backup_unsupported_database">A versão da base de dados desta cópia de segurança não é suportada por esta versão do Metrolist.</string>
+    <string name="backup_unsupported_format">O formato desta cópia de segurança não é suportado por esta versão do RLN Network.</string>
+    <string name="backup_unsupported_database">A versão da base de dados desta cópia de segurança não é suportada por esta versão do RLN Network.</string>
     <string name="backup_too_large">A cópia de segurança excede o limite de tamanho ou de número de entradas suportado.</string>
     <string name="backup_invalid_data">Não foi possível ler ou validar a cópia de segurança. Pode estar danificada ou conter dados não suportados.</string>
     <string name="search_history_removal_failed">Não foi possível limpar o histórico de pesquisa da conta. Tenta novamente quando tiveres ligação.</string>
@@ -809,7 +809,7 @@
     <string name="onboarding_migration_title">A tua biblioteca da v13 está aqui</string>
     <string name="onboarding_migration_description">Encontrámos uma base de dados autónoma do Metrolist. Migra as listas de reprodução, o histórico, os gostos e os dados da biblioteca no local. Podes recuperar a base de dados original se a migração falhar.</string>
     <string name="onboarding_migration_complete_title">A tua conta foi migrada</string>
-    <string name="onboarding_migration_complete_description">A tua conta, listas de reprodução, histórico, gostos e dados da biblioteca estão prontos nesta versão do Metrolist.</string>
+    <string name="onboarding_migration_complete_description">A tua conta, listas de reprodução, histórico, gostos e dados da biblioteca estão prontos nesta versão do RLN Network.</string>
     <string name="onboarding_crash_reports_title">Ajuda a melhorar o RLN Network</string>
     <string name="onboarding_crash_reports_description">Partilha dados de diagnóstico opcionais através do Sentry para nos ajudar a encontrar e corrigir problemas. Podes alterar esta opção a qualquer momento nas Definições.</string>
     <string name="onboarding_notifications_title">Permitir notificações</string>
@@ -826,7 +826,7 @@
     <string name="onboarding_finish_title">Está tudo pronto</string>
     <string name="onboarding_finish_description">A configuração está concluída. Começa a ouvir ou transfere primeiro a tua conta e os teus dados.</string>
     <string name="onboarding_restore_backup">Restaurar a partir de uma cópia de segurança</string>
-    <string name="onboarding_settings_hint">Abre as Definições no menu do canto superior direito para personalizares o Metrolist.</string>
+    <string name="onboarding_settings_hint">Abre as Definições no menu do canto superior direito para personalizares o RLN Network.</string>
     <string name="onboarding_no_saved_accounts">Não foram encontradas contas associadas.</string>
     <string name="onboarding_account_picture">Fotografia de perfil de %1$s</string>
     <string name="onboarding_backup_picker_title">Restaurar cópia de segurança do RLN Network</string>

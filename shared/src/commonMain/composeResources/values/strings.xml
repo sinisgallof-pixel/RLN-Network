@@ -1313,7 +1313,7 @@
     <!-- Translators: Imperative action label for sign in again in the Spotify playlist import. -->
     <string name="spotify_sign_in_again">Sign in again</string>
     <!-- Translators: Imperative action label for choose playlists supporting in the Spotify playlist import. -->
-    <string name="spotify_choose_playlists_supporting">Select the playlists you want to import into Metrolist.</string>
+    <string name="spotify_choose_playlists_supporting">Select the playlists you want to import into RLN Network.</string>
     <!-- Translators: Pluralized count or status for selected playlist count in the Spotify playlist import. %1$d is the playlist count. -->
     <plurals name="spotify_selected_playlist_count">
         <item quantity="one">%1$d playlist selected</item>
@@ -1388,7 +1388,7 @@
     <!-- Translators: Dialog or notice body text for sensitive in the Backup & Restore. -->
     <string name="backup_sensitive_message">Backups contain your API keys, account credentials, authentication cookies, session tokens, and other sensitive information. Anyone with this file can access your accounts. Store it securely. Never share it.</string>
     <!-- Translators: Progress or status message for in progress in the Backup & Restore. -->
-    <string name="restore_in_progress">Restoring your backup…\nMetrolist will restart automatically.</string>
+    <string name="restore_in_progress">Restoring your backup…\nRLN Network will restart automatically.</string>
     <!-- Translators: Section heading for scrobbling account and behavior settings. -->
     <!-- Translators: Option or section label for not connected; retained for translation compatibility but not currently referenced by app code. -->
     <!-- Translators: Option or section label for signed in as; retained for translation compatibility but not currently referenced by app code. %1$s is the account name. -->
@@ -3274,7 +3274,7 @@
     <!-- Translators: Heading for migration complete in the onboarding. -->
     <string name="onboarding_migration_complete_title">Your account was migrated</string>
     <!-- Translators: Supporting text beneath the migration complete option in the onboarding. -->
-    <string name="onboarding_migration_complete_description">Your account, playlists, history, likes, and library data are ready in this version of Metrolist.</string>
+    <string name="onboarding_migration_complete_description">Your account, playlists, history, likes, and library data are ready in this version of RLN Network.</string>
     <!-- Translators: Heading for crash reports in the onboarding. -->
     <string name="onboarding_crash_reports_title">Help improve RLN Network</string>
     <!-- Translators: Supporting text beneath the crash reports option in the onboarding. -->
@@ -3313,7 +3313,7 @@
     <!-- Translators: Imperative action label for restore backup in the onboarding. -->
     <string name="onboarding_restore_backup">Restore from backup</string>
     <!-- Translators: Input hint for onboarding settings in the onboarding. -->
-    <string name="onboarding_settings_hint">Open Settings from the menu in the top right to customize Metrolist.</string>
+    <string name="onboarding_settings_hint">Open Settings from the menu in the top right to customize RLN Network.</string>
     <!-- Translators: Confirmation message about no saved accounts in the onboarding. -->
     <string name="onboarding_no_saved_accounts">No linked accounts were found.</string>
     <!-- Translators: Label for google in the onboarding. -->
@@ -3873,7 +3873,7 @@
     <!-- Translators: Imperative action label for restore in the Library and Backup & Restore. -->
     <string name="restore">Restore</string>
     <!-- Translators: Message explaining restoring backup in the Backup & Restore. -->
-    <string name="restoring_backup">Restoring your backup…\nMetrolist will restart automatically.</string>
+    <string name="restoring_backup">Restoring your backup…\nRLN Network will restart automatically.</string>
 
     <!-- Desktop: history -->
     <!-- Translators: Imperative action label for cannot undone; retained for translation compatibility but not currently referenced by app code. -->
@@ -5099,7 +5099,7 @@
     <string name="onboarding_continue_without_migration">Continue with an empty library</string>
     <string name="onboarding_migration_recovery_description">You can try again or continue with an empty library. A recovery copy of your original database will stay on this device. You can restore a backup after setup.</string>
     <string name="onboarding_migration_failed">Could not prepare your library. Your original data has been preserved.</string>
-    <string name="onboarding_library_migrated_description">Your playlists, history, likes, and library data are ready in this version of Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Your playlists, history, likes, and library data are ready in this version of RLN Network.</string>
     <string name="onboarding_notifications_denied">Notifications are disabled. You can enable them later in Android app settings, or choose No to continue.</string>
     <string name="mini_player_video_prerequisite">Enable Play music videos in Playback settings first</string>
     <string name="download_folder_access_failed">Access to this folder could not be saved. Choose a folder with read and write access.</string>
@@ -5125,7 +5125,7 @@
     <string name="updates_notification_settings">Android notification settings</string>
     <string name="widget_recognizer_open_result">Open identified song</string>
     <string name="statistics_load_failed">Could not refresh statistics. Try again.</string>
-    <string name="desktop_platform_unsupported">This operating system is not supported by Metrolist. Use Windows 10 or later, macOS, or a Linux distribution other than Omarchy.</string>
+    <string name="desktop_platform_unsupported">This operating system is not supported by RLN Network. Use Windows 10 or later, macOS, or a Linux distribution other than Omarchy.</string>
     <string name="shortcut_toggle_expanded">Toggle expanded player</string>
     <string name="desktop_display_unavailable">RLN Network could not connect to this session’s X display. Launch it from your desktop session with DISPLAY set.</string>
     <string name="webkit_install_hint">Embedded sign-in requires WebKitGTK 4.1 (%1$s). Install it using your system package manager.</string>
@@ -5189,8 +5189,8 @@
     <string name="theme_color_rose">Rose</string>
     <string name="theme_color_red">Red</string>
     <string name="theme_color_gold">Gold</string>
-    <string name="backup_unsupported_format">This backup format is not supported by this version of Metrolist.</string>
-    <string name="backup_unsupported_database">The database version in this backup is not supported by this version of Metrolist.</string>
+    <string name="backup_unsupported_format">This backup format is not supported by this version of RLN Network.</string>
+    <string name="backup_unsupported_database">The database version in this backup is not supported by this version of RLN Network.</string>
     <string name="backup_too_large">The backup exceeds a supported size or entry limit.</string>
     <string name="backup_invalid_data">The backup could not be read or validated. It may be damaged or contain unsupported data.</string>
     <string name="search_history_removal_failed">Could not clear account search history. Please try again when connected.</string>

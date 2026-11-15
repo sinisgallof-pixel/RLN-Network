@@ -447,7 +447,7 @@
     <string name="backup_restore_title">Còpia de seguretat i restauració</string>
     <string name="spotify_sign_in">Inicia sessió a Spotify</string>
     <string name="spotify_sign_in_again">Inicia sessió de nou</string>
-    <string name="spotify_choose_playlists_supporting">Selecciona les llistes de reproducció que vols portar a Metrolist.</string>
+    <string name="spotify_choose_playlists_supporting">Selecciona les llistes de reproducció que vols portar a RLN Network.</string>
     <plurals name="spotify_selected_playlist_count">
         <item quantity="one">%1$d llista de reproducció seleccionada</item>
         <item quantity="many">%1$d llistes de reproducció seleccionades</item>
@@ -481,7 +481,7 @@
     <string name="backup_restore_busy">Treballant…</string>
     <string name="backup_sensitive_title">Còpia de seguretat sensible</string>
     <string name="backup_sensitive_message">Les còpies de seguretat contenen les teves claus API, credencials de compte, cookies d’autenticació, tokens de sessió i altra informació sensible. Qualsevol qui tingui aquest fitxer PODRÀ accedir als teus comptes. Emmagatzema-ho de manera segura i MAI HO COMPARTISQUIS.</string>
-    <string name="restore_in_progress">S\u0027està restaurant la còpia de seguretat…\nMetrolist es reiniciarà automàticament.</string>
+    <string name="restore_in_progress">S\u0027està restaurant la còpia de seguretat…\nRLN Network es reiniciarà automàticament.</string>
     <string name="scrobble_tap_to_disconnect">Toqueu per desconnectar</string>
     <string name="scrobble_enable">Habilita el scrobbling</string>
     <string name="scrobble_now_playing">Actualitzacions de reproducció actual</string>
@@ -1207,7 +1207,7 @@
     <string name="onboarding_migration_title">La teva biblioteca v13 és aquí</string>
     <string name="onboarding_migration_description">Hem trobat una base de dades Metrolist independent. Migra les llistes de reproducció, l\u0027historial, els m\u0027agrada i les dades de la biblioteca in situ. L\u0027original es podrà recuperar si la migració falla.</string>
     <string name="onboarding_migration_complete_title">El teu compte s\u0027ha migrat</string>
-    <string name="onboarding_migration_complete_description">El teu compte, les llistes de reproducció, l\u0027historial, els m\u0027agrada i les dades de la biblioteca estan llestos en aquesta versió de Metrolist.</string>
+    <string name="onboarding_migration_complete_description">El teu compte, les llistes de reproducció, l\u0027historial, els m\u0027agrada i les dades de la biblioteca estan llestos en aquesta versió de RLN Network.</string>
     <string name="onboarding_crash_reports_title">Ajuda a millorar RLN Network</string>
     <string name="onboarding_crash_reports_description">Comparteix diagnòstics opcionals mitjançant Sentry per ajudar-nos a trobar i solucionar problemes més ràpidament. Pots canviar això en qualsevol moment a Configuració.</string>
     <string name="onboarding_notifications_title">Permet notificacions</string>
@@ -1225,7 +1225,7 @@
     <string name="onboarding_finish_description">La configuració està completada. Comença a escoltar, o importa primer el teu compte i les teves dades.</string>
     <string name="finish">Finalitzar</string>
     <string name="onboarding_restore_backup">Restaura des de còpia de seguretat</string>
-    <string name="onboarding_settings_hint">Consulta la configuració al menú de la cantonada superior dreta per personalitzar Metrolist.</string>
+    <string name="onboarding_settings_hint">Consulta la configuració al menú de la cantonada superior dreta per personalitzar RLN Network.</string>
     <string name="onboarding_no_saved_accounts">No s\u0027han trobat comptes vinculats.</string>
     <string name="onboarding_account_picture">%1$s imatge de perfil</string>
     <string name="migrated">Migrat</string>
@@ -1439,7 +1439,7 @@
     <string name="sensitive_backup">Còpia de seguretat sensible</string>
     <string name="restore_backup_confirm">Restaurar la còpia de seguretat?</string>
     <string name="restore">Restaura</string>
-    <string name="restoring_backup">S\u0027està restaurant la còpia de seguretat…\nMetrolist es reiniciarà automàticament.</string>
+    <string name="restoring_backup">S\u0027està restaurant la còpia de seguretat…\nRLN Network es reiniciarà automàticament.</string>
     <string name="hidden_items_count">Elements ocults (%1$d)</string>
     <string name="hidden_library_items">Elements de biblioteca ocults</string>
     <string name="delete_playlist_confirm">Eliminar llista de reproducció</string>
@@ -2057,7 +2057,7 @@
     <string name="onboarding_continue_without_migration">Continua amb una biblioteca buida</string>
     <string name="onboarding_migration_recovery_description">Pots tornar-ho a intentar o continuar amb una biblioteca buida. Es conservarà una còpia de recuperació de la base de dades original en aquest dispositiu. Pots restaurar una còpia de seguretat després de la configuració.</string>
     <string name="onboarding_migration_failed">No s'ha pogut preparar la biblioteca. S'han conservat les dades originals.</string>
-    <string name="onboarding_library_migrated_description">Les llistes de reproducció, l'historial, els m'agrada i les dades de la biblioteca ja estan disponibles en aquesta versió de Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Les llistes de reproducció, l'historial, els m'agrada i les dades de la biblioteca ja estan disponibles en aquesta versió de RLN Network.</string>
     <string name="onboarding_notifications_denied">Les notificacions estan desactivades. Les pots activar més endavant a la configuració de l'aplicació d'Android o triar No per continuar.</string>
     <string name="mini_player_video_prerequisite">Primer activa Reprodueix vídeos musicals a la configuració de reproducció</string>
     <string name="download_folder_access_failed">No s'ha pogut desar el permís d'accés a aquesta carpeta. Tria una carpeta amb accés de lectura i escriptura.</string>
@@ -2097,7 +2097,7 @@
     <string name="video_stats_latency_value">%1$s ms</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s MB (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Volum: %2$s</string>
-    <string name="download_folder_unavailable">No s'ha pogut fer servir aquesta carpeta. Tria una carpeta amb permís d'escriptura a la qual el sistema o l'entorn aïllat permeti accedir a Metrolist.</string>
+    <string name="download_folder_unavailable">No s'ha pogut fer servir aquesta carpeta. Tria una carpeta amb permís d'escriptura a la qual el sistema o l'entorn aïllat permeti accedir a RLN Network.</string>
     <string name="window_maximize">Maximitza</string>
     <string name="window_restore">Restaura la finestra</string>
     <string name="equalizer_stream_unavailable">L'equalitzador i el preamplificador no estan disponibles per a aquest flux. Els canvis s'aplicaran quan es reprodueixi una cançó compatible.</string>

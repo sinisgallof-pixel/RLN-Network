@@ -451,7 +451,7 @@
     <string name="backup_restore_title">Backup e importazione</string>
     <string name="spotify_sign_in">Accedi a Spotify</string>
     <string name="spotify_sign_in_again">Accedi di nuovo</string>
-    <string name="spotify_choose_playlists_supporting">Scegli le playlist che vuoi importare su Metrolist.</string>
+    <string name="spotify_choose_playlists_supporting">Scegli le playlist che vuoi importare su RLN Network.</string>
     <plurals name="spotify_selected_playlist_count">
         <item quantity="one">%1$d playlist selezionata</item>
         <item quantity="many">%1$d playlist selezionate</item>
@@ -485,7 +485,7 @@
     <string name="backup_restore_busy">Elaborazione in corso…</string>
     <string name="backup_sensitive_title">Backup con dati sensibili</string>
     <string name="backup_sensitive_message">I backup contengono le tue chiavi API, credenziali dell\u0027account, cookie di autenticazione, token di sessione e altre informazioni sensibili. Chiunque entri in possesso di questo file potrà accedere ai tuoi account. Conservalo in un luogo sicuro e non condividerlo con nessuno.</string>
-    <string name="restore_in_progress">Ripristinando il tuo backup...\nMetrolist si riavvierà automaticamente.</string>
+    <string name="restore_in_progress">Ripristinando il tuo backup...\nRLN Network si riavvierà automaticamente.</string>
     <string name="scrobble_tap_to_disconnect">Tocca per disconnettere</string>
     <string name="scrobble_enable">Scrobbling</string>
     <string name="scrobble_now_playing">Aggiornamenti in riproduzione</string>
@@ -932,7 +932,7 @@
         <item quantity="many">Aggiunti %1$d brani a %2$s</item>
         <item quantity="other">Aggiunti %1$d brani a %2$s</item>
     </plurals>
-    <string name="onboarding_migration_complete_description">Il tuo account, le playlist, la cronologia, i preferiti e i dati della libreria sono pronti in questa versione di Metrolist.</string>
+    <string name="onboarding_migration_complete_description">Il tuo account, le playlist, la cronologia, i preferiti e i dati della libreria sono pronti in questa versione di RLN Network.</string>
     <string name="statistics_play_count_duration">%1$s · %2$s</string>
     <string name="stored_remove_selected_message">I file audio salvati selezionati verranno rimossi.</string>
     <string name="suggested_to_host">Suggerito all\u0027host</string>
@@ -1298,7 +1298,7 @@
     <string name="onboarding_finish_title">È tutto pronto</string>
     <string name="finish">Fine</string>
     <string name="onboarding_restore_backup">Ripristina da backup</string>
-    <string name="onboarding_settings_hint">Apri le Impostazioni dal menù in alto a destra per personalizzare Metrolist.</string>
+    <string name="onboarding_settings_hint">Apri le Impostazioni dal menù in alto a destra per personalizzare RLN Network.</string>
     <string name="migrated">Importato</string>
     <string name="ready_to_migrate">Pronto a importare</string>
     <string name="discord_logout">Disconnetti</string>
@@ -1501,7 +1501,7 @@
     <string name="sensitive_backup">Backup sensibile</string>
     <string name="restore_backup_confirm">Ripristinare backup?</string>
     <string name="restore">Ripristina</string>
-    <string name="restoring_backup">Ripristinando il tuo backup...\nMetrolist si riavvierà automaticamente.</string>
+    <string name="restoring_backup">Ripristinando il tuo backup...\nRLN Network si riavvierà automaticamente.</string>
     <string name="hidden_library_items">Elementi nascosti in libreria</string>
     <string name="delete_playlist_confirm">Eliminare playlist?</string>
     <string name="join_room">Unisciti a una stanza</string>
@@ -2146,7 +2146,7 @@
     <string name="onboarding_continue_without_migration">Continua con una libreria vuota</string>
     <string name="onboarding_migration_recovery_description">Puoi riprovare o continuare con una libreria vuota. Una copia di recupero del database originale rimarrà su questo dispositivo. Potrai ripristinare un backup dopo la configurazione.</string>
     <string name="onboarding_migration_failed">Impossibile preparare la libreria. I dati originali sono stati conservati.</string>
-    <string name="onboarding_library_migrated_description">Le tue playlist, la cronologia, i brani piaciuti e i dati della libreria sono pronti in questa versione di Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Le tue playlist, la cronologia, i brani piaciuti e i dati della libreria sono pronti in questa versione di RLN Network.</string>
     <string name="onboarding_notifications_denied">Le notifiche sono disattivate. Puoi attivarle in seguito nelle impostazioni dell'app di Android oppure scegliere No per continuare.</string>
     <string name="mini_player_video_prerequisite">Attiva prima Riproduci video musicali nelle impostazioni di riproduzione</string>
     <string name="download_folder_access_failed">Impossibile salvare l'accesso a questa cartella. Scegli una cartella con accesso in lettura e scrittura.</string>
@@ -2171,7 +2171,7 @@
     <string name="updates_notification_settings">Impostazioni notifiche di Android</string>
     <string name="widget_recognizer_open_result">Apri il brano riconosciuto</string>
     <string name="statistics_load_failed">Impossibile aggiornare le statistiche. Riprova.</string>
-    <string name="desktop_platform_unsupported">Questo sistema operativo non è supportato da Metrolist. Usa Windows 10 o successivo, macOS o una distribuzione Linux diversa da Omarchy.</string>
+    <string name="desktop_platform_unsupported">Questo sistema operativo non è supportato da RLN Network. Usa Windows 10 o successivo, macOS o una distribuzione Linux diversa da Omarchy.</string>
     <string name="shortcut_toggle_expanded">Espandi o riduci il lettore</string>
     <string name="desktop_display_unavailable">RLN Network non è riuscito a connettersi al display X di questa sessione. Avvialo dalla sessione desktop con DISPLAY impostato.</string>
     <string name="webkit_install_hint">L'accesso integrato richiede WebKitGTK 4.1 (%1$s). Installalo tramite il gestore di pacchetti del sistema.</string>
@@ -2186,7 +2186,7 @@
     <string name="video_stats_latency_value">%1$s ms</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s MB (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Vol.: %2$s</string>
-    <string name="download_folder_unavailable">Impossibile usare questa cartella. Scegli una cartella scrivibile a cui il sistema o la sandbox consentano l'accesso a Metrolist.</string>
+    <string name="download_folder_unavailable">Impossibile usare questa cartella. Scegli una cartella scrivibile a cui il sistema o la sandbox consentano l'accesso a RLN Network.</string>
     <string name="window_maximize">Massimizza</string>
     <string name="window_restore">Ripristina finestra</string>
     <string name="equalizer_stream_unavailable">Equalizzatore e preamplificatore non disponibili per questo flusso. Le modifiche verranno applicate alla riproduzione di un brano supportato.</string>
@@ -2236,8 +2236,8 @@
     <string name="theme_color_rose">Rosa</string>
     <string name="theme_color_red">Rosso</string>
     <string name="theme_color_gold">Oro</string>
-    <string name="backup_unsupported_format">Questo formato di backup non è supportato da questa versione di Metrolist.</string>
-    <string name="backup_unsupported_database">La versione del database in questo backup non è supportata da questa versione di Metrolist.</string>
+    <string name="backup_unsupported_format">Questo formato di backup non è supportato da questa versione di RLN Network.</string>
+    <string name="backup_unsupported_database">La versione del database in questo backup non è supportata da questa versione di RLN Network.</string>
     <string name="backup_too_large">Il backup supera un limite consentito di dimensione o numero di voci.</string>
     <string name="backup_invalid_data">Impossibile leggere o convalidare il backup. Potrebbe essere danneggiato o contenere dati non supportati.</string>
     <string name="search_history_removal_failed">Impossibile cancellare la cronologia delle ricerche dell'account. Riprova quando sei connesso.</string>

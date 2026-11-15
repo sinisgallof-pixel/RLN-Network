@@ -411,7 +411,7 @@
     <string name="onboarding_finish_title">Mọi thứ đã sẵn sàng</string>
     <string name="onboarding_finish_description">Đã hoàn tất thiết lập. Bắt đầu nghe hoặc chuyển tài khoản và dữ liệu của bạn sang trước.</string>
     <string name="onboarding_restore_backup">Khôi phục từ bản sao lưu</string>
-    <string name="onboarding_settings_hint">Mở Cài đặt từ trình đơn ở góc trên bên phải để tùy chỉnh Metrolist.</string>
+    <string name="onboarding_settings_hint">Mở Cài đặt từ trình đơn ở góc trên bên phải để tùy chỉnh RLN Network.</string>
     <string name="onboarding_no_saved_accounts">Không tìm thấy tài khoản đã liên kết.</string>
     <string name="onboarding_account_picture">Ảnh hồ sơ của %1$s</string>
     <string name="onboarding_backup_picker_title">Khôi phục bản sao lưu RLN Network</string>

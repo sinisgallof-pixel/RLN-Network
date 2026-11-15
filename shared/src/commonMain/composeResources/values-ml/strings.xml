@@ -287,7 +287,7 @@
     <string name="onboarding_continue_without_migration">ശൂന്യമായ ലൈബ്രറിയുമായി തുടരുക</string>
     <string name="onboarding_migration_recovery_description">വീണ്ടും ശ്രമിക്കാം അല്ലെങ്കിൽ ശൂന്യമായ ലൈബ്രറിയുമായി തുടരാം. പഴയ ഡാറ്റാബേസിന്റെ വീണ്ടെടുക്കൽ പകർപ്പ് ഈ ഉപകരണത്തിൽ സൂക്ഷിക്കും. സജ്ജീകരണം പൂർത്തിയാക്കിയശേഷം ബാക്കപ്പ് പുനഃസ്ഥാപിക്കാം.</string>
     <string name="onboarding_migration_failed">നിങ്ങളുടെ ലൈബ്രറി തയ്യാറാക്കാനായില്ല. പഴയ ഡാറ്റ സുരക്ഷിതമായി സൂക്ഷിച്ചിട്ടുണ്ട്.</string>
-    <string name="onboarding_library_migrated_description">നിങ്ങളുടെ പ്ലേലിസ്റ്റുകൾ, ചരിത്രം, ഇഷ്ടപ്പെട്ടവ, ലൈബ്രറി ഡാറ്റ എന്നിവ Metrolist-ന്റെ ഈ പതിപ്പിൽ തയ്യാറാണ്.</string>
+    <string name="onboarding_library_migrated_description">നിങ്ങളുടെ പ്ലേലിസ്റ്റുകൾ, ചരിത്രം, ഇഷ്ടപ്പെട്ടവ, ലൈബ്രറി ഡാറ്റ എന്നിവ RLN Network-ന്റെ ഈ പതിപ്പിൽ തയ്യാറാണ്.</string>
     <string name="onboarding_notifications_denied">അറിയിപ്പുകൾ പ്രവർത്തനരഹിതമാണ്. പിന്നീട് Android ആപ്പ് ക്രമീകരണങ്ങളിൽ അവ പ്രവർത്തനക്ഷമമാക്കാം, അല്ലെങ്കിൽ തുടരാൻ “ഇല്ല” തിരഞ്ഞെടുക്കുക.</string>
     <string name="mini_player_video_prerequisite">ആദ്യം പ്ലേബാക്ക് ക്രമീകരണങ്ങളിൽ സംഗീത വീഡിയോകൾ പ്ലേ ചെയ്യുക പ്രവർത്തനക്ഷമമാക്കുക</string>
     <string name="download_folder_access_failed">ഈ ഫോൾഡറിലേക്കുള്ള പ്രവേശനാനുമതി സൂക്ഷിക്കാനായില്ല. വായിക്കാനും എഴുതാനും അനുമതിയുള്ള ഫോൾഡർ തിരഞ്ഞെടുക്കുക.</string>
@@ -314,7 +314,7 @@
     <string name="statistics_load_failed">സ്ഥിതിവിവരക്കണക്കുകൾ പുതുക്കാനായില്ല. വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="desktop_platform_unsupported">ഈ ഓപ്പറേറ്റിങ് സിസ്റ്റത്തെ RLN Network പിന്തുണയ്ക്കുന്നില്ല. Windows 10 അല്ലെങ്കിൽ അതിനുശേഷമുള്ള പതിപ്പ്, macOS, അല്ലെങ്കിൽ Omarchy ഒഴികെയുള്ള ഒരു Linux വിതരണം ഉപയോഗിക്കുക.</string>
     <string name="shortcut_toggle_expanded">വിപുലീകരിച്ച പ്ലേയർ തുറക്കുക അല്ലെങ്കിൽ അടയ്ക്കുക</string>
-    <string name="desktop_display_unavailable">ഈ സെഷന്റെ X ഡിസ്പ്ലേയിലേക്ക് Metrolist-ന് കണക്റ്റ് ചെയ്യാനായില്ല. DISPLAY സജ്ജമാക്കിയ ഡെസ്ക്ടോപ്പ് സെഷനിൽനിന്ന് ആരംഭിക്കുക.</string>
+    <string name="desktop_display_unavailable">ഈ സെഷന്റെ X ഡിസ്പ്ലേയിലേക്ക് RLN Network-ന് കണക്റ്റ് ചെയ്യാനായില്ല. DISPLAY സജ്ജമാക്കിയ ഡെസ്ക്ടോപ്പ് സെഷനിൽനിന്ന് ആരംഭിക്കുക.</string>
     <string name="webkit_install_hint">ആപ്പിനുള്ളിൽ പ്രവേശിക്കാൻ WebKitGTK 4.1 (%1$s) ആവശ്യമാണ്. സിസ്റ്റത്തിന്റെ പാക്കേജ് മാനേജർ ഉപയോഗിച്ച് ഇൻസ്റ്റാൾ ചെയ്യുക.</string>
     <string name="webkit_install_command">ഇത് ഉപയോഗിച്ച് ഇൻസ്റ്റാൾ ചെയ്യുക:\n%1$s</string>
     <string name="webkit_appimage_hint">AppImage പതിപ്പുകളും പ്രവേശനത്തിനായി സിസ്റ്റത്തിലെ WebKitGTK ലൈബ്രറികൾ ഉപയോഗിക്കുന്നു.</string>
@@ -327,7 +327,7 @@
     <string name="video_stats_latency_value">%1$s ms</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s MB (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | ശബ്ദനില: %2$s</string>
-    <string name="download_folder_unavailable">ഈ ഫോൾഡർ ഉപയോഗിക്കാനായില്ല. Metrolist-ന് പ്രവേശിക്കാൻ സിസ്റ്റമോ ഒറ്റപ്പെട്ട പ്രവർത്തനപരിസരമോ അനുവദിക്കുന്ന, എഴുതാൻ കഴിയുന്ന ഫോൾഡർ തിരഞ്ഞെടുക്കുക.</string>
+    <string name="download_folder_unavailable">ഈ ഫോൾഡർ ഉപയോഗിക്കാനായില്ല. RLN Network-ന് പ്രവേശിക്കാൻ സിസ്റ്റമോ ഒറ്റപ്പെട്ട പ്രവർത്തനപരിസരമോ അനുവദിക്കുന്ന, എഴുതാൻ കഴിയുന്ന ഫോൾഡർ തിരഞ്ഞെടുക്കുക.</string>
     <string name="window_maximize">വലുതാക്കുക</string>
     <string name="window_restore">വിൻഡോ പഴയ വലുപ്പത്തിലാക്കുക</string>
     <string name="equalizer_stream_unavailable">ഈ സ്ട്രീമിന് ഇക്വലൈസറും പ്രീആംപും ലഭ്യമല്ല. പിന്തുണയ്ക്കുന്ന പാട്ട് പ്ലേ ചെയ്യുമ്പോൾ മാറ്റങ്ങൾ ബാധകമാകും.</string>
@@ -376,8 +376,8 @@
     <string name="theme_color_rose">റോസ്</string>
     <string name="theme_color_red">ചുവപ്പ്</string>
     <string name="theme_color_gold">സ്വർണ്ണനിറം</string>
-    <string name="backup_unsupported_format">ഈ ബാക്കപ്പ് ഫോർമാറ്റിനെ Metrolist-ന്റെ ഈ പതിപ്പ് പിന്തുണയ്ക്കുന്നില്ല.</string>
-    <string name="backup_unsupported_database">ഈ ബാക്കപ്പിലെ ഡാറ്റാബേസ് പതിപ്പിനെ Metrolist-ന്റെ ഈ പതിപ്പ് പിന്തുണയ്ക്കുന്നില്ല.</string>
+    <string name="backup_unsupported_format">ഈ ബാക്കപ്പ് ഫോർമാറ്റിനെ RLN Network-ന്റെ ഈ പതിപ്പ് പിന്തുണയ്ക്കുന്നില്ല.</string>
+    <string name="backup_unsupported_database">ഈ ബാക്കപ്പിലെ ഡാറ്റാബേസ് പതിപ്പിനെ RLN Network-ന്റെ ഈ പതിപ്പ് പിന്തുണയ്ക്കുന്നില്ല.</string>
     <string name="backup_too_large">ബാക്കപ്പിന്റെ വലുപ്പമോ അതിലെ ഇനങ്ങളുടെ എണ്ണമോ അനുവദനീയമായ പരിധി കവിയുന്നു.</string>
     <string name="backup_invalid_data">ബാക്കപ്പ് വായിക്കാനോ സാധുത പരിശോധിക്കാനോ കഴിഞ്ഞില്ല. അത് കേടായിരിക്കാം അല്ലെങ്കിൽ പിന്തുണയ്ക്കാത്ത ഡാറ്റ അടങ്ങിയിരിക്കാം.</string>
     <string name="search_history_removal_failed">അക്കൗണ്ടിന്റെ തിരയൽ ചരിത്രം മായ്ക്കാനായില്ല. ഇന്റർനെറ്റിൽ കണക്റ്റ് ചെയ്തശേഷം വീണ്ടും ശ്രമിക്കുക.</string>
@@ -390,7 +390,7 @@
     <string name="onboarding_migration_title">നിങ്ങളുടെ v13 ലൈബ്രറി ഇവിടെയുണ്ട്</string>
     <string name="onboarding_migration_description">ഒരു സ്വതന്ത്ര Metrolist ഡാറ്റാബേസ് കണ്ടെത്തി. പ്ലേലിസ്റ്റുകൾ, ചരിത്രം, ഇഷ്ടപ്പെട്ടവ, ലൈബ്രറി ഡാറ്റ എന്നിവ അതേ സ്ഥാനത്ത് മാറ്റുക. മാറ്റം പരാജയപ്പെട്ടാൽ യഥാർത്ഥ ഡാറ്റാബേസ് വീണ്ടെടുക്കാം.</string>
     <string name="onboarding_migration_complete_title">നിങ്ങളുടെ അക്കൗണ്ട് മാറ്റിയിരിക്കുന്നു</string>
-    <string name="onboarding_migration_complete_description">നിങ്ങളുടെ അക്കൗണ്ട്, പ്ലേലിസ്റ്റുകൾ, ചരിത്രം, ഇഷ്ടപ്പെട്ടവ, ലൈബ്രറി ഡാറ്റ എന്നിവ Metrolist-ന്റെ ഈ പതിപ്പിൽ തയ്യാറാണ്.</string>
+    <string name="onboarding_migration_complete_description">നിങ്ങളുടെ അക്കൗണ്ട്, പ്ലേലിസ്റ്റുകൾ, ചരിത്രം, ഇഷ്ടപ്പെട്ടവ, ലൈബ്രറി ഡാറ്റ എന്നിവ RLN Network-ന്റെ ഈ പതിപ്പിൽ തയ്യാറാണ്.</string>
     <string name="onboarding_crash_reports_title">RLN Network മെച്ചപ്പെടുത്താൻ സഹായിക്കുക</string>
     <string name="onboarding_crash_reports_description">പ്രശ്നങ്ങൾ കണ്ടെത്താനും പരിഹരിക്കാനും ഞങ്ങളെ സഹായിക്കാൻ Sentry വഴി പരിശോധനാ വിവരങ്ങൾ ഇഷ്ടാനുസരണം പങ്കിടുക. ക്രമീകരണങ്ങളിൽ ഇത് എപ്പോൾ വേണമെങ്കിലും മാറ്റാം.</string>
     <string name="onboarding_notifications_title">അറിയിപ്പുകൾ അനുവദിക്കുക</string>

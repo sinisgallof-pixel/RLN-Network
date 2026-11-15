@@ -409,7 +409,7 @@
     <string name="onboarding_continue_without_migration">Nadaljuj s prazno knjižnico</string>
     <string name="onboarding_migration_recovery_description">Lahko poskusite znova ali nadaljujete s prazno knjižnico. Kopija izvirne zbirke podatkov za obnovitev bo ostala v tej napravi. Po nastavitvi lahko obnovite varnostno kopijo.</string>
     <string name="onboarding_migration_failed">Knjižnice ni bilo mogoče pripraviti. Vaši izvirni podatki so ohranjeni.</string>
-    <string name="onboarding_library_migrated_description">Vaši seznami predvajanja, zgodovina, všečki in podatki knjižnice so pripravljeni v tej različici aplikacije Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Vaši seznami predvajanja, zgodovina, všečki in podatki knjižnice so pripravljeni v tej različici aplikacije RLN Network.</string>
     <string name="onboarding_notifications_denied">Obvestila so onemogočena. Pozneje jih lahko omogočite v nastavitvah aplikacije v Androidu ali izberete »Ne« za nadaljevanje.</string>
     <string name="mini_player_video_prerequisite">Najprej v nastavitvah predvajanja omogočite predvajanje glasbenih videoposnetkov</string>
     <string name="download_folder_access_failed">Dostopa do te mape ni bilo mogoče shraniti. Izberite mapo z dovoljenjem za branje in pisanje.</string>
@@ -449,7 +449,7 @@
     <string name="video_stats_latency_value">%1$s ms</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s MB (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Glasnost: %2$s</string>
-    <string name="download_folder_unavailable">Te mape ni bilo mogoče uporabiti. Izberite zapisljivo mapo, do katere sistem ali peskovnik dovoljuje dostop aplikaciji Metrolist.</string>
+    <string name="download_folder_unavailable">Te mape ni bilo mogoče uporabiti. Izberite zapisljivo mapo, do katere sistem ali peskovnik dovoljuje dostop aplikaciji RLN Network.</string>
     <string name="window_maximize">Povečaj</string>
     <string name="window_restore">Obnovi okno</string>
     <string name="equalizer_stream_unavailable">Izenačevalnik in predojačevalnik za ta tok nista na voljo. Spremembe bodo veljale ob predvajanju podprte skladbe.</string>
@@ -465,7 +465,7 @@
     <string name="queue_youtube_history_paused_desc">Nadaljujte beleženje zgodovine poslušanja, da se predvajanja brez povezave dodajajo v čakalno vrsto</string>
     <string name="search_online_failed">Spletno iskanje ni uspelo. Preverite povezavo in poskusite znova.</string>
     <string name="search_load_more_failed">Več rezultatov ni bilo mogoče naložiti.</string>
-    <string name="discord_error_gateway_configuration">Discord je zavrnil nastavitve povezave. Pred ponovnim poskusom posodobite Metrolist.</string>
+    <string name="discord_error_gateway_configuration">Discord je zavrnil nastavitve povezave. Pred ponovnim poskusom posodobite RLN Network.</string>
     <string name="discord_preview_buttons_adjusted">Discord skrajša dolge napise gumbov in izpusti gumbe s predolgimi povezavami. Ta predogled prikazuje gumbe, ki bodo poslani.</string>
     <string name="discord_presence_status_warning">Obogatena prisotnost pošlje Discordu stanje »Na spletu«. Lahko preglasi »Neviden« ali »Ne moti«, tudi ko se predvajanje ustavi.</string>
     <string name="discord_refresh_queued">Osvežitev prisotnosti je v čakalni vrsti.</string>
@@ -514,7 +514,7 @@
     <string name="onboarding_migration_title">Vaša knjižnica iz različice v13 je tukaj</string>
     <string name="onboarding_migration_description">Našli smo samostojno podatkovno zbirko Metrolist. Na mestu preselite sezname predvajanja, zgodovino poslušanja, všečke in podatke knjižnice. Če selitev ne uspe, lahko obnovite izvirno podatkovno zbirko.</string>
     <string name="onboarding_migration_complete_title">Vaš račun je bil preseljen</string>
-    <string name="onboarding_migration_complete_description">Vaš račun, seznami predvajanja, zgodovina poslušanja, všečki in podatki knjižnice so pripravljeni v tej različici aplikacije Metrolist.</string>
+    <string name="onboarding_migration_complete_description">Vaš račun, seznami predvajanja, zgodovina poslušanja, všečki in podatki knjižnice so pripravljeni v tej različici aplikacije RLN Network.</string>
     <string name="onboarding_crash_reports_title">Pomagajte izboljšati RLN Network</string>
     <string name="onboarding_crash_reports_description">Po želji delite diagnostične podatke prek storitve Sentry, da nam pomagate najti in odpraviti težave. To lahko kadar koli spremenite v Nastavitvah.</string>
     <string name="onboarding_notifications_title">Dovoli obvestila</string>

@@ -265,7 +265,7 @@
     <string name="discord_status_not_initialized">प्रारम्भ नभएको</string>
     <string name="discord_status_authorized">अनुमति दिइएको</string>
     <string name="discord_error_denied">डिस्कोर्ड द्वारा अनुमति अस्वीकृत गरियो।</string>
-    <string name="discord_error_connection_failed">डिसकर्डसँग कनेक्ट गर्न सकिएन। Metrolistले स्वतः पुनः प्रयास गर्नेछ।</string>
+    <string name="discord_error_connection_failed">डिसकर्डसँग कनेक्ट गर्न सकिएन। RLN Networkले स्वतः पुनः प्रयास गर्नेछ।</string>
     <string name="discord_error_no_browser">डिस्कर्ड अनुमति खोल्न कुनै एप उपलब्ध छैन।</string>
     <string name="discord_error_token_exchange_failed">टोकन विनिमय विफल भयो। फेरि प्रयास गर्नुहोस्।</string>
     <string name="discord_error_token_refresh_failed">टोकन रिफ्रेश असफल भयो। फेरि लग इन गर्नुहोस्।</string>

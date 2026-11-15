@@ -299,7 +299,7 @@
     <string name="onboarding_continue_without_migration">Продължаване с празна библиотека</string>
     <string name="onboarding_migration_recovery_description">Можете да опитате отново или да продължите с празна библиотека. Копие на оригиналната ви база данни за възстановяване ще остане на това устройство. След настройката можете да възстановите резервно копие.</string>
     <string name="onboarding_migration_failed">Библиотеката ви не можа да бъде подготвена. Оригиналните ви данни са запазени.</string>
-    <string name="onboarding_library_migrated_description">Вашите плейлисти, история, харесвания и данни от библиотеката са готови в тази версия на Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Вашите плейлисти, история, харесвания и данни от библиотеката са готови в тази версия на RLN Network.</string>
     <string name="onboarding_notifications_denied">Известията са изключени. Можете да ги включите по-късно в настройките на приложението в Android или да изберете „Не“, за да продължите.</string>
     <string name="mini_player_video_prerequisite">Първо включете „Пускане на музикални видеоклипове“ в настройките за възпроизвеждане</string>
     <string name="download_folder_access_failed">Достъпът до тази папка не можа да бъде запазен. Изберете папка с достъп за четене и запис.</string>
@@ -324,7 +324,7 @@
     <string name="updates_notification_settings">Настройки за известия в Android</string>
     <string name="widget_recognizer_open_result">Отваряне на разпознатата песен</string>
     <string name="statistics_load_failed">Статистиката не можа да бъде обновена. Опитайте отново.</string>
-    <string name="desktop_platform_unsupported">Тази операционна система не се поддържа от Metrolist. Използвайте Windows 10 или по-нова версия, macOS или Linux дистрибуция, различна от Omarchy.</string>
+    <string name="desktop_platform_unsupported">Тази операционна система не се поддържа от RLN Network. Използвайте Windows 10 или по-нова версия, macOS или Linux дистрибуция, различна от Omarchy.</string>
     <string name="shortcut_toggle_expanded">Разгъване или свиване на плейъра</string>
     <string name="desktop_display_unavailable">RLN Network не можа да се свърже с X дисплея на тази сесия. Стартирайте го от графичната си сесия със зададена променлива DISPLAY.</string>
     <string name="webkit_install_hint">За вграденото влизане е необходим WebKitGTK 4.1 (%1$s). Инсталирайте го чрез пакетния мениджър на системата си.</string>
@@ -339,7 +339,7 @@
     <string name="video_stats_latency_value">%1$s мс</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s МБ (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Сила на звука: %2$s</string>
-    <string name="download_folder_unavailable">Тази папка не може да се използва. Изберете папка с право на запис, до която системата или изолираната среда позволява достъп на Metrolist.</string>
+    <string name="download_folder_unavailable">Тази папка не може да се използва. Изберете папка с право на запис, до която системата или изолираната среда позволява достъп на RLN Network.</string>
     <string name="window_maximize">Увеличаване</string>
     <string name="window_restore">Възстановяване на прозореца</string>
     <string name="equalizer_stream_unavailable">Еквалайзерът и предусилвателят не са достъпни за този поток. Промените ще се приложат при възпроизвеждане на поддържана песен.</string>
@@ -388,8 +388,8 @@
     <string name="theme_color_rose">Розово</string>
     <string name="theme_color_red">Червено</string>
     <string name="theme_color_gold">Златисто</string>
-    <string name="backup_unsupported_format">Форматът на това резервно копие не се поддържа от тази версия на Metrolist.</string>
-    <string name="backup_unsupported_database">Версията на базата данни в това резервно копие не се поддържа от тази версия на Metrolist.</string>
+    <string name="backup_unsupported_format">Форматът на това резервно копие не се поддържа от тази версия на RLN Network.</string>
+    <string name="backup_unsupported_database">Версията на базата данни в това резервно копие не се поддържа от тази версия на RLN Network.</string>
     <string name="backup_too_large">Резервното копие надвишава поддържания размер или брой записи.</string>
     <string name="backup_invalid_data">Резервното копие не можа да бъде прочетено или проверено. То може да е повредено или да съдържа неподдържани данни.</string>
     <string name="search_history_removal_failed">Историята на търсене в профила не можа да бъде изчистена. Опитайте отново, когато имате връзка.</string>
@@ -402,7 +402,7 @@
     <string name="onboarding_migration_title">Вашата библиотека от v13 е тук</string>
     <string name="onboarding_migration_description">Открихме самостоятелна база данни на Metrolist. Прехвърлете плейлистите, историята, харесванията и данните от библиотеката на място. Можете да възстановите оригиналната база данни, ако прехвърлянето е неуспешно.</string>
     <string name="onboarding_migration_complete_title">Вашият акаунт е прехвърлен</string>
-    <string name="onboarding_migration_complete_description">Вашият акаунт, плейлисти, история, харесвания и данни от библиотеката са готови в тази версия на Metrolist.</string>
+    <string name="onboarding_migration_complete_description">Вашият акаунт, плейлисти, история, харесвания и данни от библиотеката са готови в тази версия на RLN Network.</string>
     <string name="onboarding_crash_reports_title">Помогнете за подобряването на RLN Network</string>
     <string name="onboarding_crash_reports_description">Споделяйте диагностични данни по желание чрез Sentry, за да ни помогнете да откриваме и отстраняваме проблеми. Можете да промените това по всяко време в Настройки.</string>
     <string name="onboarding_notifications_title">Разрешаване на известия</string>
@@ -419,7 +419,7 @@
     <string name="onboarding_finish_title">Всичко е готово</string>
     <string name="onboarding_finish_description">Настройката е завършена. Започнете да слушате или първо прехвърлете акаунта и данните си.</string>
     <string name="onboarding_restore_backup">Възстановяване от резервно копие</string>
-    <string name="onboarding_settings_hint">Отворете Настройки от менюто горе вдясно, за да персонализирате Metrolist.</string>
+    <string name="onboarding_settings_hint">Отворете Настройки от менюто горе вдясно, за да персонализирате RLN Network.</string>
     <string name="onboarding_no_saved_accounts">Не са намерени свързани акаунти.</string>
     <string name="onboarding_account_picture">Профилна снимка на %1$s</string>
     <string name="onboarding_backup_picker_title">Възстановяване на резервно копие на RLN Network</string>

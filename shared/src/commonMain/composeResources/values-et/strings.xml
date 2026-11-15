@@ -321,7 +321,7 @@
     <string name="import_error_unsupported_playlist_entries">See esitusloend sisaldab kohalikke faile või otselinke, millele Android ei pääse juurde. Impordi YouTube’i linkidega esitusloend või vali kohalikud failid arvutis.</string>
     <string name="import_error_local_files_require_local_playlist">Kohalikke helifaile saab importida ainult kohalikku esitusloendisse.</string>
     <string name="import_error_file_read_failed">Esitusloendi faili ei õnnestunud lugeda. Vali see uuesti ja anna failile juurdepääs.</string>
-    <string name="startup_error_title">Metrolisti käivitamise viga</string>
+    <string name="startup_error_title">RLN Networki käivitamise viga</string>
     <string name="lyrics_show_translations">Kuva tõlked</string>
     <string name="artist_latest_release">Uusim väljalase</string>
     <string name="top_tracks">Populaarseimad lood</string>
@@ -479,7 +479,7 @@
     <string name="queue_youtube_history_paused_desc">Jätka kuulamisajaloo salvestamist, et talletada võrguühenduseta kuulatud lugude esituskorrad hilisemaks saatmiseks</string>
     <string name="search_online_failed">Veebist otsimine ebaõnnestus. Kontrolli ühendust ja proovi uuesti.</string>
     <string name="search_load_more_failed">Rohkem tulemusi ei õnnestunud laadida.</string>
-    <string name="discord_error_gateway_configuration">Discord lükkas ühenduse seadistuse tagasi. Enne uuesti proovimist uuenda rakendust Metrolist.</string>
+    <string name="discord_error_gateway_configuration">Discord lükkas ühenduse seadistuse tagasi. Enne uuesti proovimist uuenda rakendust RLN Network.</string>
     <string name="discord_preview_buttons_adjusted">Discord lühendab pikki nupusilte ja jätab liiga pikkade linkidega nupud välja. Eelvaade näitab nuppe, mis saadetakse.</string>
     <string name="discord_presence_status_warning">Üksikasjalik tegevusolek saadab Discordile oleku „Võrgus“. See võib tühistada „Nähtamatu“ või „Mitte segada“, ka siis, kui taasesitus peatub.</string>
     <string name="discord_refresh_queued">Tegevusoleku värskendus lisati järjekorda.</string>
@@ -528,8 +528,8 @@
     <string name="onboarding_migration_title">Sinu v13 muusikakogu on siin</string>
     <string name="onboarding_migration_description">Leidsime eraldiseisva Metrolisti andmebaasi. Kanna esitusloendid, kuulamisajalugu, meeldivaks märgitud lood ja muusikakogu andmed üle kohapeal. Kui ülekandmine ebaõnnestub, saad algse andmebaasi taastada.</string>
     <string name="onboarding_migration_complete_title">Sinu konto on üle kantud</string>
-    <string name="onboarding_migration_complete_description">Sinu konto, esitusloendid, kuulamisajalugu, meeldivaks märgitud lood ja muusikakogu andmed on selles Metrolisti versioonis valmis.</string>
-    <string name="onboarding_crash_reports_title">Aita Metrolisti paremaks muuta</string>
+    <string name="onboarding_migration_complete_description">Sinu konto, esitusloendid, kuulamisajalugu, meeldivaks märgitud lood ja muusikakogu andmed on selles RLN Networki versioonis valmis.</string>
+    <string name="onboarding_crash_reports_title">Aita RLN Networki paremaks muuta</string>
     <string name="onboarding_crash_reports_description">Jaga soovi korral Sentry kaudu diagnostikaandmeid, et aidata meil probleeme leida ja parandada. Saad seda igal ajal seadistustes muuta.</string>
     <string name="onboarding_notifications_title">Luba teavitused</string>
     <string name="onboarding_notifications_description">Lülita sisse taasesituse ja allalaadimiste teavitused.</string>
@@ -545,10 +545,10 @@
     <string name="onboarding_finish_title">Kõik on valmis</string>
     <string name="onboarding_finish_description">Seadistamine on lõpetatud. Alusta kuulamist või too esmalt oma konto ja andmed üle.</string>
     <string name="onboarding_restore_backup">Taasta varukoopiast</string>
-    <string name="onboarding_settings_hint">Metrolisti kohandamiseks ava paremal ülal asuvast menüüst Seadistused.</string>
+    <string name="onboarding_settings_hint">RLN Networki kohandamiseks ava paremal ülal asuvast menüüst Seadistused.</string>
     <string name="onboarding_no_saved_accounts">Seotud kontosid ei leitud.</string>
     <string name="onboarding_account_picture">Kasutaja %1$s profiilipilt</string>
-    <string name="onboarding_backup_picker_title">Taasta Metrolisti varukoopia</string>
+    <string name="onboarding_backup_picker_title">Taasta RLN Networki varukoopia</string>
     <string name="onboarding_backup_picker_error">Varukoopia valijat ei saanud avada: %1$s</string>
     <string name="onboarding_backup_restore_failed">Taastamine ebaõnnestus: %1$s</string>
     <string name="new_badge">Uus</string>

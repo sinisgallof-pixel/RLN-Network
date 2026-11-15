@@ -306,7 +306,7 @@
     <string name="onboarding_continue_without_migration">המשך עם ספרייה ריקה</string>
     <string name="onboarding_migration_recovery_description">אפשר לנסות שוב או להמשיך עם ספרייה ריקה. עותק לשחזור של מסד הנתונים המקורי יישאר במכשיר הזה. ניתן לשחזר גיבוי לאחר ההגדרה.</string>
     <string name="onboarding_migration_failed">לא ניתן להכין את הספרייה שלך. הנתונים המקוריים נשמרו.</string>
-    <string name="onboarding_library_migrated_description">הפלייליסטים, ההיסטוריה, הלייקים ונתוני הספרייה שלך מוכנים לשימוש בגרסה הזו של Metrolist.</string>
+    <string name="onboarding_library_migrated_description">הפלייליסטים, ההיסטוריה, הלייקים ונתוני הספרייה שלך מוכנים לשימוש בגרסה הזו של RLN Network.</string>
     <string name="onboarding_notifications_denied">ההתראות מושבתות. אפשר להפעיל אותן בהמשך בהגדרות האפליקציה ב-Android, או לבחור ״לא״ כדי להמשיך.</string>
     <string name="mini_player_video_prerequisite">יש להפעיל תחילה את ״נגן סרטוני מוזיקה״ בהגדרות הניגון</string>
     <string name="download_folder_access_failed">לא ניתן לשמור את הרשאת הגישה לתיקייה הזו. בחר תיקייה עם גישת קריאה וכתיבה.</string>
@@ -331,7 +331,7 @@
     <string name="updates_notification_settings">הגדרות ההתראות של Android</string>
     <string name="widget_recognizer_open_result">פתיחת השיר שזוהה</string>
     <string name="statistics_load_failed">לא ניתן לרענן את הסטטיסטיקות. נסה שוב.</string>
-    <string name="desktop_platform_unsupported">מערכת ההפעלה הזו אינה נתמכת על ידי Metrolist. השתמש ב-Windows 10 ומעלה, ב-macOS או בהפצת Linux שאינה Omarchy.</string>
+    <string name="desktop_platform_unsupported">מערכת ההפעלה הזו אינה נתמכת על ידי RLN Network. השתמש ב-Windows 10 ומעלה, ב-macOS או בהפצת Linux שאינה Omarchy.</string>
     <string name="shortcut_toggle_expanded">הרחבה או כיווץ של הנגן</string>
     <string name="desktop_display_unavailable">RLN Network לא הצליח להתחבר לתצוגת X של ההפעלה הזו. הפעל אותו מתוך סביבת שולחן העבודה כאשר המשתנה DISPLAY מוגדר.</string>
     <string name="webkit_install_hint">הכניסה המובנית דורשת WebKitGTK 4.1 (%1$s). התקן אותו באמצעות מנהל החבילות של המערכת.</string>
@@ -396,8 +396,8 @@
     <string name="theme_color_rose">ורוד</string>
     <string name="theme_color_red">אדום</string>
     <string name="theme_color_gold">זהב</string>
-    <string name="backup_unsupported_format">פורמט הגיבוי הזה אינו נתמך בגרסה הזו של Metrolist.</string>
-    <string name="backup_unsupported_database">גרסת מסד הנתונים בגיבוי הזה אינה נתמכת בגרסה הזו של Metrolist.</string>
+    <string name="backup_unsupported_format">פורמט הגיבוי הזה אינו נתמך בגרסה הזו של RLN Network.</string>
+    <string name="backup_unsupported_database">גרסת מסד הנתונים בגיבוי הזה אינה נתמכת בגרסה הזו של RLN Network.</string>
     <string name="backup_too_large">הגיבוי חורג ממגבלת הגודל או מספר הרשומות הנתמכת.</string>
     <string name="backup_invalid_data">לא ניתן לקרוא או לאמת את הגיבוי. ייתכן שהוא פגום או מכיל נתונים שאינם נתמכים.</string>
     <string name="search_history_removal_failed">לא ניתן למחוק את היסטוריית החיפוש של החשבון. נסה שוב לאחר התחברות לאינטרנט.</string>
@@ -410,7 +410,7 @@
     <string name="onboarding_migration_title">הספרייה שלך מגרסה 13 כאן</string>
     <string name="onboarding_migration_description">מצאנו מסד נתונים עצמאי של Metrolist. אפשר להעביר את הפלייליסטים, ההיסטוריה, הלייקים ונתוני הספרייה במקום. ניתן לשחזר את מסד הנתונים המקורי אם ההעברה תיכשל.</string>
     <string name="onboarding_migration_complete_title">החשבון שלך הועבר</string>
-    <string name="onboarding_migration_complete_description">החשבון, הפלייליסטים, ההיסטוריה, הלייקים ונתוני הספרייה שלך מוכנים לשימוש בגרסה הזו של Metrolist.</string>
+    <string name="onboarding_migration_complete_description">החשבון, הפלייליסטים, ההיסטוריה, הלייקים ונתוני הספרייה שלך מוכנים לשימוש בגרסה הזו של RLN Network.</string>
     <string name="onboarding_crash_reports_title">עזרו לשפר את RLN Network</string>
     <string name="onboarding_crash_reports_description">אפשר לשתף נתוני אבחון דרך Sentry כדי לעזור לנו למצוא ולתקן בעיות. ניתן לשנות זאת בכל עת בהגדרות.</string>
     <string name="onboarding_notifications_title">אישור התראות</string>

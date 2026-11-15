@@ -126,7 +126,7 @@
     <string name="onboarding_continue_without_migration">Fortsæt med et tomt bibliotek</string>
     <string name="onboarding_migration_recovery_description">Du kan prøve igen eller fortsætte med et tomt bibliotek. En gendannelseskopi af din oprindelige database bliver på denne enhed. Du kan gendanne en sikkerhedskopi efter opsætningen.</string>
     <string name="onboarding_migration_failed">Kunne ikke klargøre dit bibliotek. Dine oprindelige data er bevaret.</string>
-    <string name="onboarding_library_migrated_description">Dine afspilningslister, din historik, dine sange, du synes om, og dine biblioteksdata er klar i denne version af Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Dine afspilningslister, din historik, dine sange, du synes om, og dine biblioteksdata er klar i denne version af RLN Network.</string>
     <string name="onboarding_notifications_denied">Notifikationer er slået fra. Du kan slå dem til senere i Androids appindstillinger eller vælge Nej for at fortsætte.</string>
     <string name="mini_player_video_prerequisite">Slå først Afspil musikvideoer til i afspilningsindstillingerne</string>
     <string name="download_folder_access_failed">Kunne ikke gemme adgangen til denne mappe. Vælg en mappe med læse- og skriveadgang.</string>
@@ -151,7 +151,7 @@
     <string name="updates_notification_settings">Androids notifikationsindstillinger</string>
     <string name="widget_recognizer_open_result">Åbn den genkendte sang</string>
     <string name="statistics_load_failed">Kunne ikke opdatere statistikken. Prøv igen.</string>
-    <string name="desktop_platform_unsupported">Dette operativsystem understøttes ikke af Metrolist. Brug Windows 10 eller nyere, macOS eller en anden Linux-distribution end Omarchy.</string>
+    <string name="desktop_platform_unsupported">Dette operativsystem understøttes ikke af RLN Network. Brug Windows 10 eller nyere, macOS eller en anden Linux-distribution end Omarchy.</string>
     <string name="shortcut_toggle_expanded">Udvid eller sammenfold afspilleren</string>
     <string name="desktop_display_unavailable">RLN Network kunne ikke oprette forbindelse til denne sessions X-skærm. Start appen fra din skrivebordssession med DISPLAY indstillet.</string>
     <string name="webkit_install_hint">Indbygget login kræver WebKitGTK 4.1 (%1$s). Installér det med systemets pakkehåndtering.</string>
@@ -215,8 +215,8 @@
     <string name="theme_color_rose">Rosa</string>
     <string name="theme_color_red">Rød</string>
     <string name="theme_color_gold">Guld</string>
-    <string name="backup_unsupported_format">Dette sikkerhedskopiformat understøttes ikke af denne version af Metrolist.</string>
-    <string name="backup_unsupported_database">Databaseversionen i denne sikkerhedskopi understøttes ikke af denne version af Metrolist.</string>
+    <string name="backup_unsupported_format">Dette sikkerhedskopiformat understøttes ikke af denne version af RLN Network.</string>
+    <string name="backup_unsupported_database">Databaseversionen i denne sikkerhedskopi understøttes ikke af denne version af RLN Network.</string>
     <string name="backup_too_large">Sikkerhedskopien overskrider en understøttet grænse for størrelse eller antal poster.</string>
     <string name="backup_invalid_data">Sikkerhedskopien kunne ikke læses eller valideres. Den kan være beskadiget eller indeholde data, der ikke understøttes.</string>
     <string name="search_history_removal_failed">Kunne ikke rydde kontoens søgehistorik. Prøv igen, når du har forbindelse.</string>
@@ -229,7 +229,7 @@
     <string name="onboarding_migration_title">Dit v13-bibliotek er her</string>
     <string name="onboarding_migration_description">Vi fandt en selvstændig Metrolist-database. Overfør afspilningslister, historik, sange, du synes om, og biblioteksdata på stedet. Du kan gendanne den oprindelige database, hvis overførslen mislykkes.</string>
     <string name="onboarding_migration_complete_title">Din konto er overført</string>
-    <string name="onboarding_migration_complete_description">Din konto, dine afspilningslister, din historik, dine sange, du synes om, og dine biblioteksdata er klar i denne version af Metrolist.</string>
+    <string name="onboarding_migration_complete_description">Din konto, dine afspilningslister, din historik, dine sange, du synes om, og dine biblioteksdata er klar i denne version af RLN Network.</string>
     <string name="onboarding_crash_reports_title">Hjælp med at forbedre RLN Network</string>
     <string name="onboarding_crash_reports_description">Del valgfrie diagnosticeringsdata via Sentry for at hjælpe os med at finde og løse problemer. Du kan til enhver tid ændre dette i Indstillinger.</string>
     <string name="onboarding_notifications_title">Tillad notifikationer</string>
@@ -246,10 +246,10 @@
     <string name="onboarding_finish_title">Alt er klar</string>
     <string name="onboarding_finish_description">Opsætningen er færdig. Begynd at lytte, eller overfør først din konto og dine data.</string>
     <string name="onboarding_restore_backup">Gendan fra sikkerhedskopi</string>
-    <string name="onboarding_settings_hint">Åbn Indstillinger fra menuen øverst til højre for at tilpasse Metrolist.</string>
+    <string name="onboarding_settings_hint">Åbn Indstillinger fra menuen øverst til højre for at tilpasse RLN Network.</string>
     <string name="onboarding_no_saved_accounts">Der blev ikke fundet nogen tilknyttede konti.</string>
     <string name="onboarding_account_picture">Profilbillede for %1$s</string>
-    <string name="onboarding_backup_picker_title">Gendan Metrolist-sikkerhedskopi</string>
+    <string name="onboarding_backup_picker_title">Gendan RLN Network-sikkerhedskopi</string>
     <string name="onboarding_backup_picker_error">Kunne ikke åbne vælgeren til sikkerhedskopier: %1$s</string>
     <string name="onboarding_backup_restore_failed">Gendannelse mislykkedes: %1$s</string>
     <string name="new_badge">Ny</string>
@@ -327,7 +327,7 @@
     <string name="settings_reset_download_folder_summary">Brug standardmappen til downloadede sange</string>
     <string name="settings_diagnostic_logs_summary">Læs og kopiér appens diagnoselog</string>
     <string name="settings_log_directory_summary">Gennemse gemte logfiler i din filhåndtering</string>
-    <string name="settings_check_releases_summary">Se efter en nyere Metrolist-version på GitHub</string>
+    <string name="settings_check_releases_summary">Se efter en nyere RLN Network-version på GitHub</string>
     <string name="settings_share_apk_summary">Del den installerede apps pakke som en fil</string>
     <string name="settings_system_font_summary">Brug den skrifttype, dit styresystem leverer</string>
     <string name="settings_thumbnail_shape_summary">Vælg omslagenes form i den udvidede afspiller</string>
