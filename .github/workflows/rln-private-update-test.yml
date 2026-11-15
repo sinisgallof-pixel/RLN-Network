@@ -1,0 +1,77 @@
+name: RLN Network private update test
+
+on:
+  push:
+    branches: [qa/private-update]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  apk:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          submodules: recursive
+          persist-credentials: false
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad
+        with:
+          distribution: temurin
+          java-version: '25'
+      - uses: android-actions/setup-android@be39fa834029ff78f1a44aa3bb0819b8fc2bd8fd
+        with:
+          packages: platform-tools
+      - name: Prepara la firma RLN
+        id: signing
+        uses: ./.github/actions/prepare-android-signing
+        env:
+          KEYSTORE_PATH: ${{ secrets.KEYSTORE }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+      - name: Build and verify signed test APKs
+        shell: bash
+        env:
+          SIGNING_AVAILABLE: ${{ steps.signing.outputs.signing_available }}
+          KEYSTORE_PATH: ${{ steps.signing.outputs.keystore_path }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          set -euo pipefail
+          test "$SIGNING_AVAILABLE" = true
+          mapfile -t signers < <(find "$ANDROID_HOME/build-tools" -name apksigner | sort -V)
+          signer="${signers[-1]}"
+          mkdir -p dist
+          build_apk() {
+            local version="$1" code="$2" file
+            sed -i -E "s/^appVersion=.*/appVersion=$version/" gradle.properties
+            sed -i -E "s/^([[:space:]]*versionCode = )[0-9]+/\1$code/" androidApp/build.gradle.kts
+            ./gradlew :androidApp:assembleRelease --no-configuration-cache
+            local apks=(androidApp/build/outputs/apk/release/*.apk)
+            test "${#apks[@]}" -eq 1 && test -f "${apks[0]}"
+            file="dist/RLN-Network-$version.apk"
+            "$signer" verify --verbose --print-certs "${apks[0]}" > "$file.signature.txt"
+            grep -E 'certificate SHA-256 digest: 43f8d1591f70239277bc7374bd0b80c693829a251fac9e3a00d5e12d5d274467$' "$file.signature.txt"
+            "${signer%/*}/aapt" dump badging "${apks[0]}" > "$file.badging.txt"
+            grep -F "package: name='com.rlnnetwork.music.kmp' versionCode='$code' versionName='$version'" "$file.badging.txt"
+            cp "${apks[0]}" "$file"
+          }
+          build_apk 2.0.3-qa.1 158
+          updater=androidApp/src/main/kotlin/com/metrolist/android/update/AppUpdateManager.kt
+          net_config=androidApp/src/main/res/xml/network_security_config.xml
+          sed -i 's@private const val RELEASES_URL = ".*"@private const val RELEASES_URL = "http://127.0.0.1:8766/releases"@' "$updater"
+          grep -F 'RELEASES_URL = "http://127.0.0.1:8766/releases"' "$updater"
+          sed -i '/<\/network-security-config>/i\    <domain-config cleartextTrafficPermitted="true"><domain>127.0.0.1</domain></domain-config>' "$net_config"
+          grep -F '<domain>127.0.0.1</domain>' "$net_config"
+          build_apk 2.0.2-qa.1 157
+          cp scripts/rln-local-update.py dist/
+          (cd dist && sha256sum -- *.apk > SHA256SUMS)
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: RLN-private-update-test
+          path: dist/
+          if-no-files-found: error
