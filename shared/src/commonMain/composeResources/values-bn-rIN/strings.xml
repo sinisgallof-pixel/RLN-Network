@@ -148,7 +148,7 @@
     <string name="import_error_unsupported_playlist_entries">এই প্লেলিস্টে এমন স্থানীয় ফাইল বা সরাসরি লিংক আছে যা Android ব্যবহার করতে পারে না। YouTube লিংকসহ একটি প্লেলিস্ট আমদানি করুন, অথবা ডেস্কটপে স্থানীয় ফাইলগুলো বেছে নিন।</string>
     <string name="import_error_local_files_require_local_playlist">স্থানীয় অডিও ফাইল শুধু স্থানীয় প্লেলিস্টে আমদানি করা যায়।</string>
     <string name="import_error_file_read_failed">প্লেলিস্ট ফাইলটি পড়া যায়নি। আবার ফাইলটি বেছে নিয়ে প্রবেশাধিকার দিন।</string>
-    <string name="startup_error_title">Metrolist চালু করতে ত্রুটি</string>
+    <string name="startup_error_title">RLN Network চালু করতে ত্রুটি</string>
     <string name="lyrics_show_translations">অনুবাদ দেখান</string>
     <string name="artist_latest_release">সর্বশেষ প্রকাশনা</string>
     <string name="top_tracks">সেরা ট্র্যাক</string>
@@ -282,9 +282,9 @@
     <string name="updates_notification_settings">Android বিজ্ঞপ্তি সেটিংস</string>
     <string name="widget_recognizer_open_result">শনাক্ত করা গান খুলুন</string>
     <string name="statistics_load_failed">পরিসংখ্যান রিফ্রেশ করা যায়নি। আবার চেষ্টা করুন।</string>
-    <string name="desktop_platform_unsupported">Metrolist এই অপারেটিং সিস্টেম সমর্থন করে না। Windows 10 বা পরবর্তী সংস্করণ, macOS অথবা Omarchy ছাড়া অন্য কোনো Linux ডিস্ট্রিবিউশন ব্যবহার করুন।</string>
+    <string name="desktop_platform_unsupported">RLN Network এই অপারেটিং সিস্টেম সমর্থন করে না। Windows 10 বা পরবর্তী সংস্করণ, macOS অথবা Omarchy ছাড়া অন্য কোনো Linux ডিস্ট্রিবিউশন ব্যবহার করুন।</string>
     <string name="shortcut_toggle_expanded">প্লেয়ার বড় বা ছোট করুন</string>
-    <string name="desktop_display_unavailable">Metrolist এই সেশনের X ডিসপ্লেতে সংযোগ করতে পারেনি। DISPLAY সেট করে আপনার ডেস্কটপ সেশন থেকে এটি চালু করুন।</string>
+    <string name="desktop_display_unavailable">RLN Network এই সেশনের X ডিসপ্লেতে সংযোগ করতে পারেনি। DISPLAY সেট করে আপনার ডেস্কটপ সেশন থেকে এটি চালু করুন।</string>
     <string name="webkit_install_hint">অ্যাপের ভিতরে সাইন ইন করতে WebKitGTK 4.1 (%1$s) প্রয়োজন। সিস্টেমের প্যাকেজ ম্যানেজার দিয়ে এটি ইনস্টল করুন।</string>
     <string name="webkit_install_command">এই কমান্ড দিয়ে ইনস্টল করুন:\n%1$s</string>
     <string name="webkit_appimage_hint">AppImage সংস্করণগুলিও সাইন ইন করতে সিস্টেমের WebKitGTK লাইব্রেরি ব্যবহার করে।</string>
@@ -311,7 +311,7 @@
     <string name="queue_youtube_history_paused_desc">অফলাইনে শোনা গানের তথ্য সারিতে রাখতে শোনার ইতিহাস আবার চালু করুন</string>
     <string name="search_online_failed">অনলাইনে খোঁজা যায়নি। সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।</string>
     <string name="search_load_more_failed">আরও ফলাফল লোড করা যায়নি।</string>
-    <string name="discord_error_gateway_configuration">Discord সংযোগের কনফিগারেশন প্রত্যাখ্যান করেছে। আবার চেষ্টা করার আগে Metrolist আপডেট করুন।</string>
+    <string name="discord_error_gateway_configuration">Discord সংযোগের কনফিগারেশন প্রত্যাখ্যান করেছে। আবার চেষ্টা করার আগে RLN Network আপডেট করুন।</string>
     <string name="discord_preview_buttons_adjusted">Discord বোতামের লম্বা লেখা ছোট করে এবং অতিরিক্ত লম্বা লিংকযুক্ত বোতাম বাদ দেয়। এই পূর্বরূপে যে বোতামগুলি পাঠানো হবে সেগুলি দেখানো হয়েছে।</string>
     <string name="discord_presence_status_warning">বিস্তারিত উপস্থিতির তথ্য Discord-এ অনলাইন অবস্থা পাঠায়। এটি অদৃশ্য বা বিরক্ত করবেন না অবস্থা বদলাতে পারে, এমনকি গান বন্ধ হলেও।</string>
     <string name="discord_refresh_queued">উপস্থিতির তথ্য রিফ্রেশ করার অনুরোধ সারিতে রাখা হয়েছে।</string>
@@ -361,7 +361,7 @@
     <string name="onboarding_migration_description">আমরা একটি স্বতন্ত্র Metrolist ডেটাবেস পেয়েছি। প্লেলিস্ট, ইতিহাস, পছন্দের গান ও লাইব্রেরির তথ্য এখানেই স্থানান্তর করুন। স্থানান্তর ব্যর্থ হলে আপনি মূল ডেটাবেস পুনরুদ্ধার করতে পারবেন।</string>
     <string name="onboarding_migration_complete_title">আপনার অ্যাকাউন্ট স্থানান্তর করা হয়েছে</string>
     <string name="onboarding_migration_complete_description">আপনার অ্যাকাউন্ট, প্লেলিস্ট, ইতিহাস, পছন্দের গান ও লাইব্রেরির তথ্য Metrolist-এর এই সংস্করণে প্রস্তুত আছে।</string>
-    <string name="onboarding_crash_reports_title">Metrolist উন্নত করতে সাহায্য করুন</string>
+    <string name="onboarding_crash_reports_title">RLN Network উন্নত করতে সাহায্য করুন</string>
     <string name="onboarding_crash_reports_description">সমস্যা খুঁজে বের করতে ও সমাধান করতে আমাদের সাহায্য করার জন্য Sentry-এর মাধ্যমে ঐচ্ছিক ডায়াগনস্টিক তথ্য শেয়ার করুন। সেটিংস থেকে যেকোনো সময় এটি পরিবর্তন করতে পারবেন।</string>
     <string name="onboarding_notifications_title">বিজ্ঞপ্তির অনুমতি দিন</string>
     <string name="onboarding_notifications_description">প্লেব্যাক ও ডাউনলোডের জন্য বিজ্ঞপ্তি চালু করুন।</string>
@@ -377,10 +377,10 @@
     <string name="onboarding_finish_title">সব প্রস্তুত</string>
     <string name="onboarding_finish_description">সেটআপ সম্পূর্ণ। শুনতে শুরু করুন অথবা আগে আপনার অ্যাকাউন্ট ও তথ্য নিয়ে আসুন।</string>
     <string name="onboarding_restore_backup">ব্যাকআপ থেকে পুনরুদ্ধার করুন</string>
-    <string name="onboarding_settings_hint">Metrolist নিজের মতো সাজাতে উপরের ডানদিকের মেনু থেকে সেটিংস খুলুন।</string>
+    <string name="onboarding_settings_hint">RLN Network নিজের মতো সাজাতে উপরের ডানদিকের মেনু থেকে সেটিংস খুলুন।</string>
     <string name="onboarding_no_saved_accounts">কোনো সংযুক্ত অ্যাকাউন্ট পাওয়া যায়নি।</string>
     <string name="onboarding_account_picture">%1$s-এর প্রোফাইলের ছবি</string>
-    <string name="onboarding_backup_picker_title">Metrolist ব্যাকআপ পুনরুদ্ধার করুন</string>
+    <string name="onboarding_backup_picker_title">RLN Network ব্যাকআপ পুনরুদ্ধার করুন</string>
     <string name="onboarding_backup_picker_error">ব্যাকআপ বেছে নেওয়ার উইন্ডো খোলা যায়নি: %1$s</string>
     <string name="onboarding_backup_restore_failed">পুনরুদ্ধার ব্যর্থ হয়েছে: %1$s</string>
     <string name="new_badge">নতুন</string>

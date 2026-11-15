@@ -5,6 +5,8 @@ on:
     branches: [release/rln-network-2.0]
     paths:
       - 'androidApp/**'
+      - 'shared/src/commonMain/composeResources/**'
+      - 'gradle.properties'
       - '.github/workflows/rln-kmp-release.yml'
       - '.github/workflows/rln-kmp-update-check.yml'
 
@@ -28,4 +30,4 @@ jobs:
         with:
           packages: platform-tools
       - name: Test del sistema di aggiornamento
-        run: ./gradlew :androidApp:testDebugUnitTest --tests 'com.metrolist.android.update.AppUpdateManagerTest' --no-configuration-cache
+        run: ./gradlew :androidApp:testDebugUnitTest --tests 'com.metrolist.android.update.*' --no-configuration-cache

@@ -258,6 +258,7 @@ object AppUpdateManager {
                         .build()
                 var downloaded = 0L
                 val call = client.newCall(request).also { activeDownload = it }
+                mutableState.value = AppUpdateState.Downloading(release, 0)
                 call.execute().use { response ->
                     check(response.isSuccessful) { "Download returned ${response.code}" }
                     val body = checkNotNull(response.body)

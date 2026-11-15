@@ -265,7 +265,7 @@
     <string name="discord_status_not_initialized">Ei aloitettu</string>
     <string name="discord_status_authorized">Valtuutettu</string>
     <string name="discord_error_denied">Discord eväsi valtuutuksen.</string>
-    <string name="discord_error_connection_failed">Discordiin yhdistäminen epäonnistui. Metrolist yrittää automaattisesti uudelleen.</string>
+    <string name="discord_error_connection_failed">Discordiin yhdistäminen epäonnistui. RLN Network yrittää automaattisesti uudelleen.</string>
     <string name="discord_error_no_browser">Discordin valtuutuksen käsittelyyn sopivaa selainta ei löytynyt.</string>
     <string name="discord_error_token_exchange_failed">Avainten vaihto epäonnistui. Yritä uudestaan.</string>
     <string name="discord_error_token_refresh_failed">Avainten virkistäminen epäonnistui. Kirjaudu uudestaan sisään.</string>
@@ -327,7 +327,7 @@
     <string name="app_icon_zenith_black">Zenith Black (Zeniitinmusta)</string>
     <string name="app_icon_zenith_white">Zenith White (Zeniitinvalkoinen)</string>
     <string name="app_font_choose">Valitse fonttitiedosto</string>
-    <string name="app_font_picker_desc">Valitse TTF- tai OTF-tiedosto. Metrolist kopioi sen omaan sovellustallennustilaansa.</string>
+    <string name="app_font_picker_desc">Valitse TTF- tai OTF-tiedosto. RLN Network kopioi sen omaan sovellustallennustilaansa.</string>
     <string name="app_font_system">Järjestelmän oletus</string>
     <string name="app_font_applied">Käytössä: %1$s</string>
     <string name="app_font_invalid">Fonttia ei voi käyttää. Valitse kelvollinen TTF- tai OTF-tiedosto, joka on pienempi kuin 20 MB.</string>
@@ -496,7 +496,7 @@
     <string name="listenbrainz_now_playing_description">Näytä kuuntelussa oleva kappale ListenBrainzissa</string>
     <string name="listenbrainz_connect_title">Yhdistä ListenBrainz</string>
     <string name="listenbrainz_user_token">Käyttäjätoken</string>
-    <string name="restore_database_incompatible">Tämä varmuuskopio käyttää tietokantaversiota %1$d, mutta nykyinen sovellus ei tue uudempia versioita kuin %2$d. Päivitä Metrolist ja yritä uudelleen.</string>
+    <string name="restore_database_incompatible">Tämä varmuuskopio käyttää tietokantaversiota %1$d, mutta nykyinen sovellus ei tue uudempia versioita kuin %2$d. Päivitä RLN Network ja yritä uudelleen.</string>
     <string name="restore_failed_detail">Varmuuskopion tuonti epäonnistui vaiheessa %1$s.\n\nSyy: %2$s</string>
     <string name="restore_error_unknown">Lisätietoja ei ole saatavilla.</string>
     <string name="restore_stage_reading_backup">Luetaan varmuuskopiotiedostoa</string>
@@ -564,7 +564,7 @@
     <string name="updates_title">Sovelluspäivitykset</string>
     <string name="updates_check">Hae päivityksiä</string>
     <string name="updates_checking">Haetaan päivityksiä…</string>
-    <string name="updates_no_updates">Metrolist on ajan tasalla</string>
+    <string name="updates_no_updates">RLN Network on ajan tasalla</string>
     <string name="updates_error">Päivitysten hakeminen epäonnistui</string>
     <string name="updates_status_current">Päivitetty Metrolistin versioon %1$s</string>
     <string name="updates_auto_check">Hae päivityksiä automaattisesti</string>
@@ -578,13 +578,13 @@
     <string name="updates_changelog">Muutosloki</string>
     <string name="updates_install">Asenna</string>
     <string name="updates_retry">Yritä uudelleen</string>
-    <string name="updates_available_title">Metrolist %1$s on saatavilla</string>
+    <string name="updates_available_title">RLN Network %1$s on saatavilla</string>
     <string name="updates_available_message">Klikkaa "Päivitä" ladataksesi päivityksen ja jatkaaksesi Androidin asentajapalveluun.</string>
     <string name="updates_changelog_preview">Uutuudet</string>
     <string name="updates_pending_parenthetical">(päivitys odottamassa)</string>
     <string name="update_pending">Päivitys odottamassa</string>
     <string name="updates_action">Päivitä</string>
-    <string name="updates_notification_title">Metrolist %1$s on valmiina</string>
+    <string name="updates_notification_title">RLN Network %1$s on valmiina</string>
     <string name="updates_notification_text">Klikkaa ladataksesi ja asentaaksesi päivityksen</string>
     <string name="updates_channel_name">Sovelluspäivitykset</string>
     <string name="updates_channel_description">Ilmoituksia Metrolistin uusista versioista</string>
@@ -1572,7 +1572,7 @@
     <string name="backup_created">Varmuuskopio luotu</string>
     <string name="backup_failed">Varmuuskopio epäonnistui: %1$s</string>
     <string name="could_not_open_file_picker">Tiedostoselaimen avaaminen epäonnistui: %1$s</string>
-    <string name="restore_replaces_data">Tämä korvaa nykyiset asetuksesi, tunnuksesi, tilisi ja kirjastosi. Metrolist tulee käynnistymään uudelleen.</string>
+    <string name="restore_replaces_data">Tämä korvaa nykyiset asetuksesi, tunnuksesi, tilisi ja kirjastosi. RLN Network tulee käynnistymään uudelleen.</string>
     <string name="create_backup_countdown">Luo varmuuskopio (%1$d)</string>
     <string name="listen_together_how_it_works">Kuinka se toimii</string>
     <string name="listen_together_how_it_works_body">Kuuntele musiikkia reaaliajassa kavereidesi kanssa. Ylläpitäjä ohjaa toistoa kaverien seuratessa mukana.</string>
@@ -1634,7 +1634,7 @@
     <string name="tray_show_window">Näytä ikkuna</string>
     <string name="tray_show_miniplayer">Näytä minisoitin</string>
     <string name="tray_settings">Asetukset</string>
-    <string name="tray_quit_metrolist">Sulje Metrolist</string>
+    <string name="tray_quit_metrolist">Sulje RLN Network</string>
     <string name="sign_in_discord">Kirjaudu sisään Discordiin</string>
     <string name="discord_sign_in_unavailable">Discord-kirjautuminen ei ole saatavilla</string>
     <string name="sign_in_youtube_music">Kirjaudu sisään Youtube Musiciin</string>
@@ -2035,9 +2035,9 @@
     <string name="updates_notification_settings">Androidin ilmoitusasetukset</string>
     <string name="widget_recognizer_open_result">Avaa tunnistettu kappale</string>
     <string name="statistics_load_failed">Tilastojen päivitys epäonnistui. Yritä uudelleen.</string>
-    <string name="desktop_platform_unsupported">Metrolist ei tue tätä käyttöjärjestelmää. Käytä Windows 10:tä tai uudempaa, macOS:ää tai jotain muuta Linux-distroa kuin Omarchy.</string>
+    <string name="desktop_platform_unsupported">RLN Network ei tue tätä käyttöjärjestelmää. Käytä Windows 10:tä tai uudempaa, macOS:ää tai jotain muuta Linux-distroa kuin Omarchy.</string>
     <string name="shortcut_toggle_expanded">Näytä tai piilota laajennettu soitin</string>
-    <string name="desktop_display_unavailable">Metrolist ei saanut yhteyttä tämän istunnon X-näyttöön. Käynnistä se työpöytäistunnosta, jossa DISPLAY on asetettu.</string>
+    <string name="desktop_display_unavailable">RLN Network ei saanut yhteyttä tämän istunnon X-näyttöön. Käynnistä se työpöytäistunnosta, jossa DISPLAY on asetettu.</string>
     <string name="webkit_install_hint">Sisäänrakennettu kirjautuminen vaatii WebKitGTK 4.1:n (%1$s). Asenna se järjestelmäsi paketinhallinnalla.</string>
     <string name="webkit_install_command">Asenna komennolla:\n%1$s</string>
     <string name="webkit_appimage_hint">Myös AppImage-versiot käyttävät kirjautumiseen järjestelmän WebKitGTK-kirjastoja.</string>
@@ -2064,7 +2064,7 @@
     <string name="queue_youtube_history_paused_desc">Ota kuunteluhistoria taas käyttöön, jotta offline-kuuntelut tallennetaan jonoon</string>
     <string name="search_online_failed">Verkkohaku epäonnistui. Tarkista yhteys ja yritä uudelleen.</string>
     <string name="search_load_more_failed">Lisää tuloksia ei voitu ladata.</string>
-    <string name="discord_error_gateway_configuration">Discord hylkäsi yhteysasetukset. Päivitä Metrolist ennen uutta yritystä.</string>
+    <string name="discord_error_gateway_configuration">Discord hylkäsi yhteysasetukset. Päivitä RLN Network ennen uutta yritystä.</string>
     <string name="discord_preview_buttons_adjusted">Discord lyhentää pitkiä painiketekstejä ja jättää pois painikkeet, joiden linkit ovat liian pitkiä. Tämä esikatselu näyttää lähetettävät painikkeet.</string>
     <string name="discord_presence_status_warning">Rich presence lähettää käyttöön otettaessa Discordiin Paikalla-tilan ja voi ohittaa Näkymätön- tai Älä häiritse -tilan myös toiston pysähtyessä</string>
     <string name="discord_refresh_queued">Läsnäolotietojen päivitys lisätty jonoon.</string>
@@ -2171,7 +2171,7 @@
     <string name="settings_canvas_playback_summary">Toista lyhyitä leikkeitä tai koko musiikkivideo soittimen taustalla</string>
     <string name="settings_normalization_summary">Tasaa kappaleiden äänenvoimakkuutta suurten erojen välttämiseksi</string>
     <string name="settings_loudness_target_summary">Aseta tavoitevoimakkuus, kun äänen normalisointi on käytössä</string>
-    <string name="settings_stop_on_close_summary">Pysäytä toisto, kun Metrolist poistetaan viimeksi käytetyistä sovelluksista</string>
+    <string name="settings_stop_on_close_summary">Pysäytä toisto, kun RLN Network poistetaan viimeksi käytetyistä sovelluksista</string>
     <string name="settings_screen_awake_summary">Valitse, pitääkö soitin tai sanoitus näytön päällä</string>
     <string name="settings_translation_mode_summary">Käännä sanat tai kirjoita niiden ääntämys kohdekirjoitusjärjestelmällä</string>
     <string name="settings_translation_provider_summary">Valitse sanoitukset kääntävä palvelu</string>

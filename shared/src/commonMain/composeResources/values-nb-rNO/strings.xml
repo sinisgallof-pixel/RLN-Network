@@ -176,7 +176,7 @@
     <string name="import_error_unsupported_playlist_entries">Denne spillelisten inneholder lokale filer eller direktekoblinger som Android ikke har tilgang til. Importer en spilleliste med YouTube-koblinger, eller velg de lokale filene på en datamaskin.</string>
     <string name="import_error_local_files_require_local_playlist">Lokale lydfiler kan bare importeres til en lokal spilleliste.</string>
     <string name="import_error_file_read_failed">Kunne ikke lese spillelistefilen. Velg den på nytt og gi tilgang til filen.</string>
-    <string name="startup_error_title">Feil ved oppstart av Metrolist</string>
+    <string name="startup_error_title">Feil ved oppstart av RLN Network</string>
     <string name="lyrics_show_translations">Vis oversettelser</string>
     <string name="artist_latest_release">Nyeste utgivelse</string>
     <string name="top_tracks">Mest populære spor</string>
@@ -316,7 +316,7 @@
     <string name="statistics_load_failed">Kunne ikke oppdatere statistikken. Prøv igjen.</string>
     <string name="desktop_platform_unsupported">Dette operativsystemet støttes ikke av Metrolist. Bruk Windows 10 eller nyere, macOS eller en annen Linux-distribusjon enn Omarchy.</string>
     <string name="shortcut_toggle_expanded">Utvid eller minimer avspilleren</string>
-    <string name="desktop_display_unavailable">Metrolist kunne ikke koble til X-skjermen for denne økten. Start appen fra skrivebordsøkten med DISPLAY angitt.</string>
+    <string name="desktop_display_unavailable">RLN Network kunne ikke koble til X-skjermen for denne økten. Start appen fra skrivebordsøkten med DISPLAY angitt.</string>
     <string name="webkit_install_hint">Innebygd innlogging krever WebKitGTK 4.1 (%1$s). Installer det med systemets pakkebehandler.</string>
     <string name="webkit_install_command">Installer det med:\n%1$s</string>
     <string name="webkit_appimage_hint">AppImage-versjoner bruker også systemets WebKitGTK-biblioteker til innlogging.</string>
@@ -329,7 +329,7 @@
     <string name="video_stats_latency_value">%1$s ms</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s MB (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Volum: %2$s</string>
-    <string name="download_folder_unavailable">Kunne ikke bruke denne mappen. Velg en skrivbar mappe som systemet eller sandkassen gir Metrolist tilgang til.</string>
+    <string name="download_folder_unavailable">Kunne ikke bruke denne mappen. Velg en skrivbar mappe som systemet eller sandkassen gir RLN Network tilgang til.</string>
     <string name="window_maximize">Maksimer</string>
     <string name="window_restore">Gjenopprett vindu</string>
     <string name="equalizer_stream_unavailable">Tonekontroll og forforsterker er utilgjengelige for denne strømmen. Endringene tas i bruk når en støttet sang spilles av.</string>
@@ -343,7 +343,7 @@
     <string name="queue_youtube_history_paused_desc">Gjenoppta lyttehistorikken for å legge avspillinger i kø mens du er frakoblet</string>
     <string name="search_online_failed">Kunne ikke søke på nettet. Kontroller tilkoblingen og prøv igjen.</string>
     <string name="search_load_more_failed">Kunne ikke laste inn flere resultater.</string>
-    <string name="discord_error_gateway_configuration">Discord avviste tilkoblingsoppsettet. Oppdater Metrolist før du prøver igjen.</string>
+    <string name="discord_error_gateway_configuration">Discord avviste tilkoblingsoppsettet. Oppdater RLN Network før du prøver igjen.</string>
     <string name="discord_preview_buttons_adjusted">Discord forkorter lange knappetekster og utelater knapper med for lange lenker. Denne forhåndsvisningen viser knappene som blir sendt.</string>
     <string name="discord_presence_status_warning">Aktivitetsvisning sender statusen Pålogget til Discord. Dette kan overstyre Usynlig eller Ikke forstyrr, også når avspillingen stopper.</string>
     <string name="discord_refresh_queued">Oppdatering av aktivitetsstatus lagt i kø.</string>
@@ -393,7 +393,7 @@
     <string name="onboarding_migration_description">Vi fant en frittstående Metrolist-database. Overfør spillelister, lyttehistorikk, likte sanger og biblioteksdata på stedet. Du kan gjenopprette den opprinnelige databasen hvis overføringen mislykkes.</string>
     <string name="onboarding_migration_complete_title">Kontoen din er overført</string>
     <string name="onboarding_migration_complete_description">Kontoen, spillelistene, lyttehistorikken, likte sanger og biblioteksdataene dine er klare i denne versjonen av Metrolist.</string>
-    <string name="onboarding_crash_reports_title">Hjelp oss å forbedre Metrolist</string>
+    <string name="onboarding_crash_reports_title">Hjelp oss å forbedre RLN Network</string>
     <string name="onboarding_crash_reports_description">Del valgfrie diagnosedata via Sentry for å hjelpe oss med å finne og løse problemer. Du kan endre dette når som helst i Innstillinger.</string>
     <string name="onboarding_notifications_title">Tillat varsler</string>
     <string name="onboarding_notifications_description">Aktiver varsler for avspilling og nedlastinger.</string>
@@ -431,7 +431,7 @@
     <string name="settings_appearance_overview">Tema, skrifttyper og spillerens utseende</string>
     <string name="settings_android_auto_overview">Spillelister i bilen og mål for rask tilføying</string>
     <string name="settings_about_overview">Bidragsytere, fellesskapslenker og lisenser</string>
-    <string name="settings_supported_links_overview">Velg hvilke YouTube-lenker som åpnes i Metrolist</string>
+    <string name="settings_supported_links_overview">Velg hvilke YouTube-lenker som åpnes i RLN Network</string>
     <string name="settings_equalizer_overview">Lydforvalg, frekvensbånd og profiler</string>
     <string name="settings_fonts_overview">Valg og import av skrifttyper</string>
     <string name="settings_artwork_overview">Animerte omslag, bildekilder og videokvalitet</string>
@@ -447,7 +447,7 @@
     <string name="settings_listen_together_overview">Server, forespørsler om å bli med og sangforslag</string>
     <string name="settings_device_connect_overview">Enheter i nærheten, sammenkobling og fjernavspilling</string>
     <string name="settings_release_overview">Versjonsnotater og installasjonsvalg</string>
-    <string name="settings_notification_access_summary">Velg hvilke varsler Android tillater for Metrolist</string>
+    <string name="settings_notification_access_summary">Velg hvilke varsler Android tillater for RLN Network</string>
     <string name="settings_crash_reports_summary">Les og del lagrede krasjrapporter</string>
     <string name="settings_content_language_summary">Språk for søk og anbefalinger i YouTube Music</string>
     <string name="settings_content_country_summary">Region for topplister og anbefalinger i YouTube Music</string>
@@ -467,7 +467,7 @@
     <string name="settings_canvas_playback_summary">Spill korte klipp eller hele musikkvideoen bak spilleren</string>
     <string name="settings_normalization_summary">Jevn ut volumet mellom sanger for å unngå store forskjeller</string>
     <string name="settings_loudness_target_summary">Angi målvolumet når lydnormalisering er på</string>
-    <string name="settings_stop_on_close_summary">Stopp avspillingen når Metrolist fjernes fra nylige apper</string>
+    <string name="settings_stop_on_close_summary">Stopp avspillingen når RLN Network fjernes fra nylige apper</string>
     <string name="settings_screen_awake_summary">Velg om spilleren eller sangtekster holder skjermen på</string>
     <string name="settings_translation_mode_summary">Oversett ordene eller skriv uttalen med målskriftens tegn</string>
     <string name="settings_translation_provider_summary">Velg tjenesten som oversetter sangtekster</string>
