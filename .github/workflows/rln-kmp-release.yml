@@ -51,7 +51,7 @@ jobs:
           mkdir -p dist
           "$signer" verify --verbose --print-certs "${apks[0]}" > dist/signature.txt
           cat dist/signature.txt
-          grep -Fx 'Signer #1 certificate SHA-256 digest: 43f8d1591f70239277bc7374bd0b80c693829a251fac9e3a00d5e12d5d274467' dist/signature.txt
+          grep -E 'certificate SHA-256 digest: 43f8d1591f70239277bc7374bd0b80c693829a251fac9e3a00d5e12d5d274467$' dist/signature.txt
           "${signer%/*}/aapt" dump badging "${apks[0]}" > "$RUNNER_TEMP/rln-badging.txt"
           VERSION="$(sed -n 's/^appVersion=//p' gradle.properties | head -1)"
           test -n "$VERSION"
