@@ -10,6 +10,16 @@ permissions:
 
 jobs:
   apk:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - version: 2.0.2-qa.1
+            code: 157
+            local: true
+          - version: 2.0.3-qa.1
+            code: 158
+            local: false
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     steps:
@@ -35,6 +45,9 @@ jobs:
       - name: Build and verify signed test APKs
         shell: bash
         env:
+          APP_VERSION: ${{ matrix.version }}
+          APP_CODE: ${{ matrix.code }}
+          LOCAL_CHANNEL: ${{ matrix.local }}
           SIGNING_AVAILABLE: ${{ steps.signing.outputs.signing_available }}
           KEYSTORE_PATH: ${{ steps.signing.outputs.keystore_path }}
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
@@ -60,18 +73,18 @@ jobs:
             grep -F "package: name='com.rlnnetwork.music.kmp' versionCode='$code' versionName='$version'" "$file.badging.txt"
             cp "${apks[0]}" "$file"
           }
-          build_apk 2.0.3-qa.1 158
-          updater=androidApp/src/main/kotlin/com/metrolist/android/update/AppUpdateManager.kt
-          net_config=androidApp/src/main/res/xml/network_security_config.xml
-          sed -i 's@private const val RELEASES_URL = ".*"@private const val RELEASES_URL = "http://127.0.0.1:8766/releases"@' "$updater"
-          grep -F 'RELEASES_URL = "http://127.0.0.1:8766/releases"' "$updater"
-          sed -i '/<\/network-security-config>/i\    <domain-config cleartextTrafficPermitted="true"><domain>127.0.0.1</domain></domain-config>' "$net_config"
-          grep -F '<domain>127.0.0.1</domain>' "$net_config"
-          build_apk 2.0.2-qa.1 157
-          cp scripts/rln-local-update.py dist/
+          if [[ "$LOCAL_CHANNEL" == true ]]; then
+            updater=androidApp/src/main/kotlin/com/metrolist/android/update/AppUpdateManager.kt
+            net_config=androidApp/src/main/res/xml/network_security_config.xml
+            sed -i 's@private const val RELEASES_URL = ".*"@private const val RELEASES_URL = "http://127.0.0.1:8766/releases"@' "$updater"
+            grep -F 'RELEASES_URL = "http://127.0.0.1:8766/releases"' "$updater"
+            sed -i '/<\/network-security-config>/i\    <domain-config cleartextTrafficPermitted="true"><domain includeSubdomains="false">127.0.0.1</domain></domain-config>' "$net_config"
+            grep -F '<domain includeSubdomains="false">127.0.0.1</domain>' "$net_config"
+          fi
+          build_apk "$APP_VERSION" "$APP_CODE"
           (cd dist && sha256sum -- *.apk > SHA256SUMS)
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: RLN-private-update-test
+          name: RLN-private-update-${{ matrix.version }}
           path: dist/
           if-no-files-found: error
