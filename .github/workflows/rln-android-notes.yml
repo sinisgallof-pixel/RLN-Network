@@ -1,0 +1,43 @@
+name: Aggiorna changelog Android RLN 2.0.3
+
+on:
+  push:
+    paths:
+      - .github/workflows/rln-android-notes.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update-release-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pubblica le note Android
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          cat > notes.txt <<'NOTES'
+          RLN Network 2.0.3
+
+          Miglioramenti Android
+          • Ripristinata la riproduzione senza pause tra i brani.
+          • Recuperati preferiti, album salvati, testi, download e audio in cache che potevano andare persi durante l’aggiornamento dalla versione 13.x.
+
+          Nuove funzioni
+          • Aggiunta la qualità 1440p per i video musicali.
+          • Aggiunta la ricerca degli episodi nelle pagine dei podcast.
+          • Migliorata la traslitterazione dei testi con rilevamento della lingua sul dispositivo e opzione per nascondere la scrittura originale.
+          • Ripristinata la possibilità di aggiungere brani alla libreria e ordinarli per tempo di ascolto o data di download.
+          • Salvare un album o una playlist non avvia più automaticamente il download, salvo attivazione dell’opzione.
+          • I brani non disponibili vengono mostrati in grigio.
+
+          Correzioni
+          • Corretti la riproduzione casuale, “Ripeti tutto” e l’avvio della radio da Speed Dial.
+          • Corretti i blocchi della riproduzione Android legati all’elaborazione audio o alla mancata concessione del focus audio.
+          • Corretta l’importazione di playlist da Spotify, Apple Music, Deezer e Tidal.
+          • Corretta la ripresa dei download dopo il riavvio.
+          NOTES
+          sed -i 's/^          //' notes.txt
+          gh release edit v2.0.3 --repo "$GH_REPO" --notes-file notes.txt
