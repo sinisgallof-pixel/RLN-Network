@@ -37,15 +37,19 @@ import com.metrolist.desktop.state.app.UiState
 import com.metrolist.desktop.state.auth.AuthState
 import com.metrolist.desktop.state.playback.PlayerState
 import com.metrolist.shared.generated.resources.Res
+import com.metrolist.shared.generated.resources.account_downloading_nightly_update
 import com.metrolist.shared.generated.resources.account_downloading_update
+import com.metrolist.shared.generated.resources.account_keyring_required
+import com.metrolist.shared.generated.resources.account_linux_keyring_required
 import com.metrolist.shared.generated.resources.account_logout_webview_failed
+import com.metrolist.shared.generated.resources.account_nightly_update_available
 import com.metrolist.shared.generated.resources.account_retry_cleanup
 import com.metrolist.shared.generated.resources.account_update_available
 import com.metrolist.shared.generated.resources.account_webview_remove_failed
 import com.metrolist.shared.settings.Settings
 import com.metrolist.shared.state.GlobalYouTubeRepository
-import com.metrolist.shared.ui.components.ContainedLoadingIndicator
 import com.metrolist.shared.ui.icons.MetrolistIcons
+import com.metrolist.shared.utils.OsUtil
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.stringResource
 import com.metrolist.shared.ui.components.AccountMenu as SharedAccountMenu
@@ -111,13 +115,15 @@ fun AccountMenu(onDismiss: () -> Unit) {
         menuMaxWidth = 432.dp,
         afterMenuContent = { dismiss ->
             if (Settings.shared.credentialsPending) {
-                Row(
-                    Modifier.fillMaxWidth().padding(16.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(12.dp),
-                ) {
-                    ContainedLoadingIndicator(Modifier.size(32.dp))
-                }
+                Text(
+                    text =
+                        stringResource(
+                            if (OsUtil.isLinux) Res.string.account_linux_keyring_required else Res.string.account_keyring_required,
+                        ),
+                    modifier = Modifier.fillMaxWidth().padding(16.dp),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = colorScheme.onSurfaceVariant,
+                )
             }
             logoutError?.let { error ->
                 Surface(shape = RoundedCornerShape(12.dp), color = colorScheme.errorContainer) {
@@ -166,10 +172,22 @@ fun AccountMenu(onDismiss: () -> Unit) {
                             modifier = Modifier.size(20.dp),
                         )
                         Text(
-                            if (UiState.isDownloadingUpdate) {
-                                stringResource(Res.string.account_downloading_update, pendingUpdate.version)
-                            } else {
-                                stringResource(Res.string.account_update_available, pendingUpdate.version)
+                            when {
+                                UiState.isDownloadingUpdate && pendingUpdate.isNightly -> {
+                                    stringResource(Res.string.account_downloading_nightly_update)
+                                }
+
+                                UiState.isDownloadingUpdate -> {
+                                    stringResource(Res.string.account_downloading_update, pendingUpdate.version)
+                                }
+
+                                pendingUpdate.isNightly -> {
+                                    stringResource(Res.string.account_nightly_update_available)
+                                }
+
+                                else -> {
+                                    stringResource(Res.string.account_update_available, pendingUpdate.version)
+                                }
                             },
                             style = MaterialTheme.typography.bodyMedium,
                             color = colorScheme.primary,

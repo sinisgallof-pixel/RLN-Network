@@ -239,6 +239,19 @@ fun HomeScreen(
 
     val homeContent: @Composable () -> Unit = {
         val sharedText = homeContentText()
+        val onHomeItemClick: (YTItem) -> Unit = { item ->
+            handleItemClick(
+                item,
+                onNavigateToAlbum,
+                onNavigateToArtist,
+                onNavigateToPlaylist,
+                onNavigateToPodcast,
+                playerConnection,
+                scope,
+                onNavigateToBrowse,
+                startVideo = false,
+            )
+        }
         HomeContent(
             uiState = uiState,
             shelfCache = viewModel.shared.shelfCache,
@@ -251,18 +264,13 @@ fun HomeScreen(
                     else -> Unit
                 }
             },
-            onItemClick = { item ->
-                handleItemClick(
-                    item,
-                    onNavigateToAlbum,
-                    onNavigateToArtist,
-                    onNavigateToPlaylist,
-                    onNavigateToPodcast,
-                    playerConnection,
-                    scope,
-                    onNavigateToBrowse,
-                    startVideo = false,
-                )
+            onItemClick = onHomeItemClick,
+            onSpeedDialItemClick = { item ->
+                if (item is SongItem) {
+                    playerConnection?.startRadio(item)
+                } else {
+                    onHomeItemClick(item)
+                }
             },
             onItemLongClick = { selectedMenuItem = it },
             onShuffleSongs = { songs -> playerConnection?.shuffleQueue(songs, queueTitle = sharedText.shuffle) },

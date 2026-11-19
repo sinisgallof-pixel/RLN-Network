@@ -456,7 +456,7 @@ fun PlayerLikeShareButtons(
         )
     val likeButtonColors =
         ToggleButtonDefaults.colors(
-            containerColor = playerInactiveControlContainerColor(),
+            containerColor = MaterialTheme.colorScheme.secondaryContainer,
             contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
             checkedContainerColor = MaterialTheme.colorScheme.primary,
             checkedContentColor = MaterialTheme.colorScheme.onPrimary,

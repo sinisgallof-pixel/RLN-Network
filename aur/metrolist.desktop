@@ -2,8 +2,9 @@
 Type=Application
 Name=Metrolist
 Comment=YouTube Music desktop client
-Exec=metrolist %u
+Exec=/usr/bin/metrolist %u
 Icon=metrolist
 Terminal=false
+StartupWMClass=Metrolist
 Categories=AudioVideo;Player;
 MimeType=x-scheme-handler/metrolist;x-scheme-handler/metrolist-auth;

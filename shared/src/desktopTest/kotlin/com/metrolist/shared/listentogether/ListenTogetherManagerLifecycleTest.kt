@@ -1,6 +1,16 @@
 package com.metrolist.shared.listentogether
 
+import androidx.compose.runtime.AbstractApplier
+import androidx.compose.runtime.BroadcastFrameClock
+import androidx.compose.runtime.Composition
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.Recomposer
 import androidx.compose.runtime.snapshotFlow
+import androidx.compose.runtime.snapshots.Snapshot
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.unit.Density
+import androidx.compose.ui.unit.LayoutDirection
 import com.metrolist.listentogether.codec.MessageCodec
 import com.metrolist.shared.listentogether.network.ApproveSuggestionPayload
 import com.metrolist.shared.listentogether.network.ErrorPayload
@@ -16,6 +26,7 @@ import com.metrolist.shared.listentogether.network.ReconnectedPayload
 import com.metrolist.shared.listentogether.network.RoomCreatedPayload
 import com.metrolist.shared.listentogether.network.RoomState
 import com.metrolist.shared.listentogether.network.ServerCapabilities
+import com.metrolist.shared.listentogether.network.ServerRestartingPayload
 import com.metrolist.shared.listentogether.network.SuggestTrackPayload
 import com.metrolist.shared.listentogether.network.SuggestionApprovedPayload
 import com.metrolist.shared.listentogether.network.SuggestionReceivedPayload
@@ -23,7 +34,11 @@ import com.metrolist.shared.listentogether.network.SuggestionSubmittedPayload
 import com.metrolist.shared.listentogether.network.TrackInfo
 import com.metrolist.shared.listentogether.network.UserInfo
 import com.metrolist.shared.model.SongItem
+import com.metrolist.shared.settings.ContentUndoHints
+import com.metrolist.shared.settings.ContentUndoPage
 import com.metrolist.shared.settings.Settings
+import com.metrolist.shared.ui.listentogether.listenTogetherSettingsPage
+import com.metrolist.shared.ui.settings.SettingsPageRegistration
 import com.russhwolf.settings.MapSettings
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
@@ -53,7 +68,11 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.filterIsInstance
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.take
+import kotlinx.coroutines.flow.toList
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.advanceTimeBy
 import kotlinx.coroutines.test.advanceUntilIdle
@@ -77,6 +96,30 @@ import io.ktor.server.cio.CIO as ServerCIO
 import io.ktor.server.websocket.WebSockets as ServerWebSockets
 
 class ListenTogetherManagerLifecycleTest {
+    @Test
+    fun blockingUsersHintsOnceAfterAValidBlockAndKeepsTheFlagAfterUnblocking() =
+        runTest {
+            ContentUndoHints.pending.value.forEach(ContentUndoHints::markShown)
+            Settings.shared.blockedUsersUndoHintShown = false
+            val client = HttpClient(MockEngine { error("No request expected") })
+            val manager = handoffManager(backgroundScope, client, sessionPersistenceEnabled = false)
+            try {
+                manager.blockUser(" ")
+                assertTrue(ContentUndoHints.pending.value.isEmpty())
+                manager.blockUser("Listener")
+                assertEquals(listOf(ContentUndoPage.BLOCKED_USERS), ContentUndoHints.pending.value)
+                assertEquals(setOf("Listener"), manager.blockedUsernames.value)
+                ContentUndoHints.markShown(ContentUndoPage.BLOCKED_USERS)
+                manager.unblockUser("Listener")
+                manager.blockUser("Another listener")
+                assertTrue(ContentUndoHints.pending.value.isEmpty())
+                assertTrue(Settings.shared.blockedUsersUndoHintShown)
+            } finally {
+                manager.close()
+                client.close()
+            }
+        }
+
     @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun pausedGuestsWaitForReadinessChangesAndStopAfterThreeRecoveryAttempts() =
@@ -601,6 +644,84 @@ class ListenTogetherManagerLifecycleTest {
     fun tearDown() {
         Settings.replaceSharedForTest(null)
     }
+
+    @OptIn(ExperimentalCoroutinesApi::class)
+    @Test
+    fun settingsRegistryRebuildsAfterEachSwitchChangeWithoutReopening() =
+        runTest {
+            val client = HttpClient(MockEngine { error("Preference changes must not connect") })
+            val manager = handoffManager(backgroundScope, client, sessionPersistenceEnabled = false)
+            val clock = BroadcastFrameClock()
+            val recomposer = Recomposer(coroutineContext + clock)
+            val composition =
+                Composition(
+                    object : AbstractApplier<Unit>(Unit) {
+                        override fun insertBottomUp(
+                            index: Int,
+                            instance: Unit,
+                        ) = error("No UI nodes expected")
+
+                        override fun insertTopDown(
+                            index: Int,
+                            instance: Unit,
+                        ) = error("No UI nodes expected")
+
+                        override fun move(
+                            from: Int,
+                            to: Int,
+                            count: Int,
+                        ) = error("No UI nodes expected")
+
+                        override fun remove(
+                            index: Int,
+                            count: Int,
+                        ) = error("No UI nodes expected")
+
+                        override fun onClear() {}
+                    },
+                    recomposer,
+                )
+            var page: SettingsPageRegistration? = null
+            backgroundScope.launch(clock) { recomposer.runRecomposeAndApplyChanges() }
+            try {
+                composition.setContent {
+                    CompositionLocalProvider(
+                        LocalDensity provides Density(1f),
+                        LocalLayoutDirection provides LayoutDirection.Ltr,
+                    ) {
+                        page = listenTogetherSettingsPage(manager)
+                    }
+                }
+                runCurrent()
+                var frame = 0L
+                for (id in listOf("listenTogetherAutoApproveJoins", "listenTogetherAutoApproveSuggestions", "listenTogetherSyncVolume")) {
+                    repeat(2) {
+                        val item = page!!.groups.flatMap { it.items }.single { it.id == id }
+                        val expected = item.checked != true
+                        item.onCheckedChange!!(expected)
+                        runCurrent()
+                        Snapshot.sendApplyNotifications()
+                        runCurrent()
+                        clock.sendFrame(++frame)
+                        runCurrent()
+                        assertEquals(
+                            expected,
+                            page!!
+                                .groups
+                                .flatMap { it.items }
+                                .single { it.id == id }
+                                .checked,
+                            "$id should update without reopening",
+                        )
+                    }
+                }
+            } finally {
+                composition.dispose()
+                recomposer.close()
+                manager.close()
+                client.close()
+            }
+        }
 
     @Test
     fun localPreferencesPublishAndPersistForHostsAndGuestsWithABlankUsername() =
@@ -1500,6 +1621,37 @@ class ListenTogetherManagerLifecycleTest {
                     }
                 manager.createRoom("Listener")
                 assertEquals(1, withTimeout(5_000L.milliseconds) { newRoomRetry.await() }.attempt)
+            } finally {
+                manager.close()
+                client.close()
+                callerScope.cancel()
+            }
+        }
+
+    @Test
+    fun `announced server restart reconnects after its delay without consuming a retry`() =
+        runBlocking {
+            val client = HttpClient(MockEngine { error("Offline") })
+            val callerScope = CoroutineScope(coroutineContext + SupervisorJob())
+            val manager =
+                handoffManager(
+                    callerScope,
+                    client,
+                    sessionPersistenceEnabled = false,
+                    reconnectDelayMillis = 60_000L,
+                )
+            try {
+                val retries =
+                    async(start = CoroutineStart.UNDISPATCHED) {
+                        manager.events
+                            .filterIsInstance<ListenTogetherEvent.Reconnecting>()
+                            .take(2)
+                            .toList()
+                    }
+                manager.handleBinary(MessageCodec().encode(MessageTypes.SERVER_RESTARTING, ServerRestartingPayload(0)))
+                manager.createRoom("Listener")
+                // The announced zero delay replaces the 60 s backoff, so both retries arrive at once.
+                assertEquals(listOf(1, 1), withTimeout(5_000L.milliseconds) { retries.await() }.map { it.attempt })
             } finally {
                 manager.close()
                 client.close()

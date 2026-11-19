@@ -2,6 +2,8 @@ package com.metrolist.shared.backup
 
 import androidx.sqlite.SQLiteConnection
 import androidx.sqlite.execSQL
+import com.metrolist.shared.db.PROTECT_LEGACY_LYRICS_SQL
+import com.metrolist.shared.db.recoverLegacyUserLyrics
 
 private val VERSION_ONE_EXPLICIT_TABLES = setOf("song", "artist", "playlist", "song_artist_map", "playlist_song_map")
 
@@ -20,6 +22,9 @@ fun copyLegacyBackupTables(
             database.userTables("main").forEach { table -> database.copyLegacyTable(table, legacyVersion) }
             if (legacyVersion == 1) database.importVersionOne()
             legacyBackupDataMigrations(legacyVersion).forEach(database::execSQL)
+            if (legacyVersion < 66) database.execSQL(PROTECT_LEGACY_LYRICS_SQL)
+            database.recoverLegacyUserLyrics()
+            database.removeLegacyOrphans()
             database.prepare("PRAGMA foreign_key_check").use {
                 check(!it.step()) { "Legacy database contains invalid relationships" }
             }
@@ -31,6 +36,21 @@ fun copyLegacyBackupTables(
     } finally {
         database.execSQL("DETACH DATABASE legacy")
     }
+}
+
+private fun SQLiteConnection.removeLegacyOrphans() {
+    // Legacy deletes could leave children behind while foreign keys were disabled.
+    listOf(
+        "DELETE FROM song_artist_map WHERE songId NOT IN (SELECT id FROM song) OR artistId NOT IN (SELECT id FROM artist)",
+        "DELETE FROM song_album_map WHERE songId NOT IN (SELECT id FROM song) OR albumId NOT IN (SELECT id FROM album)",
+        "DELETE FROM album_artist_map WHERE albumId NOT IN (SELECT id FROM album) OR artistId NOT IN (SELECT id FROM artist)",
+        "DELETE FROM playlist_song_map WHERE songId NOT IN (SELECT id FROM song) OR playlistId NOT IN (SELECT id FROM playlist)",
+        "DELETE FROM import_track_match WHERE songId NOT IN (SELECT id FROM song) OR playlistId NOT IN (SELECT id FROM playlist)",
+        "DELETE FROM related_song_map WHERE songId NOT IN (SELECT id FROM song) OR relatedSongId NOT IN (SELECT id FROM song)",
+        "DELETE FROM event WHERE songId NOT IN (SELECT id FROM song)",
+        "DELETE FROM history_snapshot WHERE eventId NOT IN (SELECT id FROM event)",
+        "UPDATE history_provenance SET eventId = NULL WHERE eventId NOT IN (SELECT id FROM event)",
+    ).forEach(::execSQL)
 }
 
 private fun SQLiteConnection.copyLegacyTable(
