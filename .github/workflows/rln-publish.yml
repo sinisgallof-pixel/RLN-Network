@@ -1,0 +1,64 @@
+name: Pubblica APK RLN verificata
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_run_id:
+        description: ID della build firmata da pubblicare
+        required: true
+        type: string
+      draft:
+        description: Prepara una bozza
+        default: true
+        type: boolean
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: rln-release-publication
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      BUILD_RUN_ID: ${{ inputs.build_run_id }}
+      DRAFT: ${{ inputs.draft }}
+    steps:
+      - name: Verifica build e test dello stesso commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$BUILD_RUN_ID" =~ ^[0-9]+$ ]]
+          gh api "repos/$GH_REPO/actions/runs/$BUILD_RUN_ID" > run.json
+          jq -e '.conclusion == "success" and .path == ".github/workflows/rln-kmp-release.yml"' run.json
+          SHA="$(jq -r .head_sha run.json)"
+          gh api "repos/$GH_REPO/actions/workflows/rln-kmp-update-check.yml/runs?head_sha=$SHA&per_page=100" > tests.json
+          jq -e '.workflow_runs | any(.conclusion == "success")' tests.json
+          echo "SOURCE_SHA=$SHA" >> "$GITHUB_ENV"
+          gh run download "$BUILD_RUN_ID" --repo "$GH_REPO" --name RLN-Network-signed --dir dist
+      - name: Verifica integrità e prepara pubblicazione
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd dist
+          sha256sum -c SHA256SUMS
+          grep -Fq '43f8d1591f70239277bc7374bd0b80c693829a251fac9e3a00d5e12d5d274467' signature.txt
+          grep -Fq "package: name='com.rlnnetwork.music.kmp'" badging.txt
+          VERSION="$(sed -n "s/^package:.*versionName='\\([^']*\\)'.*/\\1/p" badging.txt)"
+          [[ "$VERSION" =~ ^[0-9]+\\.[0-9]+\\.[0-9]+$ ]]
+          test -f "RLN-Network-$VERSION.apk"
+          printf 'RLN Network %s\\n\\nAggiornamenti scaricabili dall’app.\\nCrediti Metrolist e licenza GPL-3.0 mantenuti.\\n\\nSorgenti corrispondenti: https://github.com/%s/tree/%s\\n' "$VERSION" "$GH_REPO" "$SOURCE_SHA" > notes.txt
+          if [[ "$VERSION" == "2.0.1" ]]; then
+            printf '\\nProblema noto: il Cast può interrompersi al termine del brano a schermo spento.\\n' >> notes.txt
+          fi
+          flags=(--draft)
+          if [[ "$DRAFT" == "false" ]]; then flags=(--latest); fi
+          gh release create "v$VERSION" "RLN-Network-$VERSION.apk" SHA256SUMS \\
+            --repo "$GH_REPO" --target "$SOURCE_SHA" --title "RLN Network $VERSION" \\
+            --notes-file notes.txt "${flags[@]}"
