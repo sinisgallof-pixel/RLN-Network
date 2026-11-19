@@ -50,15 +50,15 @@ jobs:
           sha256sum -c SHA256SUMS
           grep -Fq '43f8d1591f70239277bc7374bd0b80c693829a251fac9e3a00d5e12d5d274467' signature.txt
           grep -Fq "package: name='com.rlnnetwork.music.kmp'" badging.txt
-          VERSION="$(sed -n "s/^package:.*versionName='\\([^']*\\)'.*/\\1/p" badging.txt)"
-          [[ "$VERSION" =~ ^[0-9]+\\.[0-9]+\\.[0-9]+$ ]]
+          VERSION="$(sed -n "s/^package:.*versionName='\([^']*\)'.*/\1/p" badging.txt)"
+          [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
           test -f "RLN-Network-$VERSION.apk"
-          printf 'RLN Network %s\\n\\nAggiornamenti scaricabili dall’app.\\nCrediti Metrolist e licenza GPL-3.0 mantenuti.\\n\\nSorgenti corrispondenti: https://github.com/%s/tree/%s\\n' "$VERSION" "$GH_REPO" "$SOURCE_SHA" > notes.txt
+          printf 'RLN Network %s\n\nAggiornamenti scaricabili dall’app.\nCrediti Metrolist e licenza GPL-3.0 mantenuti.\n\nSorgenti corrispondenti: https://github.com/%s/tree/%s\n' "$VERSION" "$GH_REPO" "$SOURCE_SHA" > notes.txt
           if [[ "$VERSION" == "2.0.1" ]]; then
-            printf '\\nProblema noto: il Cast può interrompersi al termine del brano a schermo spento.\\n' >> notes.txt
+            printf '\nProblema noto: il Cast può interrompersi al termine del brano a schermo spento.\n' >> notes.txt
           fi
           flags=(--draft)
           if [[ "$DRAFT" == "false" ]]; then flags=(--latest); fi
-          gh release create "v$VERSION" "RLN-Network-$VERSION.apk" SHA256SUMS \\
-            --repo "$GH_REPO" --target "$SOURCE_SHA" --title "RLN Network $VERSION" \\
+          gh release create "v$VERSION" "RLN-Network-$VERSION.apk" SHA256SUMS \
+            --repo "$GH_REPO" --target "$SOURCE_SHA" --title "RLN Network $VERSION" \
             --notes-file notes.txt "${flags[@]}"
