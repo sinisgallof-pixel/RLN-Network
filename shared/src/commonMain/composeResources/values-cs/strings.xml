@@ -269,20 +269,20 @@
     <string name="sponsor_developer">Podpořit vývojáře</string>
     <string name="credits_license_name">Licence</string>
     <string name="credits_license_desc">Metrolist je licencován pod GPL-3.0</string>
-    <string name="credits_collaborators_section">Tým Metrolist hrdinů</string>
+    <string name="credits_collaborators_section">Tým RLN Network hrdinů</string>
     <string name="devmode_already_active" translatable="true">Vývojářský režim je již aktivní</string>
     <string name="discord_enable_rich_presence">Discord Rich Presence</string>
-    <string name="discord_listen_to_metrolist">Poslouchej Metrolist</string>
+    <string name="discord_listen_to_metrolist">Poslouchej RLN Network</string>
     <string name="discord_login_description">Připoj svůj Discord účet</string>
     <string name="discord_rich_presence">Rich presence</string>
     <string name="discord_state">Stav</string>
     <string name="discord_button1_text_default">Poslouchej na YouTube Music</string>
-    <string name="discord_button2_text_default">Navštiv Metrolist</string>
+    <string name="discord_button2_text_default">Navštiv RLN Network</string>
     <string name="discord_status_authorizing">Probíhá autorizace…</string>
     <string name="discord_status_not_initialized">Neinicializováno</string>
     <string name="discord_status_authorized">Autorizováno</string>
     <string name="discord_error_denied">Discord zamítl autorizaci.</string>
-    <string name="discord_error_connection_failed">Nepodařilo se připojit k Discordu. Metrolist to zkusí znovu automaticky.</string>
+    <string name="discord_error_connection_failed">Nepodařilo se připojit k Discordu. RLN Network to zkusí znovu automaticky.</string>
     <string name="discord_error_no_browser">Žádná dostupná aplikace pro otevření autorizace Discordu.</string>
     <string name="discord_error_token_exchange_failed">Výměna tokenu selhala. Zkus to znovu.</string>
     <string name="discord_error_token_refresh_failed">Obnovení tokenu selhalo. Přihlas se znovu.</string>
@@ -312,8 +312,8 @@
     <string name="settings_application_about">Aplikace &amp; O aplikaci</string>
     <string name="settings_open_supported_links_title">Otevřít podporované odkazy</string>
     <string name="settings_updates_title">Aktualizace</string>
-    <string name="settings_updates_available_description">Nová aktualizace Metrolistu je dostupná</string>
-    <string name="settings_about_title">O aplikaci Metrolist</string>
+    <string name="settings_updates_available_description">Nová aktualizace RLN Networku je dostupná</string>
+    <string name="settings_about_title">O aplikaci RLN Network</string>
     <string name="settings_search_placeholder">Prohledávat nastavení</string>
     <string name="settings_search_no_results">Nenalezena žádná nastavení</string>
     <string name="settings_search_no_results_desc">Žádné shody pro %1$s</string>
@@ -344,7 +344,7 @@
     <string name="app_icon_zenith_black">Zenitová černá</string>
     <string name="app_icon_zenith_white">Zenitová bílá</string>
     <string name="app_font_choose">Vybrat soubor písma</string>
-    <string name="app_font_picker_desc">Vybrat TTF nebo OTF soubor. Metrolist ho zkopíruje do soukromého úložiště aplikace.</string>
+    <string name="app_font_picker_desc">Vybrat TTF nebo OTF soubor. RLN Network ho zkopíruje do soukromého úložiště aplikace.</string>
     <string name="app_font_system">Podle systému</string>
     <string name="app_font_applied">Používá se %1$s</string>
     <string name="app_font_invalid">Nepodařilo se použít toto písmo. Vyber platný TTF nebo OTF soubor menší než 20 MB.</string>
@@ -462,7 +462,7 @@
     <string name="backup_restore_title">Záloha a obnovení</string>
     <string name="spotify_sign_in">Přihlásit se do Spotify</string>
     <string name="spotify_sign_in_again">Přihlásit se znovu</string>
-    <string name="spotify_choose_playlists_supporting">Vybrat playlisty, které chceš přenést do Metrolistu.</string>
+    <string name="spotify_choose_playlists_supporting">Vybrat playlisty, které chceš přenést do RLN Networku.</string>
     <plurals name="spotify_selected_playlist_count">
         <item quantity="one">%1$d playlist vybrán</item>
         <item quantity="few">%1$d playlisty vybrány</item>
@@ -501,7 +501,7 @@
     <string name="backup_restore_busy">Zpracovávání…</string>
     <string name="backup_sensitive_title">Citlivá záloha</string>
     <string name="backup_sensitive_message">Zálohy obsahují tvoje API klíče, přihlašovací údaje, ověřovací cookies, relační tokeny a další citlivé informace. Kdokoliv s tímto souborem bude mít přístup k tvým účtům. Ulož ho bezpečně a nikdy ho nesdílej.</string>
-    <string name="restore_in_progress">Obnovování tvé zálohy...\nMetrolist se automaticky restartuje.</string>
+    <string name="restore_in_progress">Obnovování tvé zálohy...\nRLN Network se automaticky restartuje.</string>
     <string name="scrobble_tap_to_disconnect">Klepni pro odpojení</string>
     <string name="scrobble_enable">Povolit scrobbling</string>
     <string name="scrobble_now_playing">Aktualizace Právě Přehrávané</string>
@@ -522,7 +522,7 @@
     <string name="listenbrainz_now_playing_description">Zobrazit aktuálně přehrávanou skladbu na ListenBrainz</string>
     <string name="listenbrainz_connect_title">Připojit ListenBrainz účet</string>
     <string name="listenbrainz_user_token">Uživatelský token</string>
-    <string name="restore_database_incompatible">Tato záloha používá verzi databáze %1$d, ale tato aplikace podporuje maximálně verzi %2$d. Aktualizuj Metrolist a zkus to znovu.</string>
+    <string name="restore_database_incompatible">Tato záloha používá verzi databáze %1$d, ale tato aplikace podporuje maximálně verzi %2$d. Aktualizuj RLN Network a zkus to znovu.</string>
     <string name="restore_failed_detail">Nepodařilo se obnovit zálohu při %1$s\n\nDůvod: %2$s</string>
     <string name="restore_error_unknown">Žádné další podrobnosti nejsou k dispozici.</string>
     <string name="restore_stage_reading_backup">Načítání souboru zálohy</string>
@@ -591,35 +591,35 @@
     <string name="updates_title">Aktualizace aplikace</string>
     <string name="updates_check">Zkontrolovat aktualizace</string>
     <string name="updates_checking">Vyhledávaní aktualizací…</string>
-    <string name="updates_no_updates">Tvůj Metrolist je aktuální</string>
+    <string name="updates_no_updates">Tvůj RLN Network je aktuální</string>
     <string name="updates_error">Nepodařilo se zkontrolovat aktualizace</string>
-    <string name="updates_status_current">Aktualizováno na Metrolist %1$s</string>
+    <string name="updates_status_current">Aktualizováno na RLN Network %1$s</string>
     <string name="updates_auto_check">Automaticky kontrolovat aktualizace</string>
     <string name="updates_notifications">Povolit notifikace aktualizací</string>
     <string name="updates_changelogs">Seznam změn</string>
     <string name="updates_last_check">Poslední úspěšná kontrola aktualizací</string>
     <string name="updates_pending_title">Čekající aktualizace</string>
-    <string name="updates_version">Verze Metrolistu</string>
+    <string name="updates_version">Verze RLN Networku</string>
     <string name="updates_size">Velikost aktualizace</string>
     <string name="updates_date">Datum</string>
     <string name="updates_changelog">Seznam změn</string>
     <string name="updates_install">Nainstalovat</string>
     <string name="updates_retry">Zkusit znovu</string>
-    <string name="updates_available_title">Metrolist %1$s je dostupný</string>
+    <string name="updates_available_title">RLN Network %1$s je dostupný</string>
     <string name="updates_available_message">Klepni Aktualizovat pro stažení aktualizace a pokračování do Android instalátoru.</string>
     <string name="updates_changelog_preview">Co je nového</string>
     <string name="updates_pending_parenthetical">(aktualizace čeká)</string>
     <string name="update_pending">Aktualizace čeká</string>
     <string name="updates_action">Aktualizovat</string>
-    <string name="updates_notification_title">Metrolist %1$s je dostupný</string>
+    <string name="updates_notification_title">RLN Network %1$s je dostupný</string>
     <string name="updates_notification_text">Klepni pro stažení a nainstalování aktualizace</string>
     <string name="updates_channel_name">Aktualizace aplikace</string>
-    <string name="updates_channel_description">Notifikace na nové Metrolist verze</string>
+    <string name="updates_channel_description">Notifikace na nové RLN Network verze</string>
     <string name="updates_download_failed">Aktualizace se nepodařila stáhnout.</string>
     <string name="updates_digest_failed">Stažená aktualizace neodpovídá kontrolnímu součtu z GitHubu.</string>
     <string name="updates_installer_failed">Instalátor balíčků Android není k dispozici nebo je instalace aplikací na tomto zařízení omezena.</string>
     <string name="updates_release_unavailable">Tato verze neobsahuje kompatibilní balíček APK.</string>
-    <string name="updates_release_notes_title">Co je nového v Metrolistu %1$s</string>
+    <string name="updates_release_notes_title">Co je nového v RLN Networku %1$s</string>
     <string name="device_connect_title">Připojení zařízení</string>
     <string name="device_connect_beta">Beta</string>
     <string name="device_connect_enable">Povolit</string>
@@ -630,7 +630,7 @@
     <string name="device_connect_rescan">Znovu prohledat</string>
     <string name="device_connect_account_mismatch">Jiný účet</string>
     <string name="device_connect_grant_permission">Udělit oprávnění</string>
-    <string name="side_menu_welcome">Vítej v aplikaci Metrolist</string>
+    <string name="side_menu_welcome">Vítej v aplikaci RLN Network</string>
     <string name="action_cannot_be_undone">Tuto akci nelze vrátit zpět.</string>
     <string name="add">Přidat</string>
     <string name="add_a_song">Přidat skladbu</string>
@@ -1016,12 +1016,6 @@
         <item quantity="many">%1$d minut</item>
         <item quantity="other">%1$d minut</item>
     </plurals>
-    <plurals name="minutes_short">
-        <item quantity="one">%1$d min</item>
-        <item quantity="few">%1$d min</item>
-        <item quantity="many">%1$d min</item>
-        <item quantity="other">%1$d min</item>
-    </plurals>
     <plurals name="n_track">
         <item quantity="one">%1$d skladba</item>
         <item quantity="few">%1$d skladby</item>
@@ -1057,12 +1051,6 @@
         <item quantity="few">Odstraněny %1$d skladby z playlistu</item>
         <item quantity="many">Odstraněno %1$d skladeb z playlistu</item>
         <item quantity="other">Odstraněno %1$d skladeb z playlistu</item>
-    </plurals>
-    <plurals name="seconds_short">
-        <item quantity="one">%1$d s</item>
-        <item quantity="few">%1$d s</item>
-        <item quantity="many">%1$d s</item>
-        <item quantity="other">%1$d s</item>
     </plurals>
     <plurals name="song_count">
         <item quantity="one">%1$d skladba</item>
@@ -1175,7 +1163,7 @@
     <string name="play_pause">Přehrát/Pozastavit</string>
     <string name="next">Další</string>
     <string name="not_playing">Nehraje žádná skladba</string>
-    <string name="tap_to_play">Klepni pro otevření Metrolistu</string>
+    <string name="tap_to_play">Klepni pro otevření RLN Networku</string>
     <string name="widget_description">Widget přehrávače hudby s kontrolou přehrávaní</string>
     <string name="turntable_widget_description">Widget kulatého obalu skladby s kontrolou přehrávaní</string>
     <string name="widget_music_player">Hudební přehrávač</string>
@@ -1219,7 +1207,6 @@
     <string name="ai_provider">Poskytovatel</string>
     <string name="ai_base_url">Základní URL</string>
     <string name="ai_translation_model">Překladový model</string>
-    <string name="ai_judge_detector_model">Model detektoru</string>
     <string name="ai_target_language">Cílový jazyk</string>
     <string name="ai_deepl_formality">Formálnost</string>
     <string name="ai_deepl_formality_default">Výchozí</string>
@@ -1252,8 +1239,8 @@
     <string name="onboarding_migration_title">Tvoje knihovna v13 je zde</string>
     <string name="onboarding_migration_description">Našli jsme samostatnou databázi Metrolistu. Migrujte playlisty, historii, oblíbené skladby a data knihovny. Původní data zůstanou obnovitelná, pokud migrace selže.</string>
     <string name="onboarding_migration_complete_title">Tvůj účet byl přenesen</string>
-    <string name="onboarding_migration_complete_description">Tvůj účet, playlisty, historie, oblíbené a data knihovny jsou připraveny v této verzi Metrolistu.</string>
-    <string name="onboarding_crash_reports_title">Pomož vylepšit Metrolist</string>
+    <string name="onboarding_migration_complete_description">Tvůj účet, playlisty, historie, oblíbené a data knihovny jsou připraveny v této verzi RLN Networku.</string>
+    <string name="onboarding_crash_reports_title">Pomož vylepšit RLN Network</string>
     <string name="onboarding_crash_reports_description">Sdílet volitelnou diagnostiku přes Sentry, abychom mohli najít a opravit chyby rychleji. Tuto volbu můžete kdykoli změnit v nastavení.</string>
     <string name="onboarding_notifications_title">Povolit notifikace</string>
     <string name="onboarding_notifications_description">Povolte upozornění na přehrávání a stahování.</string>
@@ -1270,7 +1257,7 @@
     <string name="onboarding_finish_description">Příprava je dokončena. Začni poslouchat nebo si přineste svůj účet a své data sebou.</string>
     <string name="finish">Dokončit</string>
     <string name="onboarding_restore_backup">Obnovit ze zálohy</string>
-    <string name="onboarding_settings_hint">Přizpůsob si Metrolist v Nastavení v menu vpravo nahoře.</string>
+    <string name="onboarding_settings_hint">Přizpůsob si RLN Network v Nastavení v menu vpravo nahoře.</string>
     <string name="onboarding_no_saved_accounts">Nebyly nalezeny žádné propojené účty.</string>
     <string name="onboarding_account_picture">Profilová fotka %1$s</string>
     <string name="migrated">Migrován</string>
@@ -1419,7 +1406,7 @@
     <string name="menu_keyboard_shortcuts">Klávesové zkratky</string>
     <string name="menu_application_logs">Záznamy aplikace</string>
     <string name="menu_report_issue">Nahlásit problém…</string>
-    <string name="menu_about_metrolist">O aplikaci Metrolist</string>
+    <string name="menu_about_metrolist">O aplikaci RLN Network</string>
     <string name="menu_song">Skladba</string>
     <string name="menu_stop">Zastavit</string>
     <string name="menu_go_to_current_song">Přejít na současnou skladbu</string>
@@ -1566,7 +1553,7 @@
     <string name="restore_backup_confirm">Obnovit zálohu?</string>
     <string name="restore">Obnovit</string>
     <string name="ai_translation">AI překlad</string>
-    <string name="restoring_backup">Obnovování tvé zálohy...\nMetrolist se automaticky restartuje.</string>
+    <string name="restoring_backup">Obnovování tvé zálohy...\nRLN Network se automaticky restartuje.</string>
     <string name="downloading_percent">Stahování... %1$d%2$s</string>
     <string name="hide_queue">Skrýt frontu</string>
     <string name="restore_backup_desc">Importovat Android nebo desktop zálohu Metrolistu a restartovat</string>
@@ -1585,11 +1572,11 @@
     <string name="go_back">Zpět</string>
     <string name="clear_search">Vymazat vyhledávání</string>
     <string name="downloading_count">Stahování (%1$d)</string>
-    <string name="backup_picker_title">Obnovit Metrolist zálohu</string>
+    <string name="backup_picker_title">Obnovit RLN Network zálohu</string>
     <string name="backup_created">Záloha vytvořena</string>
     <string name="detail_available">Dostupné</string>
     <string name="app_data">Data aplikace</string>
-    <string name="create_backup_dialog_title">Vytvořit Metrolist zálohu</string>
+    <string name="create_backup_dialog_title">Vytvořit RLN Network zálohu</string>
     <string name="shortcut_open_settings">Otevřít nastavení</string>
     <string name="fullscreen">Celá obrazovka</string>
     <string name="shortcut_open_search">Otevřít vyhledávání</string>
@@ -1633,7 +1620,7 @@
     <string name="device_connect_available">Dostupný</string>
     <string name="settings_disable_wayland_fix_description">Vypnout automatickou detekci měřítka pro Wayland relací. Vyžaduje restart.</string>
     <string name="lyrics_show_translations">Zobrazit překlady</string>
-    <string name="startup_error_title">Chyba při spuštění aplikace Metrolist</string>
+    <string name="startup_error_title">Chyba při spuštění aplikace RLN Network</string>
     <string name="top_tracks">Top skladby</string>
     <string name="exit_expanded_mode">Ukončit rozšířený režim</string>
     <string name="close_video_fullscreen">Zavřít video v režimu celé obrazovky</string>
@@ -1721,7 +1708,7 @@
     <string name="tray_show_window">Zobrazit okno</string>
     <string name="tray_show_miniplayer">Zobrazit mini přehrávač</string>
     <string name="tray_settings">Nastavení</string>
-    <string name="tray_quit_metrolist">Ukončit Metrolist</string>
+    <string name="tray_quit_metrolist">Ukončit RLN Network</string>
     <string name="sign_in_discord">Přihlásit se - Discord</string>
     <string name="discord_sign_in_unavailable">Přihlášení přes Discord není dostupné</string>
     <string name="sign_in_youtube_music">Přihlásit se - YouTube Music</string>
@@ -1729,7 +1716,7 @@
     <string name="privacy_policy">Přečtěte si naše zásady ochrany osobních údajů</string>
     <string name="log_in">Přihlásit se</string>
     <string name="restore_from_backup">Obnovit ze zálohy</string>
-    <string name="onboarding_backup_picker_title">Obnovit Metrolist zálohu</string>
+    <string name="onboarding_backup_picker_title">Obnovit RLN Network zálohu</string>
     <string name="onboarding_backup_picker_error">Nepodařilo se otevřít výběr zálohy: %1$s</string>
     <string name="onboarding_backup_restore_failed">Obnova selhala: %1$s</string>
     <string name="edit_sidebar">Upravit postranní panel</string>
@@ -1806,7 +1793,7 @@
     <string name="shortcut_toggle_video">Přepnout režim videa / prohlížeč</string>
     <string name="shortcut_toggle_fullscreen_video">Přepnout video do celé obrazovky</string>
     <string name="shortcut_developer_log">Prohlížeč vývojářských záznamu</string>
-    <string name="restore_replaces_data">Tohle vám nahradí vaše stávající nastavení, údaje, účty a data v knihovně. Metrolist se restartuje automaticky.</string>
+    <string name="restore_replaces_data">Tohle vám nahradí vaše stávající nastavení, údaje, účty a data v knihovně. RLN Network se restartuje automaticky.</string>
     <string name="discord_logged_in">Jste přihlášeni</string>
     <string name="lastfm_logged_in_as">Přihlášen jako %1$s</string>
     <string name="lastfm_scrobble_percentage">Procento: %1$d%2$s</string>
@@ -2002,7 +1989,7 @@
     <string name="no_match_found">Nebyly nalezeny žádné výsledky</string>
     <string name="recognition_error">Chyba rozpoznávání</string>
     <string name="try_again">Zkusit znova</string>
-    <string name="play_on_app">Přehrát na Metrolistu</string>
+    <string name="play_on_app">Přehrát na RLN Networku</string>
     <string name="re_listen">Poslechnout znovu</string>
     <string name="stands_with_palestine">Tento projekt podporuje Palestinu</string>
     <string name="mini_player_subscribe_artist">Odebírat umělce</string>
@@ -2122,7 +2109,7 @@
     <string name="onboarding_continue_without_migration">Pokračovat s prázdnou knihovnou</string>
     <string name="onboarding_migration_recovery_description">Můžete to zkusit znovu nebo pokračovat s prázdnou knihovnou. Kopie původní databáze pro obnovení zůstane na tomto zařízení. Po dokončení nastavení můžete obnovit zálohu.</string>
     <string name="onboarding_migration_failed">Nepodařilo se připravit knihovnu. Vaše původní data byla zachována.</string>
-    <string name="onboarding_library_migrated_description">Vaše playlisty, historie, oblíbené skladby a data knihovny jsou v této verzi aplikace Metrolist připraveny.</string>
+    <string name="onboarding_library_migrated_description">Vaše playlisty, historie, oblíbené skladby a data knihovny jsou v této verzi aplikace RLN Network připraveny.</string>
     <string name="onboarding_notifications_denied">Oznámení jsou vypnutá. Můžete je zapnout později v nastavení aplikace v Androidu nebo pokračovat volbou Ne.</string>
     <string name="mini_player_video_prerequisite">Nejprve v nastavení přehrávání zapněte možnost Přehrávat hudební videa</string>
     <string name="download_folder_access_failed">Nepodařilo se uložit oprávnění k přístupu do této složky. Vyberte složku s oprávněním ke čtení a zápisu.</string>
@@ -2147,9 +2134,9 @@
     <string name="updates_notification_settings">Nastavení oznámení v Androidu</string>
     <string name="widget_recognizer_open_result">Otevřít rozpoznanou skladbu</string>
     <string name="statistics_load_failed">Nepodařilo se aktualizovat statistiky. Zkuste to znovu.</string>
-    <string name="desktop_platform_unsupported">Metrolist tento operační systém nepodporuje. Použijte Windows 10 nebo novější, macOS nebo jinou distribuci Linuxu než Omarchy.</string>
+    <string name="desktop_platform_unsupported">RLN Network tento operační systém nepodporuje. Použijte Windows 10 nebo novější, macOS nebo jinou distribuci Linuxu než Omarchy.</string>
     <string name="shortcut_toggle_expanded">Přepnout rozbalení přehrávače</string>
-    <string name="desktop_display_unavailable">Metrolist se nemohl připojit k displeji X této relace. Spusťte jej z prostředí plochy s nastavenou proměnnou DISPLAY.</string>
+    <string name="desktop_display_unavailable">RLN Network se nemohl připojit k displeji X této relace. Spusťte jej z prostředí plochy s nastavenou proměnnou DISPLAY.</string>
     <string name="webkit_install_hint">Vestavěné přihlašování vyžaduje WebKitGTK 4.1 (%1$s). Nainstalujte jej pomocí správce balíčků systému.</string>
     <string name="webkit_install_command">Nainstalujte jej příkazem:\n%1$s</string>
     <string name="webkit_appimage_hint">Sestavení AppImage také používají pro přihlášení systémové knihovny WebKitGTK.</string>
@@ -2162,7 +2149,7 @@
     <string name="video_stats_latency_value">%1$s ms</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s MB (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Hlasitost: %2$s</string>
-    <string name="download_folder_unavailable">Tuto složku nelze použít. Vyberte složku s možností zápisu, ke které systém nebo izolované prostředí povoluje aplikaci Metrolist přístup.</string>
+    <string name="download_folder_unavailable">Tuto složku nelze použít. Vyberte složku s možností zápisu, ke které systém nebo izolované prostředí povoluje aplikaci RLN Network přístup.</string>
     <string name="window_maximize">Maximalizovat</string>
     <string name="window_restore">Obnovit velikost okna</string>
     <string name="equalizer_stream_unavailable">Ekvalizér a předzesilovač nejsou pro tento stream dostupné. Změny se projeví při přehrávání podporované skladby.</string>
@@ -2178,7 +2165,7 @@
     <string name="queue_youtube_history_paused_desc">Obnovte zaznamenávání historie poslechu, aby se přehrání v režimu offline ukládala k pozdějšímu odeslání</string>
     <string name="search_online_failed">Online vyhledávání selhalo. Zkontrolujte připojení a zkuste to znovu.</string>
     <string name="search_load_more_failed">Nepodařilo se načíst další výsledky.</string>
-    <string name="discord_error_gateway_configuration">Discord odmítl nastavení připojení. Před dalším pokusem aktualizujte Metrolist.</string>
+    <string name="discord_error_gateway_configuration">Discord odmítl nastavení připojení. Před dalším pokusem aktualizujte RLN Network.</string>
     <string name="discord_preview_buttons_adjusted">Discord zkracuje dlouhé popisky tlačítek a vynechává tlačítka s příliš dlouhými odkazy. Tento náhled ukazuje tlačítka, která budou odeslána.</string>
     <string name="discord_presence_status_warning">Podrobný stav aktivity odešle do služby Discord stav Online. Může přepsat Neviditelný nebo Nerušit, i po zastavení přehrávání.</string>
     <string name="discord_refresh_queued">Aktualizace stavu aktivity byla zařazena do fronty.</string>
@@ -2213,8 +2200,8 @@
     <string name="theme_color_rose">Růžová</string>
     <string name="theme_color_red">Červená</string>
     <string name="theme_color_gold">Zlatá</string>
-    <string name="backup_unsupported_format">Tato verze aplikace Metrolist nepodporuje formát této zálohy.</string>
-    <string name="backup_unsupported_database">Tato verze aplikace Metrolist nepodporuje verzi databáze v této záloze.</string>
+    <string name="backup_unsupported_format">Tato verze aplikace RLN Network nepodporuje formát této zálohy.</string>
+    <string name="backup_unsupported_database">Tato verze aplikace RLN Network nepodporuje verzi databáze v této záloze.</string>
     <string name="backup_too_large">Záloha překračuje podporovanou velikost nebo počet položek.</string>
     <string name="backup_invalid_data">Zálohu se nepodařilo přečíst nebo ověřit. Může být poškozená nebo obsahovat nepodporovaná data.</string>
     <string name="search_history_removal_failed">Nepodařilo se vymazat historii vyhledávání účtu. Zkuste to znovu po připojení.</string>
@@ -2236,7 +2223,7 @@
     <string name="settings_appearance_overview">Motiv, písma a vzhled přehrávače</string>
     <string name="settings_android_auto_overview">Playlisty v autě a cíl rychlého přidávání</string>
     <string name="settings_about_overview">Přispěvatelé, odkazy komunity a licence</string>
-    <string name="settings_supported_links_overview">Vyberte, které odkazy YouTube se mají otevírat v Metrolist</string>
+    <string name="settings_supported_links_overview">Vyberte, které odkazy YouTube se mají otevírat v RLN Network</string>
     <string name="settings_equalizer_overview">Zvukové předvolby, frekvenční pásma a profily</string>
     <string name="settings_fonts_overview">Výběr a import písem</string>
     <string name="settings_artwork_overview">Animované obaly, zdroje obrázků a kvalita videa</string>
@@ -2252,7 +2239,7 @@
     <string name="settings_listen_together_overview">Server, žádosti o připojení a návrhy skladeb</string>
     <string name="settings_device_connect_overview">Zařízení v okolí, párování a vzdálené přehrávání</string>
     <string name="settings_release_overview">Poznámky k vydání a možnosti instalace</string>
-    <string name="settings_notification_access_summary">Vyberte, která oznámení Android povolí aplikaci Metrolist</string>
+    <string name="settings_notification_access_summary">Vyberte, která oznámení Android povolí aplikaci RLN Network</string>
     <string name="settings_crash_reports_summary">Čtěte a sdílejte uložené zprávy o pádech</string>
     <string name="settings_content_language_summary">Jazyk vyhledávání a doporučení YouTube Music</string>
     <string name="settings_content_country_summary">Oblast žebříčků a doporučení YouTube Music</string>
@@ -2272,12 +2259,11 @@
     <string name="settings_canvas_playback_summary">Přehrávat krátké klipy nebo celé hudební video za přehrávačem</string>
     <string name="settings_normalization_summary">Vyrovnat hlasitost skladeb a předejít velkým rozdílům</string>
     <string name="settings_loudness_target_summary">Nastavte cílovou hlasitost při zapnuté normalizaci zvuku</string>
-    <string name="settings_stop_on_close_summary">Zastavit přehrávání po odebrání Metrolist z nedávných aplikací</string>
+    <string name="settings_stop_on_close_summary">Zastavit přehrávání po odebrání RLN Network z nedávných aplikací</string>
     <string name="settings_screen_awake_summary">Vyberte, zda přehrávač nebo texty udrží obrazovku zapnutou</string>
     <string name="settings_translation_mode_summary">Překládat slova nebo přepsat jejich výslovnost do cílového písma</string>
     <string name="settings_translation_provider_summary">Vyberte službu, která překládá texty</string>
     <string name="settings_translation_model_summary">Model pro překlad nebo přepis textů</string>
-    <string name="settings_detector_model_summary">Model, který rozhoduje, zda texty potřebují překlad</string>
     <string name="settings_translation_formality_summary">Vyberte formální nebo neformální jazyk překladů DeepL</string>
     <string name="settings_discord_advanced_summary">Zobrazit šablony aktivity a vlastní tlačítka s odkazy</string>
     <string name="settings_discord_activity_type_summary">Vyberte, jak Discord označuje vaši hudební aktivitu</string>
@@ -2292,7 +2278,7 @@
     <string name="settings_reset_download_folder_summary">Použít výchozí složku pro stažené skladby</string>
     <string name="settings_diagnostic_logs_summary">Čtěte a kopírujte diagnostický protokol aplikace</string>
     <string name="settings_log_directory_summary">Procházejte uložené protokoly ve správci souborů</string>
-    <string name="settings_check_releases_summary">Vyhledejte novější verzi Metrolist na GitHub</string>
+    <string name="settings_check_releases_summary">Vyhledejte novější verzi RLN Network na GitHub</string>
     <string name="settings_share_apk_summary">Sdílet balíček nainstalované aplikace jako soubor</string>
     <string name="settings_system_font_summary">Použít písmo dodané operačním systémem</string>
     <string name="settings_thumbnail_shape_summary">Vyberte tvar obalů v rozbaleném přehrávači</string>
@@ -2328,4 +2314,7 @@
     <string name="listen_together_server_label">%1$s · %2$s</string>
     <string name="settings_sound">Zvuk</string>
     <string name="song_count_with_hidden">%1$s, %2$s</string>
+    <string name="charts">Žebříčky</string>
+    <string name="leave_room">Opustit místnost</string>
+    <string name="room_code">Kód místnosti</string>
 </resources>

@@ -23,7 +23,7 @@ class AudioOutputTest {
             listOf(systemDefault, pulse),
             audioOutputMixers("Linux", null, listOf(loopback, pulse, mixer("Discard [null]"), hardware, systemDefault)),
         )
-        assertEquals(emptyList(), audioOutputMixers("Linux", null, listOf(loopback, hardware)))
+        assertEquals(listOf(null), audioOutputMixers("Linux", null, listOf(loopback, hardware)))
         assertEquals(listOf(null), audioOutputMixers("Linux", "#Speakers", listOf(systemDefault)))
         assertEquals(listOf(null, hardware), audioOutputMixers("Windows 11", null, listOf(hardware)))
     }
@@ -70,7 +70,10 @@ class AudioOutputTest {
             openAudioLine(format, 4_096, "Linux", null, {
                 discoveries++
                 listOf(loopback, hardware)
-            }, { _, _ -> error("Must not open arbitrary hardware") }, waits::add)
+            }, { mixer, _ ->
+                assertEquals(null, mixer)
+                throw LineUnavailableException()
+            }, waits::add)
         }
         assertEquals(4, discoveries)
         assertEquals(listOf(100L, 200L, 400L), waits)
@@ -79,10 +82,53 @@ class AudioOutputTest {
     @Test
     fun interruptionStopsRetries() {
         assertFailsWith<InterruptedException> {
-            openAudioLine(format, 4_096, "Linux", null, { emptyList() }, { _, _ -> error("No output") }, {
+            openAudioLine(format, 4_096, "Linux", null, { emptyList() }, { _, _ -> throw LineUnavailableException() }, {
                 throw InterruptedException()
             })
         }
+    }
+
+    @Test
+    fun usesJavaSoundDefaultOnlyWhenNoSystemRouteIsListed() {
+        assertEquals(listOf(null), audioOutputMixers("Linux", null, emptyList()))
+        val tried = mutableListOf<Mixer.Info?>()
+        val output = line { }
+        assertSame(
+            output,
+            openAudioLine(format, 4_096, "Linux", null, { listOf(loopback, hardware) }, { mixer, _ ->
+                tried += mixer
+                assertEquals(null, mixer)
+                output
+            }, { error("Fallback must not wait") }),
+        )
+        assertEquals(listOf<Mixer.Info?>(null), tried)
+    }
+
+    @Test
+    fun doesNotBypassNamedSystemRoutesWhenTheyFail() {
+        val tried = mutableListOf<Mixer.Info?>()
+        assertFailsWith<LineUnavailableException> {
+            openAudioLine(format, 4_096, "Linux", null, { listOf(systemDefault, pulse, hardware) }, { mixer, _ ->
+                tried += mixer
+                throw LineUnavailableException()
+            }, {})
+        }
+        assertEquals(
+            listOf<Mixer.Info?>(systemDefault, pulse, systemDefault, pulse, systemDefault, pulse, systemDefault, pulse),
+            tried,
+        )
+    }
+
+    @Test
+    fun usesPreferredDefaultWithoutOpeningOtherRoutes() {
+        val output = line { }
+        assertSame(
+            output,
+            openAudioLine(format, 4_096, "Linux", null, { listOf(pulse, systemDefault) }, { mixer, _ ->
+                assertSame(systemDefault, mixer)
+                output
+            }, { error("An available default must not wait") }),
+        )
     }
 
     private fun line(

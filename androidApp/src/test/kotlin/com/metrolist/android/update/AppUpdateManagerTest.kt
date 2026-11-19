@@ -8,32 +8,46 @@ import org.junit.Test
 
 class AppUpdateManagerTest {
     @Test
-    fun apkSelectionPicksTheUniversalApk() {
-        assertEquals("Metrolist.apk", releaseWithAssets("Metrolist.apk", "metrolist-android-14.0.0-arm64-v8a.apk").apk?.name)
+    fun apkSelectionOnlyPicksTheOfficialRlnRelease() {
         assertEquals(
-            "Metrolist.apk",
-            releaseWithAssets("Metrolist-izzy.apk", "Metrolist-with-Google-Cast.apk", "Metrolist.apk").apk?.name,
+            "RLN-Network-2.0.0.apk",
+            releaseWithAssets("RLN-Network-2.0.0.apk", "Metrolist.apk").apk?.name,
         )
-        assertEquals("metrolist-android-14.0.0.apk", releaseWithAssets("metrolist-android-14.0.0.apk").apk?.name)
-        assertEquals("metrolist-android-14.0.0-universal.apk", releaseWithAssets("metrolist-android-14.0.0-universal.apk").apk?.name)
+        assertEquals(
+            "RLN-Network-2.0.apk",
+            releaseWithAssets("RLN-Network-2.0.apk").apk?.name,
+        )
+        assertEquals(
+            "RLN-Network-2.0.1.apk",
+            releaseWithAssets("RLN-Network-2.0.1.apk", version = "2.0.1").apk?.name,
+        )
     }
 
     @Test
-    fun apkSelectionRejectsAbiSpecificIncompleteAndAmbiguousAssets() {
-        assertNull(releaseWithAssets("metrolist-android-14.0.0-arm64-v8a.apk").apk)
-        assertNull(releaseWithAssets("metrolist-android-14.0.0-debug.apk").apk)
-        assertNull(releaseWithAssets("metrolist-android-13.0.0.apk").apk)
+    fun apkSelectionRejectsWrongVersionMetrolistAndUnsafeBuilds() {
+        assertNull(releaseWithAssets("Metrolist.apk", "metrolist-android-2.0.0.apk").apk)
+        assertNull(releaseWithAssets("RLN-Network-2.0.1.apk").apk)
+        assertNull(releaseWithAssets("RLN-Network-2.0.apk", version = "2.0.1").apk)
+        assertNull(releaseWithAssets("RLN-Network-2.0.0-debug.apk").apk)
+        assertNull(releaseWithAssets("RLN-Network-2.0.0-test.apk").apk)
         assertNull(releaseWithAssets("unknown.apk").apk)
-        val incomplete = releaseWithAssets("Metrolist.apk")
+        val incomplete = releaseWithAssets("RLN-Network-2.0.0.apk")
         assertNull(incomplete.copy(assets = incomplete.assets.map { it.copy(state = "new") }).apk)
-        assertNull(releaseWithAssets("Metrolist.apk", "METROLIST.APK").apk)
+        assertNull(releaseWithAssets("RLN-Network-2.0.0.apk", "rln-network-2.0.0.apk").apk)
     }
 
-    private fun releaseWithAssets(vararg names: String) =
+    private fun releaseWithAssets(vararg names: String, version: String = "2.0.0") =
         GitHubRelease(
-            tagName = "v14.0.0",
-            htmlUrl = "https://github.com/MetrolistGroup/Metrolist/releases/tag/v14.0.0",
-            assets = names.map { GitHubReleaseAsset(it, "uploaded", 100, downloadUrl = "https://example.com/$it") },
+            tagName = "v$version",
+            htmlUrl = "https://github.com/sinisgallof-pixel/RLN-Network/releases/tag/v$version",
+            assets = names.map {
+                GitHubReleaseAsset(
+                    name = it,
+                    state = "uploaded",
+                    size = 100,
+                    downloadUrl = "https://github.com/sinisgallof-pixel/RLN-Network/releases/download/v$version/$it",
+                )
+            },
         )
 
     @Test

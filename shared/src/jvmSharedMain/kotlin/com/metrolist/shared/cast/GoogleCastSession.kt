@@ -32,6 +32,7 @@ import java.io.ByteArrayOutputStream
 import java.io.DataInputStream
 import java.io.DataOutputStream
 import java.io.EOFException
+import java.io.IOException
 import java.io.InputStream
 import java.net.InetAddress
 import java.net.InetSocketAddress
@@ -160,6 +161,7 @@ internal fun CastSessionState.withGoogleCastMedia(
     copy(
         connected = true,
         isPlaying = autoplay,
+        isBuffering = autoplay,
         positionMs = positionMs,
         durationMs = durationMs,
         hasEnded = false,
@@ -204,6 +206,7 @@ internal class GoogleCastSession(
     private lateinit var input: DataInputStream
     private lateinit var output: DataOutputStream
     private var readerJob: Job? = null
+    private var heartbeatJob: Job? = null
     private var pollingJob: Job? = null
     private var transportId: String? = null
     private var receiverSessionId: String? = null
@@ -215,6 +218,9 @@ internal class GoogleCastSession(
 
     @Volatile
     private var mediaGeneration = 0L
+
+    @Volatile
+    private var currentLoadRequestId: Int? = null
 
     @Volatile
     private var closed = false
@@ -233,6 +239,22 @@ internal class GoogleCastSession(
             connectSocket()
             readerJob = scope.launch(Dispatchers.IO) { readLoop() }
             sendConnection(RECEIVER_ID)
+            sendHeartbeatPing()
+            heartbeatJob =
+                scope.launch(Dispatchers.IO) {
+                    while (isActive && !closed) {
+                        delay(HEARTBEAT_INTERVAL_MS.milliseconds)
+                        try {
+                            sendHeartbeatPing()
+                        } catch (error: IOException) {
+                            if (!closed) {
+                                PlaybackEventLog.error(PlaybackEventKind.NETWORK, "GoogleCast", "Receiver heartbeat failed", error)
+                                close()
+                            }
+                            break
+                        }
+                    }
+                }
 
             val statusResponse = request(RECEIVER_NAMESPACE, RECEIVER_ID, "GET_STATUS")
             var application = findDefaultReceiver(statusResponse)
@@ -269,7 +291,7 @@ internal class GoogleCastSession(
                 put("autoplay", autoplay)
                 put("currentTime", positionMs / 1000.0)
             }
-        check(response.type() != "LOAD_FAILED")
+        check(response.type() == "MEDIA_STATUS") { "Cast load rejected: ${response.type()}" }
         updateMediaStatus(response, loadedMediaGeneration = mediaGeneration)
         if (pollingJob == null) {
             pollingJob =
@@ -352,6 +374,7 @@ internal class GoogleCastSession(
         content: kotlinx.serialization.json.JsonObjectBuilder.() -> Unit = {},
     ): JsonObject {
         val requestId = requestIds.incrementAndGet()
+        if (type == "LOAD") currentLoadRequestId = requestId
         val payload =
             buildJsonObject {
                 put("type", type)
@@ -396,6 +419,10 @@ internal class GoogleCastSession(
         )
     }
 
+    private fun sendHeartbeatPing() {
+        send(HEARTBEAT_NAMESPACE, RECEIVER_ID, buildJsonObject { put("type", "PING") }.toString())
+    }
+
     private fun send(
         namespace: String,
         destinationId: String,
@@ -422,9 +449,19 @@ internal class GoogleCastSession(
                 }
                 val payload = message.payloadObject()
                 when (payload?.type()) {
-                    "MEDIA_STATUS" -> updateMediaStatus(payload)
-                    "RECEIVER_STATUS" -> updateReceiverStatus(payload)
-                    "LOAD_FAILED", "LOAD_CANCELLED" -> close()
+                    "MEDIA_STATUS" -> {
+                        updateMediaStatus(payload)
+                    }
+
+                    "RECEIVER_STATUS" -> {
+                        updateReceiverStatus(payload)
+                    }
+
+                    "LOAD_FAILED", "LOAD_CANCELLED" -> {
+                        // A superseded load can report failure after replacement playback has started.
+                        val requestId = payload["requestId"]?.jsonPrimitive?.intOrNull
+                        if (requestId != null && requestId == currentLoadRequestId) close()
+                    }
                 }
                 messages.tryEmit(message)
             }
@@ -478,6 +515,7 @@ internal class GoogleCastSession(
         _state.value =
             current.copy(
                 isPlaying = playerState == "PLAYING" || playerState == "BUFFERING",
+                isBuffering = playerState == "BUFFERING",
                 positionMs =
                     status["currentTime"]
                         ?.jsonPrimitive
@@ -518,6 +556,7 @@ internal class GoogleCastSession(
     override fun close() {
         if (closed) return
         closed = true
+        heartbeatJob?.cancel()
         pollingJob?.cancel()
         readerJob?.cancel()
         runCatching { socket.close() }
@@ -533,6 +572,7 @@ internal class GoogleCastSession(
         const val MEDIA_NAMESPACE = "urn:x-cast:com.google.cast.media"
         const val CONNECT_TIMEOUT_MS = 8_000
         const val READ_TIMEOUT_MS = 30_000
+        const val HEARTBEAT_INTERVAL_MS = 5_000L
         const val COMMAND_TIMEOUT_MS = 8_000L
         const val LAUNCH_TIMEOUT_MS = 12_000L
         const val POLL_INTERVAL_MS = 1_000L

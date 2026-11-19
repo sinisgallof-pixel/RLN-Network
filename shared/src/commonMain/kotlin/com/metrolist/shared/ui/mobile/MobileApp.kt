@@ -139,6 +139,8 @@ import com.metrolist.shared.generated.resources.error_unknown
 import com.metrolist.shared.generated.resources.export_logs
 import com.metrolist.shared.generated.resources.filter_library
 import com.metrolist.shared.generated.resources.home
+import com.metrolist.shared.generated.resources.lastfm_session_expired_description
+import com.metrolist.shared.generated.resources.lastfm_session_expired_title
 import com.metrolist.shared.generated.resources.library
 import com.metrolist.shared.generated.resources.liked_songs
 import com.metrolist.shared.generated.resources.listen_together
@@ -178,6 +180,7 @@ import com.metrolist.shared.playlist.renameStoredPlaylist
 import com.metrolist.shared.playlist.updateStoredPlaylist
 import com.metrolist.shared.playlistimport.PlaylistImportProgressCard
 import com.metrolist.shared.repository.LyricsRepository
+import com.metrolist.shared.scrobble.ScrobbleSessions
 import com.metrolist.shared.settings.MiniPlayerType
 import com.metrolist.shared.settings.Settings
 import com.metrolist.shared.settings.defaultOpenTabRoot
@@ -205,13 +208,16 @@ import com.metrolist.shared.ui.components.PopupVisibility
 import com.metrolist.shared.ui.components.RefreshIndicator
 import com.metrolist.shared.ui.components.SongSwipeActions
 import com.metrolist.shared.ui.components.SwipeBackLayout
+import com.metrolist.shared.ui.components.UnavailableSongSnackbar
 import com.metrolist.shared.ui.components.images.AsyncImage
 import com.metrolist.shared.ui.components.lyrics.LyricsTranslationSnackbar
 import com.metrolist.shared.ui.components.rememberBottomSheetState
 import com.metrolist.shared.ui.design.expressive.components.ExpressiveMiniPlayerHeight
 import com.metrolist.shared.ui.icons.MetrolistIcons
 import com.metrolist.shared.ui.listentogether.ListenTogetherGlobalEvents
+import com.metrolist.shared.ui.menu.ContentUndoHintsSnackbar
 import com.metrolist.shared.ui.menu.HiddenHomeItemsSnackbar
+import com.metrolist.shared.ui.menu.settingsPage
 import com.metrolist.shared.ui.navigation.AdaptiveFormFactor
 import com.metrolist.shared.ui.navigation.AdaptiveNavigationItem
 import com.metrolist.shared.ui.navigation.AdaptiveNavigationScaffold
@@ -236,6 +242,7 @@ import com.metrolist.shared.ui.player.collectWhilePlayerActive
 import com.metrolist.shared.ui.screens.AboutScreen
 import com.metrolist.shared.ui.screens.HomeContent
 import com.metrolist.shared.ui.screens.SearchScreen
+import com.metrolist.shared.ui.screens.SupportPrompt
 import com.metrolist.shared.ui.screens.homeContentText
 import com.metrolist.shared.ui.screens.pageKey
 import com.metrolist.shared.ui.screens.searchScreenText
@@ -337,6 +344,7 @@ fun MobileApp(
     // The expanded player sheet covers the scaffold, so its own host takes over snackbars while it is open.
     var playerSheetCoversSnackbars by remember { mutableStateOf(false) }
     HiddenHomeItemsSnackbar(snackbarHostState)
+    UnavailableSongSnackbar(snackbarHostState)
     ListenTogetherGlobalEvents(listenTogetherManager) { snackbarHostState.showSnackbar(it) }
     val onSwipeFeedback: (String) -> Unit = { message ->
         snackbarHostState.currentSnackbarData?.dismiss()
@@ -564,6 +572,13 @@ fun MobileApp(
         cancelVideoLookup()
         containers.pendingPopup = null
         if (routeStack.lastOrNull()?.route != route) routeStack += MobileRouteEntry(route)
+    }
+
+    ContentUndoHintsSnackbar(snackbarHostState) { page ->
+        open(
+            page.settingsPage?.let { MobileRoute.Settings(initialPage = it) }
+                ?: MobileRoute.ListenTogether(initialBlockedUsers = true),
+        )
     }
 
     fun dismissKeyboard() {
@@ -1056,7 +1071,7 @@ fun MobileApp(
                                                 },
                                                 onItemLongClick = { menuItem = it to null },
                                                 onShuffleSongs = { songs ->
-                                                    songs.firstOrNull()?.let { playbackController.play(it, songs) }
+                                                    playbackController.shuffleQueue(songs)
                                                 },
                                                 onPlaySongs = { songs ->
                                                     songs.firstOrNull()?.let { playbackController.play(it, songs) }
@@ -1124,10 +1139,8 @@ fun MobileApp(
                                         ) {
                                             FloatingActionButton(
                                                 onClick = {
-                                                    val songs = homeState.loadedHomeSongs().filter(isHomeItemEnabled).shuffled()
-                                                    if (songs.isNotEmpty()) {
-                                                        playbackController.play(songs.first(), songs)
-                                                    }
+                                                    val songs = homeState.loadedHomeSongs().filter(isHomeItemEnabled)
+                                                    playbackController.shuffleQueue(songs)
                                                 },
                                                 shape = RoundedCornerShape(16.dp),
                                             ) {
@@ -1285,6 +1298,7 @@ fun MobileApp(
                                 MobileListenTogetherScreen(
                                     manager = listenTogetherManager,
                                     initialRoomCode = route.initialRoomCode,
+                                    initialBlockedUsers = route.initialBlockedUsers,
                                     onBack = ::back,
                                     onCopyText = { _, text -> scope.launch { clipboard.setText(text) } },
                                     onShareText = playerServices::shareText,
@@ -1373,6 +1387,7 @@ fun MobileApp(
                                                         SettingsPageId.HIDDEN_HOME_ITEMS,
                                                         SettingsPageId.HIDDEN_LIBRARY_ITEMS,
                                                         SettingsPageId.BLOCKED_ARTISTS,
+                                                        SettingsPageId.BLOCKED_SONGS,
                                                         SettingsPageId.STORAGE,
                                                         SettingsPageId.BACKUP_RESTORE,
                                                         SettingsPageId.ABOUT,
@@ -1670,13 +1685,15 @@ fun MobileApp(
                                     onMoreOptions = { menuItem = it to null },
                                     onSongMenu = { menuItem = it to null },
                                     modifier = Modifier.fillMaxSize().padding(routePadding),
+                                    downloadedSongIds = downloadedSongIds,
                                 )
                             }
 
                             is MobileRoute.Artist -> {
                                 val detail = remember(detailStates, entry) { detailStates.entry(checkNotNull(entry)) }
                                 MobileArtistScreen(
-                                    loader = remember(detail) { detail.artist(route.id) },
+                                    loader = remember(detail) { detail.artist(route.id, database) },
+                                    database = database,
                                     subscription = detail.subscription,
                                     onError = onSwipeFeedback,
                                     onAbout = { artist, titles -> open(MobileRoute.AboutArtist(artist, titles)) },
@@ -1881,6 +1898,31 @@ fun MobileApp(
                     },
                 )
             }
+            PopupVisibility(visible = ScrobbleSessions.showLastFmExpiredNotice && !YouTubeSessionState.showExpiredSessionNotice) {
+                AlertDialog(
+                    onDismissRequest = ScrobbleSessions::dismissLastFmExpiredNotice,
+                    title = { Text(stringResource(Res.string.lastfm_session_expired_title)) },
+                    text = { Text(stringResource(Res.string.lastfm_session_expired_description)) },
+                    confirmButton = {
+                        TextButton(
+                            onClick = {
+                                ScrobbleSessions.dismissLastFmExpiredNotice()
+                                open(MobileRoute.Settings(initialPage = SettingsPageId.LAST_FM))
+                            },
+                            shapes = ButtonDefaults.shapes(),
+                        ) {
+                            Text(stringResource(Res.string.action_login))
+                        }
+                    },
+                    dismissButton = {
+                        TextButton(onClick = ScrobbleSessions::dismissLastFmExpiredNotice, shapes = ButtonDefaults.shapes()) {
+                            Text(stringResource(Res.string.action_not_now))
+                        }
+                    },
+                )
+            }
+
+            SupportPrompt()
 
             PopupVisibility(visible = showContinuePlaybackPrompt) {
                 AlertDialog(

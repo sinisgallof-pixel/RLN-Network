@@ -15,14 +15,14 @@
     <string name="history">История прослушивания</string>
     <string name="mood_and_genres">Настроения и жанры</string>
     <string name="account">Аккаунт</string>
-    <string name="quick_picks">Быстрый выбор</string>
-    <string name="forgotten_favorites">Забытые избранные</string>
-    <string name="keep_listening">Продолжайте слушать</string>
+    <string name="quick_picks">Рекомендуем</string>
+    <string name="forgotten_favorites">Вы давно не слушали</string>
+    <string name="keep_listening">Слушать дальше</string>
     <string name="similar_to">Похоже на</string>
-    <string name="new_releases">Новые релизы</string>
+    <string name="new_releases">Новинки</string>
     <string name="podcasts_for_you">Подкасты для вас</string>
     <string name="recap">Итоги</string>
-    <string name="home_unavailable">Главная недоступна</string>
+    <string name="home_unavailable">Главная страница недоступна</string>
     <string name="today">Сегодня</string>
     <string name="yesterday">Вчера</string>
     <string name="this_week">На этой неделе</string>
@@ -65,7 +65,7 @@
         <item quantity="other">Скачано %1$d из %2$d песен, %3$d не удалось скачать</item>
     </plurals>
     <string name="download_pause_all">Приостановить все</string>
-    <string name="download_resume_all">Продолжить всё</string>
+    <string name="download_resume_all">Продолжить все</string>
     <string name="download_cancel_all">Отменить все</string>
     <string name="remove_download">Удалить из скачанных</string>
     <string name="add_to_playlist">Добавить в плейлист</string>
@@ -190,7 +190,7 @@
     <string name="music_video_quality_resolution" tools:ignore="MissingTranslation" translatable="false">%1$sp</string>
     <string name="music_video_resolution" tools:ignore="MissingTranslation">Качество видео</string>
     <string name="music_video_resolution_desc" tools:ignore="MissingTranslation">Измените качество для этого клипа</string>
-    <string name="music_video_resolution_current" tools:ignore="MissingTranslation">Сейчас играет</string>
+    <string name="music_video_resolution_current" tools:ignore="MissingTranslation">Текущее разрешение</string>
     <string name="music_video_cache" tools:ignore="MissingTranslation">Кэш клипа</string>
     <string name="clear_music_video_cache" tools:ignore="MissingTranslation">Очистить кэш клипов</string>
     <string name="clear_music_video_cache_desc" tools:ignore="MissingTranslation">Удалить кэшированные сопоставления разрешений треков с видео</string>
@@ -268,20 +268,20 @@
     <string name="open_github_profile">Открыть GitHub</string>
     <string name="sponsor_developer">Спонсировать разработчика</string>
     <string name="credits_license_name">Лицензия</string>
-    <string name="credits_license_desc">Metrolist распространяется под лицензией GPL-3.0.</string>
+    <string name="credits_license_desc">Metrolist распространяется под лицензией GPL-3.0</string>
     <string name="devmode_already_active" translatable="true">Режим разработчика уже активен</string>
     <string name="discord_enable_rich_presence">Discord Rich Presence</string>
-    <string name="discord_listen_to_metrolist">Слушает в Metrolist</string>
+    <string name="discord_listen_to_metrolist">Слушает в RLN Network</string>
     <string name="discord_login_description">Подключите свой аккаунт Discord</string>
     <string name="discord_rich_presence">Rich presence</string>
     <string name="discord_state">Состояние</string>
     <string name="discord_button1_text_default">Слушать в YouTube Music</string>
-    <string name="discord_button2_text_default">Посетить Metrolist</string>
+    <string name="discord_button2_text_default">Посетить RLN Network</string>
     <string name="discord_status_authorizing">Авторизация…</string>
     <string name="discord_status_not_initialized">Не инициализировано</string>
     <string name="discord_status_authorized">Авторизован</string>
     <string name="discord_error_denied">Discord отклонил авторизацию.</string>
-    <string name="discord_error_connection_failed">Не удалось подключиться к Discord. Metrolist автоматически повторит попытку.</string>
+    <string name="discord_error_connection_failed">Не удалось подключиться к Discord. RLN Network автоматически повторит попытку.</string>
     <string name="discord_error_no_browser">Нет доступного приложения для запуска авторизации Discord.</string>
     <string name="discord_error_token_exchange_failed">Не удалось обменять токен. Повторите попытку.</string>
     <string name="discord_error_token_refresh_failed">Не удалось обновить токен. Войдите снова.</string>
@@ -311,8 +311,8 @@
     <string name="settings_application_about">О приложении</string>
     <string name="settings_open_supported_links_title">Открывать поддерживаемые ссылки</string>
     <string name="settings_updates_title">Обновления</string>
-    <string name="settings_updates_available_description">Доступно новое обновление Metrolist</string>
-    <string name="settings_about_title">О Metrolist</string>
+    <string name="settings_updates_available_description">Доступно новое обновление RLN Network</string>
+    <string name="settings_about_title">О RLN Network</string>
     <string name="settings_search_placeholder">Поиск настроек</string>
     <string name="settings_search_no_results">Настройки не найдены</string>
     <string name="settings_search_no_results_desc">Нет совпадений для %1$s</string>
@@ -343,7 +343,7 @@
     <string name="app_icon_zenith_black">Чёрный Зенит</string>
     <string name="app_icon_zenith_white">Белый Зенит</string>
     <string name="app_font_choose">Выбрать файл шрифта</string>
-    <string name="app_font_picker_desc">Выберите TTF или OTF файл. Metrolist копирует его в приватное хранилище приложения.</string>
+    <string name="app_font_picker_desc">Выберите TTF или OTF файл. RLN Network копирует его в приватное хранилище приложения.</string>
     <string name="app_font_system">По умолчанию системы</string>
     <string name="app_font_applied">Используется %1$s</string>
     <string name="app_font_invalid">Не удалось использовать этот шрифт. Выберите корректный TTF или OTF файл менее 20 МБ.</string>
@@ -462,7 +462,7 @@
     <string name="backup_restore_title">Бэкап и импорт</string>
     <string name="spotify_sign_in">Войти в Spotify</string>
     <string name="spotify_sign_in_again">Войти снова</string>
-    <string name="spotify_choose_playlists_supporting">Выберите плейлисты, которые вы хотите перенести в Metrolist.</string>
+    <string name="spotify_choose_playlists_supporting">Выберите плейлисты, которые вы хотите перенести в RLN Network.</string>
     <plurals name="spotify_selected_playlist_count">
         <item quantity="one">%1$d плейлист выбран</item>
         <item quantity="few">%1$d плейлиста выбрано</item>
@@ -501,7 +501,7 @@
     <string name="backup_restore_busy">Выполнение…</string>
     <string name="backup_sensitive_title">Конфиденциальный бэкап</string>
     <string name="backup_sensitive_message">Бэкап содержит ваши ключи API, данные входа в аккаунты, файлы cookie авторизации, токены сессий и другую конфиденциальную информацию. Любой, у кого есть этот файл, получит доступ к вашим аккаунтам. Храните его в безопасном месте и никогда не делитесь им.</string>
-    <string name="restore_in_progress">Восстановление вашего бэкапа…\nMetrolist перезапустится автоматически.</string>
+    <string name="restore_in_progress">Восстановление вашего бэкапа…\nRLN Network перезапустится автоматически.</string>
     <string name="scrobble_tap_to_disconnect">Нажмите, чтобы отключиться</string>
     <string name="scrobble_enable">Скробблинг</string>
     <string name="scrobble_now_playing">Обновления Сейчас Играет</string>
@@ -522,7 +522,7 @@
     <string name="listenbrainz_now_playing_description">Показывает текущий трек в ListenBrainz</string>
     <string name="listenbrainz_connect_title">Подключить ListenBrainz</string>
     <string name="listenbrainz_user_token">Токен пользователя</string>
-    <string name="restore_database_incompatible">Этот бэкап использует версию базы данных %1$d, но это приложение поддерживает версии до %2$d. Обновите Metrolist и попробуйте снова.</string>
+    <string name="restore_database_incompatible">Этот бэкап использует версию базы данных %1$d, но это приложение поддерживает версии до %2$d. Обновите RLN Network и попробуйте снова.</string>
     <string name="restore_failed_detail">Не удалось восстановить бэкап во время %1$s\n\nПричина: %2$s</string>
     <string name="restore_error_unknown">Дополнительные детали недоступны.</string>
     <string name="restore_stage_reading_backup">Чтение бэкап файла</string>
@@ -591,35 +591,35 @@
     <string name="updates_title">Обновление приложения</string>
     <string name="updates_check">Проверить на наличие обновлений</string>
     <string name="updates_checking">Проверка обновлений…</string>
-    <string name="updates_no_updates">Версия Metrolist - актуальная</string>
+    <string name="updates_no_updates">Версия RLN Network - актуальная</string>
     <string name="updates_error">Не удалось проверить на наличие обновлений</string>
-    <string name="updates_status_current">Обновлено до Metrolist %1$s</string>
+    <string name="updates_status_current">Обновлено до RLN Network %1$s</string>
     <string name="updates_auto_check">Автоматически проверять на наличие обновлений</string>
     <string name="updates_notifications">Уведомления об обновлениях</string>
     <string name="updates_changelogs">Список изменений</string>
     <string name="updates_last_check">Последняя успешная проверка на наличие обновлений</string>
     <string name="updates_pending_title">Ожидающее обновление</string>
-    <string name="updates_version">Версия Metrolist</string>
+    <string name="updates_version">Версия RLN Network</string>
     <string name="updates_size">Размер обновления</string>
     <string name="updates_date">Дата</string>
     <string name="updates_changelog">Список изменений</string>
     <string name="updates_install">Установить</string>
     <string name="updates_retry">Попробуйте снова</string>
-    <string name="updates_available_title">Metrolist %1$s доступна</string>
+    <string name="updates_available_title">RLN Network %1$s доступна</string>
     <string name="updates_available_message">Нажмите Обновить, чтобы скачать обновление и перейти в установщик Android.</string>
     <string name="updates_changelog_preview">Что нового</string>
     <string name="updates_pending_parenthetical">(ожидание обновления)</string>
     <string name="update_pending">Ожидание обновления</string>
     <string name="updates_action">Обновить</string>
-    <string name="updates_notification_title">Metrolist %1$s готов</string>
+    <string name="updates_notification_title">RLN Network %1$s готов</string>
     <string name="updates_notification_text">Нажмите, чтобы скачать и установить обновление</string>
     <string name="updates_channel_name">Обновления приложения</string>
-    <string name="updates_channel_description">Уведомления о новых версиях Metrolist</string>
+    <string name="updates_channel_description">Уведомления о новых версиях RLN Network</string>
     <string name="updates_download_failed">Не удалось скачать обновление.</string>
     <string name="updates_digest_failed">Скачанное обновление не совпало с контрольной суммой GitHub.</string>
     <string name="updates_installer_failed">Установщик пакетов Android недоступен или установка приложений ограничена на этом устройстве.</string>
     <string name="updates_release_unavailable">В этом релизе нет совместимого APK.</string>
-    <string name="updates_release_notes_title">Что нового в Metrolist %1$s</string>
+    <string name="updates_release_notes_title">Что нового в RLN Network %1$s</string>
     <string name="device_connect_title">Подключение устройств</string>
     <string name="device_connect_summary">Подключите доверенные устройства в локальной сети. Соединения защищены шифрованием.</string>
     <string name="device_connect_beta">Бета</string>
@@ -632,7 +632,7 @@
     <string name="device_connect_account_mismatch">Другой аккаунт</string>
     <string name="device_connect_permission_needed">Для поиска и подключения к устройствам требуется разрешение на локальную сеть.</string>
     <string name="device_connect_grant_permission">Предоставить разрешение</string>
-    <string name="side_menu_welcome">Добро пожаловать в Metrolist</string>
+    <string name="side_menu_welcome">Добро пожаловать в RLN Network</string>
     <string name="action_cannot_be_undone">Данное действие необратимо.</string>
     <string name="add">Добавить</string>
     <string name="add_a_song">Добавить песню</string>
@@ -706,7 +706,7 @@
     <string name="device_has_no_microphone">Это устройство не имеет микрофона.</string>
     <string name="discord_unknown_album">Неизвестный альбом</string>
     <string name="disliked_song">Не понравившаяся песня</string>
-    <string name="dislike_song">Не нравится песня</string>
+    <string name="dislike_song">Не нравится</string>
     <string name="done">Готово</string>
     <string name="download_not_found">Скачивание не найдено</string>
     <string name="drag_to_reorder">Перетащите для изменения порядка</string>
@@ -769,7 +769,7 @@
     <string name="library_offline_songs">Офлайн песни</string>
     <string name="library_top_songs">Ваши топ песни</string>
     <string name="library_uploaded_songs">Ваши загруженные песни</string>
-    <string name="listen_together_add_custom_server">Добавьте пользовательский сервер</string>
+    <string name="listen_together_add_custom_server">Добавить свой сервер</string>
     <string name="listen_together_add_queue_title">Добавить %1$s?</string>
     <string name="listen_together_server">Сервер</string>
     <string name="listen_together_servers">Сервера</string>
@@ -846,10 +846,10 @@
     <string name="refreshing">Обновление</string>
     <string name="remove">Удалить</string>
     <string name="remove_all">Удалить все</string>
-    <string name="removed_dislike">Дизлайк удалён</string>
+    <string name="removed_dislike">Отметка "Не нравится" убрана</string>
     <string name="removed_download">Скачивание удалено</string>
     <string name="removed_from_library">Удалено из библиотеки</string>
-    <string name="remove_dislike">Удалить дизлайк</string>
+    <string name="remove_dislike">Убрать отметку "Не нравится"</string>
     <string name="remove_from_device">Удалить с устройства</string>
     <string name="remove_from_favorites">Удалить из Любимых</string>
     <string name="remove_from_recent_question">Удалить из недавних?</string>
@@ -927,7 +927,7 @@
     <string name="suggestions">Предложения</string>
     <string name="title">Название</string>
     <string name="token_login">Токен авторизации</string>
-    <string name="top_results">Топовые результаты</string>
+    <string name="top_results">Лучшие результаты</string>
     <string name="total_listening">Общее прослушивание</string>
     <string name="total_time_listening">Общее время прослушивания</string>
     <string name="track">Трек</string>
@@ -1020,12 +1020,6 @@
         <item quantity="many">%1$d минут</item>
         <item quantity="other">%1$d минут</item>
     </plurals>
-    <plurals name="minutes_short">
-        <item quantity="one">%1$d мин</item>
-        <item quantity="few">%1$d мин</item>
-        <item quantity="many">%1$d мин</item>
-        <item quantity="other">%1$d мин</item>
-    </plurals>
     <plurals name="n_track">
         <item quantity="one">%1$d трек</item>
         <item quantity="few">%1$d трека</item>
@@ -1061,12 +1055,6 @@
         <item quantity="few">Удалены %1$d песни из плейлиста</item>
         <item quantity="many">Удалено %1$d песен из плейлиста</item>
         <item quantity="other">Удалено %1$d песен из плейлиста</item>
-    </plurals>
-    <plurals name="seconds_short">
-        <item quantity="one">%1$d с</item>
-        <item quantity="few">%1$d с</item>
-        <item quantity="many">%1$d с</item>
-        <item quantity="other">%1$d с</item>
     </plurals>
     <plurals name="song_count">
         <item quantity="one">%1$d песня</item>
@@ -1180,7 +1168,7 @@
     <string name="play_pause">Воспроизведение/Пауза</string>
     <string name="next">Следующий</string>
     <string name="not_playing">Ничего не играет</string>
-    <string name="tap_to_play">Нажмите, чтобы открыть Metrolist</string>
+    <string name="tap_to_play">Нажмите, чтобы открыть RLN Network</string>
     <string name="widget_description">Виджет плеера музыки с управлением воспроизведения</string>
     <string name="turntable_widget_description">Виджет круглой обложки с управлением воспроизведения</string>
     <string name="widget_music_player">Музыкальный плеер</string>
@@ -1224,7 +1212,6 @@
     <string name="ai_provider">Провайдер</string>
     <string name="ai_base_url">Базовый URL</string>
     <string name="ai_translation_model">Модель перевода</string>
-    <string name="ai_judge_detector_model">Модель детектора</string>
     <string name="ai_target_language">Целевой язык</string>
     <string name="ai_deepl_formality">Формальность</string>
     <string name="ai_deepl_formality_default">По умолчанию</string>
@@ -1244,8 +1231,8 @@
     <string name="discord_activity_competing">Соревнуется</string>
     <string name="discord_activity_name">Имя активности</string>
     <string name="discord_advanced_mode">Расширенный режим</string>
-    <string name="speed_dial">Быстрый набор</string>
-    <string name="pin_to_speed_dial">Закрепить в Быстрый набор</string>
+    <string name="speed_dial">Быстрый выбор</string>
+    <string name="pin_to_speed_dial">Закрепить в Быстрый выбор</string>
     <string name="unpin_from_speed_dial">Открепить из Быстрого набора</string>
     <string name="view_podcast">Просмотреть подкаст</string>
     <string name="auto_playlist">Автоплейлист</string>
@@ -1257,8 +1244,8 @@
     <string name="onboarding_migration_title">Ваша библиотека v13 здесь</string>
     <string name="onboarding_migration_description">Мы обнаружили отдельную базу данных Metrolist. Перенесите плейлисты, историю, лайки и данные библиотеки на месте. Ваш оригинал останется доступным для восстановления в случае провала переноса данных.</string>
     <string name="onboarding_migration_complete_title">Ваш аккаунт был перенесен</string>
-    <string name="onboarding_migration_complete_description">Ваш аккаунт, плейлисты, история, лайки и данные библиотеки готовы в этой версии Metrolist.</string>
-    <string name="onboarding_crash_reports_title">Помогите улучшить Metrolist</string>
+    <string name="onboarding_migration_complete_description">Ваш аккаунт, плейлисты, история, лайки и данные библиотеки готовы в этой версии RLN Network.</string>
+    <string name="onboarding_crash_reports_title">Помогите улучшить RLN Network</string>
     <string name="onboarding_crash_reports_description">Поделитесь необязательной диагностикой через Sentry чтобы помочь нам находить и исправлять проблемы. Вы можете изменить это в любое время в Настройках.</string>
     <string name="onboarding_notifications_title">Разрешить уведомления</string>
     <string name="onboarding_notifications_description">Включите уведомления о воспроизведении и скачивании.</string>
@@ -1275,7 +1262,7 @@
     <string name="onboarding_finish_description">Настройка завершена. Начните прослушивание, или сначала перенесите свой аккаунт и его данные.</string>
     <string name="finish">Завершить</string>
     <string name="onboarding_restore_backup">Восстановить из бэкапа</string>
-    <string name="onboarding_settings_hint">Перейдите в Настройки в меню в правом верхнем углу, чтобы настроить Metrolist под себя.</string>
+    <string name="onboarding_settings_hint">Перейдите в Настройки в меню в правом верхнем углу, чтобы настроить RLN Network под себя.</string>
     <string name="onboarding_no_saved_accounts">Связанные аккаунты не найдены.</string>
     <string name="onboarding_account_picture">%1$s фото профиля</string>
     <string name="migrated">Перенесено</string>
@@ -1424,7 +1411,7 @@
     <string name="menu_keyboard_shortcuts">Сочетания клавиш</string>
     <string name="menu_application_logs">Логи приложения</string>
     <string name="menu_report_issue">Сообщить о проблеме…</string>
-    <string name="menu_about_metrolist">О Metrolist</string>
+    <string name="menu_about_metrolist">О RLN Network</string>
     <string name="menu_song">Песня</string>
     <string name="menu_stop">Стоп</string>
     <string name="menu_go_to_current_song">Перейти к текущей песне</string>
@@ -1491,7 +1478,7 @@
     <string name="sensitive_backup">Конфиденциальный бэкап</string>
     <string name="restore_backup_confirm">Восстановить бэкап?</string>
     <string name="restore">Восстановить</string>
-    <string name="restoring_backup">Восстановление вашего бэкапа…\nMetrolist перезапустится автоматически.</string>
+    <string name="restoring_backup">Восстановление вашего бэкапа…\nRLN Network перезапустится автоматически.</string>
     <string name="hidden_items_count">Спрятанные элементы (%1$d)</string>
     <string name="hidden_library_items">Спрятанные элементы библиотеки</string>
     <string name="delete_playlist_confirm">Удалить плейлист?</string>
@@ -1499,7 +1486,7 @@
     <string name="privacy_policy">Прочитать нашу политику конфиденциальности</string>
     <string name="log_in">Войти</string>
     <string name="restore_from_backup">Восстановить из бэкапа</string>
-    <string name="onboarding_backup_picker_title">Восстановить бэкап Metrolist</string>
+    <string name="onboarding_backup_picker_title">Восстановить бэкап RLN Network</string>
     <string name="onboarding_backup_picker_error">Не удалось открыть выбор бэкапа: %1$s</string>
     <string name="onboarding_backup_restore_failed">Не удалось восстановить бэкап: %1$s</string>
     <string name="edit_sidebar">Редактировать боковую панель</string>
@@ -1598,12 +1585,12 @@
         <item quantity="other">%1$d песен</item>
     </plurals>
     <string name="app_data">Данные приложения</string>
-    <string name="backup_picker_title">Восстановить бэкап Metrolist</string>
-    <string name="create_backup_dialog_title">Создать бэкап Metrolist</string>
+    <string name="backup_picker_title">Восстановить бэкап RLN Network</string>
+    <string name="create_backup_dialog_title">Создать бэкап RLN Network</string>
     <string name="backup_created">Бэкап создан</string>
     <string name="backup_failed">Ошибка бэкапа: %1$s</string>
     <string name="could_not_open_file_picker">Не удалось открыть выбор файла: %1$s</string>
-    <string name="restore_replaces_data">Это заменяет ваши данные настройки, учетные данные, аккаунты и данные библиотеки. Metrolist перезапустится автоматически.</string>
+    <string name="restore_replaces_data">Это заменяет ваши данные настройки, учетные данные, аккаунты и данные библиотеки. RLN Network перезапустится автоматически.</string>
     <string name="create_backup_countdown">Создание бэкапа (%1$d)</string>
     <string name="listen_together_how_it_works">Как это работает</string>
     <string name="listen_together_how_it_works_body">Слушать Вместе синхронизирует воспроизведение музыки с друзьями. Хост управляет воспроизведением, а у гостей оно синхронизируется автоматически.</string>
@@ -1666,7 +1653,7 @@
     <string name="tray_show_window">Показать окно</string>
     <string name="tray_show_miniplayer">Показать мини-плеер</string>
     <string name="tray_settings">Настройки</string>
-    <string name="tray_quit_metrolist">Выйти из Metrolist</string>
+    <string name="tray_quit_metrolist">Выйти из RLN Network</string>
     <string name="sign_in_discord">Войти в Discord</string>
     <string name="discord_sign_in_unavailable">Вход в Discord недоступен</string>
     <string name="sign_in_youtube_music">Войти в YouTube Music</string>
@@ -1793,7 +1780,7 @@
     <string name="import_error_no_library_matches">Не удалось сопоставить треки с музыкальной библиотекой</string>
     <string name="import_error_generic">Ошибка импорта</string>
     <string name="import_source_youtube_music">YouTube Music</string>
-    <string name="startup_error_title">Ошибка запуска Metrolist</string>
+    <string name="startup_error_title">Ошибка запуска RLN Network</string>
     <string name="video_viewer">Видеоплеер</string>
     <string name="subtitles">Субтитры</string>
     <string name="open_miniplayer">Открыть мини-плеер</string>
@@ -1851,7 +1838,7 @@
     <string name="device_connect_device_type_and_model">%1$s · %2$s</string>
     <string name="device_connect_available">Доступно</string>
     <string name="settings_disable_wayland_fix_description">Выключает автоматическое определение масштабирования для сессий Wayland. Требуется перезапуск.</string>
-    <string name="device_connect_signed_out_pairing">Вышли: сравните код сопряжения на обоих устройствах перед подтверждением</string>
+    <string name="device_connect_signed_out_pairing">Вы вышли из аккаунта. Сравните код сопряжения на обоих устройствах перед подтверждением.</string>
     <string name="device_connect_paired">Сопряжено</string>
     <string name="shortcut_toggle_device_connect">Переключить панель подключения устройств</string>
     <string name="device_connect_unshareable_queue">Эта очередь содержит локальные файлы и недоступна для обмена.</string>
@@ -1882,7 +1869,7 @@
     <string name="tempo_and_pitch">Темп и высота тона</string>
     <string name="playback_pitch">Высота тона (полутоны)</string>
     <string name="widget_recognizer_name">Распознаватель музыки</string>
-    <string name="widget_recognizer_description">Узнавайте, какая музыка играет рядом, прямо с главного экрана</string>
+    <string name="widget_recognizer_description">Узнавайте, какая музыка играет рядом, с главного экрана</string>
     <string name="widget_recognizer_tap_to_search">Нажмите, чтобы распознать трек</string>
     <string name="widget_recognizer_processing">Определяем…</string>
     <string name="widget_recognizer_no_match">Совпадений не найдено. Повторите попытку</string>
@@ -1951,7 +1938,7 @@
     <string name="onboarding_continue_without_migration">Продолжить с пустой библиотекой</string>
     <string name="onboarding_migration_recovery_description">Вы можете повторить попытку или продолжить с пустой библиотекой. Копия исходной базы данных для восстановления останется на этом устройстве. После настройки вы сможете восстановить резервную копию.</string>
     <string name="onboarding_migration_failed">Не удалось подготовить библиотеку. Ваши исходные данные сохранены.</string>
-    <string name="onboarding_library_migrated_description">Ваши плейлисты, история, отметки «Нравится» и данные библиотеки готовы к использованию в этой версии Metrolist.</string>
+    <string name="onboarding_library_migrated_description">Ваши плейлисты, история, отметки «Нравится» и данные библиотеки готовы к использованию в этой версии RLN Network.</string>
     <string name="onboarding_notifications_denied">Уведомления отключены. Вы можете включить их позже в настройках приложения в Android или выбрать «Нет», чтобы продолжить.</string>
     <string name="mini_player_video_prerequisite">Сначала включите «Воспроизводить музыкальные видео» в настройках воспроизведения</string>
     <string name="download_folder_access_failed">Не удалось сохранить разрешение на доступ к этой папке. Выберите папку с доступом для чтения и записи.</string>
@@ -1976,9 +1963,9 @@
     <string name="updates_notification_settings">Настройки уведомлений Android</string>
     <string name="widget_recognizer_open_result">Открыть распознанную песню</string>
     <string name="statistics_load_failed">Не удалось обновить статистику. Повторите попытку.</string>
-    <string name="desktop_platform_unsupported">Metrolist не поддерживает эту операционную систему. Используйте Windows 10 или новее, macOS или дистрибутив Linux, кроме Omarchy.</string>
+    <string name="desktop_platform_unsupported">RLN Network не поддерживает эту операционную систему. Используйте Windows 10 или новее, macOS или дистрибутив Linux, кроме Omarchy.</string>
     <string name="shortcut_toggle_expanded">Развернуть или свернуть плеер</string>
-    <string name="desktop_display_unavailable">Metrolist не удалось подключиться к дисплею X этого сеанса. Запустите приложение из сеанса рабочего стола с заданной переменной DISPLAY.</string>
+    <string name="desktop_display_unavailable">RLN Network не удалось подключиться к дисплею X этого сеанса. Запустите приложение из сеанса рабочего стола с заданной переменной DISPLAY.</string>
     <string name="webkit_install_hint">Для встроенного входа нужен WebKitGTK 4.1 (%1$s). Установите его через пакетный менеджер вашей системы.</string>
     <string name="webkit_install_command">Установите командой:\n%1$s</string>
     <string name="webkit_appimage_hint">Сборки AppImage также используют системные библиотеки WebKitGTK для входа.</string>
@@ -1991,7 +1978,7 @@
     <string name="video_stats_latency_value">%1$s мс</string>
     <string name="video_stats_media_stream_value">%1$s / %2$s МБ (%3$s%)</string>
     <string name="video_stats_position_volume_value">%1$s | Громкость: %2$s</string>
-    <string name="download_folder_unavailable">Не удалось использовать эту папку. Выберите папку с правом записи, к которой система или песочница разрешает доступ Metrolist.</string>
+    <string name="download_folder_unavailable">Не удалось использовать эту папку. Выберите папку с правом записи, к которой система или песочница разрешает доступ RLN Network.</string>
     <string name="window_maximize">Развернуть</string>
     <string name="window_restore">Восстановить размер окна</string>
     <string name="equalizer_stream_unavailable">Эквалайзер и предусилитель недоступны для этого потока. Изменения применятся при воспроизведении поддерживаемого трека.</string>
@@ -2007,7 +1994,7 @@
     <string name="queue_youtube_history_paused_desc">Возобновите запись истории прослушиваний, чтобы ставить прослушивания не в сети в очередь на отправку</string>
     <string name="search_online_failed">Не удалось выполнить поиск в сети. Проверьте соединение и повторите попытку.</string>
     <string name="search_load_more_failed">Не удалось загрузить больше результатов.</string>
-    <string name="discord_error_gateway_configuration">Discord отклонил настройки подключения. Обновите Metrolist перед повторной попыткой.</string>
+    <string name="discord_error_gateway_configuration">Discord отклонил настройки подключения. Обновите RLN Network перед повторной попыткой.</string>
     <string name="discord_preview_buttons_adjusted">Discord сокращает длинные подписи кнопок и пропускает кнопки со слишком длинными ссылками. Здесь показаны кнопки, которые будут отправлены.</string>
     <string name="discord_presence_status_warning">При включении, Rich presence отправляет статус «Онлайн» в Discord. Она может переопределить настройки «Невидимый» или «Не беспокоить», даже когда воспроизведение остановлено.</string>
     <string name="discord_refresh_queued">Обновление статуса поставлено в очередь.</string>
@@ -2042,8 +2029,8 @@
     <string name="theme_color_rose">Розовый</string>
     <string name="theme_color_red">Красный</string>
     <string name="theme_color_gold">Золотой</string>
-    <string name="backup_unsupported_format">Эта версия Metrolist не поддерживает формат этой резервной копии.</string>
-    <string name="backup_unsupported_database">Эта версия Metrolist не поддерживает версию базы данных в этой резервной копии.</string>
+    <string name="backup_unsupported_format">Эта версия RLN Network не поддерживает формат этой резервной копии.</string>
+    <string name="backup_unsupported_database">Эта версия RLN Network не поддерживает версию базы данных в этой резервной копии.</string>
     <string name="backup_too_large">Резервная копия превышает допустимый размер или количество записей.</string>
     <string name="backup_invalid_data">Не удалось прочитать или проверить резервную копию. Возможно, она повреждена или содержит неподдерживаемые данные.</string>
     <string name="search_history_removal_failed">Не удалось очистить историю поиска аккаунта. Повторите попытку после подключения к сети.</string>
@@ -2063,7 +2050,7 @@
     <string name="settings_appearance_overview">Тема, шрифты и оформление плеера</string>
     <string name="settings_android_auto_overview">Плейлисты в автомобиле и список для быстрого добавления</string>
     <string name="settings_about_overview">Участники проекта, ссылки сообщества и лицензии</string>
-    <string name="settings_supported_links_overview">Выберите, какие ссылки YouTube открывать в Metrolist</string>
+    <string name="settings_supported_links_overview">Выберите, какие ссылки YouTube открывать в RLN Network</string>
     <string name="settings_equalizer_overview">Звуковые предустановки, полосы частот и профили</string>
     <string name="settings_fonts_overview">Выбор и импорт шрифтов</string>
     <string name="settings_artwork_overview">Анимированные обложки, источники изображений и качество видео</string>
@@ -2079,7 +2066,7 @@
     <string name="settings_listen_together_overview">Сервер, запросы на вход и предложения песен</string>
     <string name="settings_device_connect_overview">Устройства поблизости, сопряжение и удалённое воспроизведение</string>
     <string name="settings_release_overview">Сведения о версии и варианты установки</string>
-    <string name="settings_notification_access_summary">Выберите, какие уведомления Android разрешает для Metrolist</string>
+    <string name="settings_notification_access_summary">Выберите, какие уведомления Android разрешает для RLN Network</string>
     <string name="settings_crash_reports_summary">Читайте сохранённые отчёты о сбоях и делитесь ими</string>
     <string name="settings_content_language_summary">Язык поиска и рекомендаций YouTube Music</string>
     <string name="settings_content_country_summary">Регион чартов и рекомендаций YouTube Music</string>
@@ -2099,12 +2086,11 @@
     <string name="settings_canvas_playback_summary">Воспроизводить короткие фрагменты или полный клип за плеером</string>
     <string name="settings_normalization_summary">Выравнивать громкость песен, чтобы избежать резких перепадов</string>
     <string name="settings_loudness_target_summary">Задайте целевую громкость при включённой нормализации звука</string>
-    <string name="settings_stop_on_close_summary">Останавливать воспроизведение при удалении Metrolist из недавних приложений</string>
+    <string name="settings_stop_on_close_summary">Останавливать воспроизведение при удалении RLN Network из недавних приложений</string>
     <string name="settings_screen_awake_summary">Выберите, будет ли плеер или текст песни удерживать экран включённым</string>
     <string name="settings_translation_mode_summary">Переводить слова или записывать их произношение в целевой системе письма</string>
     <string name="settings_translation_provider_summary">Выберите сервис для перевода текстов</string>
     <string name="settings_translation_model_summary">Модель для перевода или транскрипции текстов</string>
-    <string name="settings_detector_model_summary">Модель, которая определяет, нужен ли перевод текста</string>
     <string name="settings_translation_formality_summary">Выберите формальный или неформальный стиль перевода DeepL</string>
     <string name="settings_discord_advanced_summary">Показывать шаблоны активности и собственные кнопки со ссылками</string>
     <string name="settings_discord_activity_type_summary">Выберите, как Discord обозначает вашу музыкальную активность</string>
@@ -2119,7 +2105,7 @@
     <string name="settings_reset_download_folder_summary">Использовать папку по умолчанию для скачанных песен</string>
     <string name="settings_diagnostic_logs_summary">Читайте и копируйте журнал диагностики приложения</string>
     <string name="settings_log_directory_summary">Просматривайте сохранённые журналы в файловом менеджере</string>
-    <string name="settings_check_releases_summary">Проверьте наличие новой версии Metrolist на GitHub</string>
+    <string name="settings_check_releases_summary">Проверьте наличие новой версии RLN Network на GitHub</string>
     <string name="settings_share_apk_summary">Поделиться пакетом установленного приложения как файлом</string>
     <string name="settings_system_font_summary">Использовать шрифт операционной системы</string>
     <string name="settings_thumbnail_shape_summary">Выберите форму обложек в развёрнутом плеере</string>
@@ -2127,12 +2113,12 @@
     <string name="settings_resume_prompt_summary">Спрашивать перед возобновлением сохранённой очереди при запуске приложения</string>
     <string name="settings_player_layout_summary">Изменить расположение обложек и элементов управления воспроизведением</string>
     <string name="settings_filter_q_summary">Q определяет ширину или резонанс выбранного фильтра</string>
-    <string name="settings_reset_to_default">Сбросить</string>
+    <string name="settings_reset_to_default">Сбросить по умолчанию</string>
     <plurals name="downloads_failed_banner">
-        <item quantity="one">%1$d загрузка провалена</item>
-        <item quantity="few">%1$d загрузки провалено</item>
-        <item quantity="many">%1$d загрузок провалено</item>
-        <item quantity="other">%1$d загрузок провалено</item>
+        <item quantity="one">Не удалось скачать %1$d песню</item>
+        <item quantity="few">Не удалось скачать %1$d песни</item>
+        <item quantity="many">Не удалось скачать %1$d песен</item>
+        <item quantity="other">Не удалось скачать %1$d песен</item>
     </plurals>
     <plurals name="download_queue_pending">
         <item quantity="one">%1$d песня в очереди скачивания</item>
@@ -2142,14 +2128,14 @@
     </plurals>
     <string name="download_paused">Остановлено</string>
     <string name="downloads_empty">В процессе загрузок нет</string>
-    <string name="downloads_empty_hint">Песни которые вы сохранили для офлайн прослушивания будут появляться здесь пока они скачиваются.</string>
+    <string name="downloads_empty_hint">Песни, которые вы сохраняете для офлайн-прослушивания, будут появляться здесь во время скачивания.</string>
     <string name="remove_all_downloads">Удалить все скачивания</string>
     <string name="lyrics_song_artist">Исполнитель песни</string>
-    <string name="lyrics_capability_line_syllable">Линия и слог</string>
-    <string name="lyrics_capability_line_syllable_unsynced">Линия, слог и несинхронизированное</string>
-    <string name="lyrics_capability_line_unsynced">Линия и несинхронизированное</string>
-    <string name="lyrics_capability_line">Линия</string>
-    <string name="lyrics_capability_unsynced">Несинхронизированное</string>
+    <string name="lyrics_capability_line_syllable">Построчно и по слогам</string>
+    <string name="lyrics_capability_line_syllable_unsynced">Построчно, по слогам и без синхронизации</string>
+    <string name="lyrics_capability_line_unsynced">Построчно и без синхронизации</string>
+    <string name="lyrics_capability_line">Построчно</string>
+    <string name="lyrics_capability_unsynced">Без синхронизации</string>
     <string name="lyrics_youtube_captions">Субтитры YouTube</string>
     <string name="edit_playlist_cover">Изменить обложку альбома</string>
     <string name="edit_playlist_cover_note">Чтобы изменить обложку плейлиста, ваша учетная запись должна быть привязана к номеру телефона и подтверждена в YouTube Music</string>
@@ -2442,7 +2428,7 @@
     <string name="no_match_found">Соответствий не найдено</string>
     <string name="recognition_error">Ошибка распознавания</string>
     <string name="try_again">Попробуйте ещё раз</string>
-    <string name="play_on_app">Воспроизвести в Metrolist</string>
+    <string name="play_on_app">Воспроизвести в RLN Network</string>
     <string name="re_listen">Прослушать ещё раз</string>
     <string name="stands_with_palestine">Этот проект поддерживает Палестину</string>
     <string name="about_play_favorite_song">Хотите включить их любимую песню?</string>
@@ -2467,10 +2453,10 @@
         <item quantity="other">Импортировать плейлисты</item>
     </plurals>
     <plurals name="import_playlists_notice">
-        <item quantity="one">Импорт %1$s из %2$d плейлиста. Импорт будет выполняться в фоновом режиме, по завершении вы получите уведомление.</item>
-        <item quantity="few">Импорт %1$s из %2$d плейлистов. Импорт будет выполняться в фоновом режиме, по завершении вы получите уведомление.</item>
-        <item quantity="many">Импорт %1$s из %2$d плейлистов. Импорт будет выполняться в фоновом режиме, по завершении вы получите уведомление.</item>
-        <item quantity="other">Импорт %1$s из %2$d плейлистов. Импорт будет выполняться в фоновом режиме, по завершении вы получите уведомление.</item>
+        <item quantity="one">Импорт %1$s из %2$d плейлиста будет выполняться в фоновом режиме. По завершении вы получите уведомление.</item>
+        <item quantity="few">Импорт %1$s из %2$d плейлистов будет выполняться в фоновом режиме. По завершении вы получите уведомление.</item>
+        <item quantity="many">Импорт %1$s из %2$d плейлистов будет выполняться в фоновом режиме. По завершении вы получите уведомление.</item>
+        <item quantity="other">Импорт %1$s из %2$d плейлистов будет выполняться в фоновом режиме. По завершении вы получите уведомление.</item>
     </plurals>
     <string name="settings_storage_summary">%1$s использовано • %2$s свободно</string>
     <string name="live">Прямой эфир</string>
@@ -2502,7 +2488,7 @@
     <string name="current_version">Текущая версия</string>
     <string name="guest">Гость</string>
     <string name="leave_room">Выйти из комнаты</string>
-    <string name="charts">Графики</string>
+    <string name="charts">Хит-парады</string>
     <string name="album_charts">Лучшие альбомы</string>
     <string name="recap_playlists">Итоговые плейлисты</string>
     <string name="settings_default">По умолчанию</string>
@@ -2535,7 +2521,7 @@
     <string name="auto_playlist_uploaded_subtitle">Ваши загруженные песни</string>
     <string name="import_status_matching_tracks">Сопоставляем трек %1$d из %2$d: %3$s…</string>
     <string name="canvas">Заставка Canvas</string>
-    <string name="library_grid_columns">Количество столбцов в сетке библиотеки</string>
+    <string name="library_grid_columns">Столбцы библиотеки</string>
     <string name="metroeq_profiles">Сохраненные профили</string>
     <string name="metroeq_preset_treble">Усиление высоких частот</string>
     <string name="metroeq_preset_flat">Плоский</string>
@@ -2613,7 +2599,7 @@
     <string name="ai_setup_description">Создайте аккаунт OpenRouter, войдите в него и выберите бесплатную модель.</string>
     <string name="ai_setup_step">Шаг %1$d из %2$d</string>
     <string name="ai_setup_account">Создайте аккаунт OpenRouter</string>
-    <string name="ai_setup_account_description">OpenRouter соединяет Metrolist с ИИ, которые переводят тексты песен.</string>
+    <string name="ai_setup_account_description">OpenRouter соединяет RLN Network с ИИ, которые переводят тексты песен.</string>
     <string name="ai_setup_limits">Бесплатные модели позволяют отправлять до %1$d запросов в минуту и %2$d в день, либо %4$d в день после покупки не менее %3$d кредитов.</string>
     <string name="ai_setup_create_account">Создайте аккаунт</string>
     <string name="ai_setup_view_limits">Проверьте текущие лимиты</string>
@@ -2640,11 +2626,48 @@
     <string name="appearance_floating_top_bar_description">Отображать верхнюю панель в виде отдельных круглых плавающих кнопок вместо панели, прикрепленной к верхней части экрана.</string>
     <string name="listen_together_server_maintainer">Ответственный за поддержку</string>
     <string name="prefer_word_synced_lyrics_description">Искать текст песен с пословной синхронизацией перед использованием текстов песен с синхронизацией по строкам или несинхронизированных текстов песен</string>
-    <string name="discord_continue_in_browser">Продолжите вход в Discord в браузере. По завершении вернитесь в Metrolist.</string>
+    <string name="discord_continue_in_browser">Продолжите вход в Discord в браузере. По завершении вернитесь в RLN Network.</string>
     <string name="discord_open_browser_again">Открыть снова</string>
     <string name="discord_browser_open_failed">Не удалось открыть браузер. Попробуйте открыть его ещё раз.</string>
     <string name="channel_switch_recovery_hint">Не удалось загрузить ваши каналы YouTube. Войдите заново, чтобы обновить сессию, а затем выберите канал.</string>
     <string name="channel_switch_browse_hint">Откройте меню с аватаром на странице YouTube Music, выберите свой канал, а затем выберите %1$s.</string>
     <string name="lyrics_curated_by">(прислано %1$s)</string>
     <string name="hidden_home_items_desc">Отображать и от-скрывать исполнителей и подкасты, скрытые на главной странице. Вручную закреплённые элементы "Быстрого набора" остаются видимыми.</string>
+    <string name="active_lyrics_alignment">Выравнивание текущей строки текста песни</string>
+    <string name="desktop_minimize_to_tray">Сворачивать в трей</string>
+    <string name="desktop_minimize_to_tray_desc">При закрытии окна Metrolist будет сворачиваться в трей вместо завершения работы</string>
+    <string name="desktop_tray_toggle_on_click">Показывать или скрывать при нажатии на значок в трее</string>
+    <string name="desktop_tray_toggle_on_click_desc">Щелчок левой кнопкой мыши по значку в трее откроет или скроет окно Metrolist</string>
+    <string name="playlist_order_original">Порядок плейлиста</string>
+    <string name="album_order_original">Порядок альбома</string>
+    <string name="canvas_cache">Кэш Canvas</string>
+    <string name="chip_content_description">Чип: %1$s</string>
+    <string name="settings_library_grid_columns">Столбцы библиотеки</string>
+    <string name="playlist_picker_library_order">Порядок библиотеки</string>
+    <string name="blocked_songs">Заблокированные песни</string>
+    <string name="blocked_songs_desc">Восстановить заблокированные песни и песни с отметкой "Не нравится"</string>
+    <string name="blocked_songs_empty">Нет заблокированных песен</string>
+    <string name="content_undo_hint">Это действие можно отменить здесь: %1$s.</string>
+    <string name="content_undo_path">%1$s &gt; %2$s &gt; %3$s</string>
+    <string name="account_keyring_required">Для восстановления аккаунта Metrolist нужен доступ к системной связке ключей. Разблокируйте её. Metrolist повторит попытку автоматически.</string>
+    <string name="account_linux_keyring_required">Для восстановления аккаунта Metrolist нужна системная связка ключей. Установите libsecret-tools или соответствующий пакет вашего дистрибутива, содержащий команду secret-tool, и убедитесь, что связка ключей запущена и разблокирована. Metrolist повторит попытку автоматически.</string>
+    <string name="density_massive">Гигантский (200%)</string>
+    <string name="density_huge">Огромный (175%)</string>
+    <string name="density_extra_large">Очень крупный (150%)</string>
+    <string name="lyrics_romanization_larger_text">Крупнее: Романизация или текст песни</string>
+    <string name="lyrics_romanization_larger_text_description">Выберите, что отображать крупнее при одновременном показе текста песни и романизации.</string>
+    <string name="lyrics_romanization_show_original">Показывать оригинал</string>
+    <string name="lyrics_romanization_show_original_description">Отображать строку оригинала ниже</string>
+    <string name="lyrics_romanization_show_romanization">Показывать романизацию</string>
+    <string name="lyrics_romanization_show_romanization_description">Отображать романизацию под текстом песни</string>
+    <string name="sync_playlist">Синхронизировать плейлист</string>
+    <string name="cast_stream_port_unavailable">Не удалось открыть TCP-порт 57643 для трансляции. Убедитесь, что эта сеть доступна и порт не используется другим приложением.</string>
+    <string name="cast_stream_unreachable">Колонка не запросила аудиопоток. Убедитесь, что брандмауэр разрешает входящие подключения от колонки на TCP-порт 57643 и оба устройства находятся в одной сети.</string>
+    <string name="listen_together_location_poland">Польша</string>
+    <string name="listen_together_location_custom">Свой</string>
+    <string name="listen_together_custom_server_name">Свой сервер</string>
+    <string name="listen_together_custom_server_maintainer">Пользователь</string>
+    <string name="desktop_tray_toggle_on_click_desc_mac">Щелчок правой кнопкой мыши по значку в трее откроет или скроет окно Metrolist</string>
+    <string name="desktop_omarchy_unsupported">Metrolist не работает на Omarchy. Используйте другой дистрибутив Linux, Windows 10 и выше или macOS.</string>
+    <string name="learn_more">Узнать больше</string>
 </resources>

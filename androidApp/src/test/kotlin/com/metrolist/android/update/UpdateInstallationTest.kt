@@ -95,6 +95,8 @@ class UpdateInstallationTest {
             file.absolutePath,
             PackageInfo().apply {
                 packageName = context.packageName
+                versionName = "test"
+                versionCode = packageManager.getInternalMutablePackageInfo(context.packageName).versionCode + 1
                 signatures = arrayOf(signer)
             },
         )

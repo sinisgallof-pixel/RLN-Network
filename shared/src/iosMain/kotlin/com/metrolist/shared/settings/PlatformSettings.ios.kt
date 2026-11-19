@@ -8,3 +8,7 @@ internal actual fun defaultKmpSettings(): KmpSettings {
     val defaults = NSUserDefaults.standardUserDefaults
     return IosSecureSettings(NSUserDefaultsSettings(defaults))
 }
+
+internal actual fun defaultMinimizeToTrayOnClose(): Boolean = false
+
+internal actual fun isDesktopMac(): Boolean = false

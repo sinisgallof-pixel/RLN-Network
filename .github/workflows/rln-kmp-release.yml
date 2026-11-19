@@ -2,7 +2,7 @@ name: RLN Network Android Release 2.0
 
 on:
   push:
-    branches: [release/rln-network-2.0]
+    branches: [release/rln-network-2.0, feature/kmp-in-app-updates-final]
   workflow_dispatch:
 
 permissions:
@@ -48,13 +48,19 @@ jobs:
           test "${#apks[@]}" -eq 1 && test -f "${apks[0]}"
           mapfile -t signers < <(find "$ANDROID_HOME/build-tools" -name apksigner | sort -V)
           signer="${signers[-1]}"
-          "$signer" verify "${apks[0]}"
-          "${signer%/*}/aapt" dump badging "${apks[0]}" > "$RUNNER_TEMP/rln-badging.txt"
-          grep -Eq "^package: name='com[.]rlnnetwork[.]music[.]kmp'.*versionName='2[.]0[.]0'" "$RUNNER_TEMP/rln-badging.txt"
           mkdir -p dist
-          cp "${apks[0]}" dist/RLN-Network-2.0.apk
+          "$signer" verify --verbose --print-certs "${apks[0]}" > dist/signature.txt
+          cat dist/signature.txt
+          grep -E 'certificate SHA-256 digest: 43f8d1591f70239277bc7374bd0b80c693829a251fac9e3a00d5e12d5d274467$' dist/signature.txt
+          "${signer%/*}/aapt" dump badging "${apks[0]}" > "$RUNNER_TEMP/rln-badging.txt"
+          VERSION="$(sed -n 's/^appVersion=//p' gradle.properties | head -1)"
+          test -n "$VERSION"
+          grep -F "package: name='com.rlnnetwork.music.kmp'" "$RUNNER_TEMP/rln-badging.txt" | grep -F "versionName='$VERSION'"
+          cp "${apks[0]}" "dist/RLN-Network-$VERSION.apk"
+          cp "$RUNNER_TEMP/rln-badging.txt" dist/badging.txt
+          (cd dist && sha256sum -- "RLN-Network-$VERSION.apk" > SHA256SUMS)
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: RLN-Network-2.0
-          path: dist/RLN-Network-2.0.apk
+          name: RLN-Network-signed
+          path: dist/
           if-no-files-found: error

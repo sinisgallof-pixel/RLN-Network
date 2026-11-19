@@ -65,6 +65,7 @@ import com.metrolist.shared.ui.settings.SettingsHostChoice
 import com.metrolist.shared.ui.settings.SettingsPageId
 import com.metrolist.shared.ui.settings.SettingsPlatform
 import com.metrolist.shared.ui.settings.SharedSettingsHost
+import com.metrolist.shared.utils.isCrashReportingAvailable
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.stringResource
 

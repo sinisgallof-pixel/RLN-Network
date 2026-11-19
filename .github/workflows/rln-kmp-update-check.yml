@@ -1,0 +1,33 @@
+name: Verifica aggiornamenti RLN KMP
+
+on:
+  pull_request:
+    branches: [release/rln-network-2.0]
+    paths:
+      - 'androidApp/**'
+      - 'shared/src/commonMain/composeResources/**'
+      - 'gradle.properties'
+      - '.github/workflows/rln-kmp-release.yml'
+      - '.github/workflows/rln-kmp-update-check.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  updater-tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          submodules: recursive
+          persist-credentials: false
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad
+        with:
+          distribution: temurin
+          java-version: '25'
+      - uses: android-actions/setup-android@be39fa834029ff78f1a44aa3bb0819b8fc2bd8fd
+        with:
+          packages: platform-tools
+      - name: Test del sistema di aggiornamento
+        run: ./gradlew :androidApp:testDebugUnitTest --tests 'com.metrolist.android.update.*' --no-configuration-cache

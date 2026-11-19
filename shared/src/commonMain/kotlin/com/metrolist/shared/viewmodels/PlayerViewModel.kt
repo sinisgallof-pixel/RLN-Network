@@ -42,7 +42,7 @@ import com.metrolist.shared.model.RadioQueueChip
 import com.metrolist.shared.model.SongItem
 import com.metrolist.shared.model.artworkExplicitness
 import com.metrolist.shared.model.canSwitchToMusicVideo
-import com.metrolist.shared.model.isLiveType
+import com.metrolist.shared.model.isLive
 import com.metrolist.shared.model.isOfficialVideoType
 import com.metrolist.shared.model.isPodcast
 import com.metrolist.shared.model.isVideoSong
@@ -607,22 +607,6 @@ class PlayerViewModel(
                     playerConnection.currentSong.value?.let(::fetchAnimatedCover)
                     playerConnection.currentSong.value?.let(::fetchMusicVideoCanvas)
                 }
-            }.launchIn(viewModelScope)
-
-        snapshotFlow { Settings.shared.spotifySession.isNotBlank() }
-            .distinctUntilChanged()
-            .drop(1)
-            .onEach {
-                animatedCoverFetch.invalidate()
-                _uiState.value =
-                    _uiState.value.copy(
-                        currentSong =
-                            _uiState.value.currentSong?.copy(
-                                spotifyAnimatedCoverUrl = null,
-                                canvasState = CanvasArtworkState.NOT_REQUESTED,
-                            ),
-                    )
-                playerConnection.currentSong.value?.let(::fetchAnimatedCover)
             }.launchIn(viewModelScope)
 
         snapshotFlow { Settings.shared.youtubeCanvasQuality to Settings.shared.youtubeCanvasMode }
@@ -2153,7 +2137,7 @@ class PlayerViewModel(
         val isOfficialMusicVideo: Boolean
             get() = isOfficialVideoType(musicVideoType)
         val isLive: Boolean
-            get() = isLiveType(musicVideoType)
+            get() = toSongItem().isLive
 
         fun toSongItem(): SongItem =
             SongItem(

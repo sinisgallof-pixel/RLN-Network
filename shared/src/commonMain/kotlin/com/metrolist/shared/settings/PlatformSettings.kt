@@ -9,6 +9,10 @@ import com.russhwolf.settings.Settings as KmpSettings
 
 internal expect fun defaultKmpSettings(): KmpSettings
 
+internal expect fun defaultMinimizeToTrayOnClose(): Boolean
+
+internal expect fun isDesktopMac(): Boolean
+
 internal val largeSettingKeys =
     setOf(
         "aiSlopBlocklistCache",
