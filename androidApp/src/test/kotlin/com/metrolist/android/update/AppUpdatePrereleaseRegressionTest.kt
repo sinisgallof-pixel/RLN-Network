@@ -62,6 +62,6 @@ class AppUpdatePrereleaseRegressionTest {
     }
 
     private companion object {
-        const val CACHE_SOURCE = "github-releases-metrolist-v1"
+        const val CACHE_SOURCE = "github-releases-rln-network-v2"
     }
 }
