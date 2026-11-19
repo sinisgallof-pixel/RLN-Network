@@ -1,0 +1,22 @@
+name: Correggi note RLN 2.0.3
+
+on:
+  push:
+    paths:
+      - .github/workflows/rln-release-notes-clean.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update-release-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Aggiorna le note della release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          printf 'RLN Network 2.0.3\n\nAggiornamento disponibile tramite app.\n' > notes.txt
+          gh release edit v2.0.3 --repo "$GH_REPO" --notes-file notes.txt
